@@ -2,36 +2,36 @@
 
 			<!-- header area -->
 
-		<div class="row">
+		<div class="row content">
 			<div class="main col-md-6">
 				
 				<div class="row">
 					<div class="main col-md-12">
 
 						<!-- conteudo do topo da coluna esquerda -->
-						<div class="row">
+						<div class="left row">
 
-						<div class="main col-md-4">
+						<div class="main-title col-md-4">
 							<h3>Apvar em Ação</h3>
 						</div>
-						<div class="main col-md-8">
+						<div class="chamada col-md-8">
 							<h5>Confira a atuação da Apvar conforme registros em diversos meios de comunicação</h5>
 						</div>
 
 						<div class="clearfix"></div>
 
 						<div class="main col-md-8">
-							<h3><a href="#">Comandante diz que venda da Varig foi uma fraude</a></h3>
+							<h3 class="m-title"><a href="#">Comandante diz que venda da Varig foi uma fraude</a></h3>
 							<p>Ao depor nesta quarta-feira(9) na Comissão de Serviços de Infra-Estrutura(CI), o presidente da Associação de Pilotos da Varig...<a href="#">[+]</a> </p>
 						</div>
-						<div class="main col-md-4">
+						<div class="foto-materia col-md-4">
 							<img src="img/foto_elnio.jpg" alt="">
 						</div>
 
 						<div class="clearfix"></div>
 
-						<div class="main col-md-8">
-							<h3><a href="#">Dep.Rodrigo Maia - 15/09/2010</a></h3>
+						<div class="chamada col-md-8">
+							<h3 class="m-title"><a href="#">Dep.Rodrigo Maia - 15/09/2010</a></h3>
 							<p>Aposentados, trabalhadores e pensionistas de uma das empresas mais respeitadas do país, que ajudaram a...<a href="#">[+]</a> </p>
 						</div>
 						<div class="main col-md-4">
@@ -44,19 +44,19 @@
 
 						<!-- conteudo do meio da coluna esquerda -->
 
-						<div class="row">
+						<div class="row avisos">
 
-						<div class="main col-md-4">
+						<div class="main-title col-md-4">
 							<h3>Quadro de Avisos</h3>
 						</div>
-						<div class="main col-md-8">
+						<div class="chamada col-md-8">
 							<h5>Informe-se sobre eventos e fatos relevantes para os pilotos e outros aeronautas da ativa ou aposentados</h5>
 						</div>
 
 						<div class="clearfix"></div>
 
 						<div class="main col-md-8">
-							<h3><a href="#">Assembléias Gerais</a></h3>
+							<h3 class="m-title"><a href="#">Assembléias Gerais</a></h3>
 
 							<img class="center-block" src="img/lanzoni.jpg" alt="">
 
@@ -75,26 +75,26 @@
 
 			<!-- coluna do meio -->
 
-			<div class="second col-md-4">
+			<div class="second middle-section col-md-4">
 				<div class="row">
 					
 					<div class="col-md-12">
 						<div class="row">
-							<div class="main col-md-4">
+							<div class="main-title col-md-4">
 								<h3>Deu na Imprensa</h3>
 							</div>
-							<div class="main col-md-8">
+							<div class="chamada col-md-8">
 								<h5>Notícias sobre a indústria e outros temas de interesse específico.</h5>
 							</div>
 
 								<div class="clearfix"></div>
 
-							<div class="main col-md-8">
+							<div class="foto-materia col-md-8">
 								<img src="img/foto_elnio.jpg" alt="">
 							</div>
 
 							<div class="main col-md-8">
-								<h3><a href="#">Tópicos de uma recuperação considerada emblemática </a></h3>
+								<h3 class="m-title"><a href="#">Tópicos de uma recuperação considerada emblemática </a></h3>
 								<p>Cmte. Silvio FRÓES – 16/03/2011
 								... quando foi anunciada a presença do Juiz Luiz Roberto Ayoub ...<a href="#">[+]</a> </p>
 							</div>
@@ -106,27 +106,27 @@
 
 						<div class="row">
 							<div class="main col-md-4">
-								<h5>Terra <br>13/04/2011 19h43</h5>
+								<h5 >Terra <br>13/04/2011 19h43</h5>
 							</div>
 								
 								<div class="clearfix"></div>
 
 							<div class="main col-md-8">
 								
-								<h3> <a href="#"> vc repórter: aposentados da Varig realizam manifestação no RJ ...[+]</a> </h3>
+								<h3 class="m-title"> <a href="#"> vc repórter: aposentados da Varig realizam manifestação no RJ ...[+]</a> </h3>
 							</div>
 
 								<div class="clearfix"></div>
 
 							
-							<div class="main col-md-8">
+							<div class="chamada col-md-8">
 								<p>Fruto da falsa paz que impera em nossa cidade, perdemos mais um fiel associado da APVAR. </p>
 							</div>
 
 							<div class="clearfix"></div>
 
-							<div class="main col-md-8">
-								<h3><a href="#">Paulo Chefia Viola </a></h3>
+							<div class="chamada col-md-8">
+								<h3 class="m-title"><a href="#">Paulo Chefia Viola </a></h3>
 								<p>A covardia das ruas do Rio matou o Paulinho...<a href="#">[+]</a> </p>
 							</div>
 
@@ -145,10 +145,10 @@
 					
 					<div class="col-md-12">
 						<div class="row">
-							<div class="main col-md-12">
+							<div class="main-title col-md-12">
 								<h3>A Falsa "recuperação" da Varig</h3>
 							</div>
-							<div class="main col-md-12">
+							<div class="chamada col-md-12">
 								<h5>Registros que comprovam a fraude escandalosa contra os trabalhadores da Varig.</h5>
 							</div>
 
@@ -180,7 +180,7 @@
 							
 
 						<div class="row">
-							<div class="main col-md-12">
+							<div class="main-title col-md-12">
 								<h3>Links Úteis</h3>
 							</div>
 							<div class="main col-md-12">
@@ -193,7 +193,7 @@
 
 							<div class="clearfix"></div>
 
-							<div class="main col-md-12">
+							<div class="main-title col-md-12">
 								<h3> Ouvidoria </h3>
 								<p>Envie-nos suas Sugestões, Dúvidas, Reclamações e etc.<a href="#"> Clique aqui>>> </a> </p>
 							</div>
@@ -214,13 +214,13 @@
 					<div class="col-md-12">
 						<div class="row">
 
-							<div class="main col-md-2">
+							<div class="main-title col-md-2">
 								<h3>Hora Mundial</h3>
 							</div>
 							<div class="main col-md-6">
 								<p>Centenas de pilotos da Varig se encontram radicados pelo mundo e  a qualquer  hora podem estar navegando também nesta página</p>
 							</div>
-							<div class="main col-md-4">
+							<div class="main-title col-md-4">
 								<h4>UTC:	14:03:30 - Thursday - 26 April</h4>
 							</div>
 
