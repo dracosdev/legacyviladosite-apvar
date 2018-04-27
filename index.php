@@ -20,6 +20,8 @@
 
 						<div class="clearfix"></div>
 
+						<hr>
+
 						<div class="main col-md-8">
 							<h3 class="m-title"><a href="#">Comandante diz que venda da Varig foi uma fraude</a></h3>
 							<p>Ao depor nesta quarta-feira(9) na Comissão de Serviços de Infra-Estrutura(CI), o presidente da Associação de Pilotos da Varig...<a href="#">[+]</a> </p>
@@ -55,6 +57,8 @@
 
 						<div class="clearfix"></div>
 
+						<hr>
+
 						<div class="main col-md-8">
 							<h3 class="m-title"><a href="#">Assembléias Gerais</a></h3>
 
@@ -89,6 +93,8 @@
 
 								<div class="clearfix"></div>
 
+							<hr>	
+
 							<div class="foto-materia col-md-8">
 								<img src="img/foto_elnio.jpg" alt="">
 							</div>
@@ -106,7 +112,7 @@
 
 						<div class="row">
 							<div class="main col-md-4">
-								<h5 >Terra <br>13/04/2011 19h43</h5>
+								<h5>Terra <br>13/04/2011 19h43</h5>
 							</div>
 								
 								<div class="clearfix"></div>
@@ -144,7 +150,7 @@
 					
 					
 					<div class="col-md-12">
-						<div class="row">
+						<div class="widget-space row">
 							<div class="main-title col-md-12">
 								<h3>A Falsa "recuperação" da Varig</h3>
 							</div>
@@ -152,26 +158,35 @@
 								<h5>Registros que comprovam a fraude escandalosa contra os trabalhadores da Varig.</h5>
 							</div>
 
-								<hr>
+								
 
 								<div class="clearfix"></div>
+
+								<hr>
 							
 							<div class="main col-md-12">
 								<h5>Graziela Baggio usurpa o voto da categoria aero-nauta para trair o interesse dos trabalhadores....</h5>
 							</div>
 
-							<hr>
+								<div class="clearfix"></div>
+
+								<hr>
 							
 							<div class="main col-md-12">
 								<h5>Marco histórico para o Grupo de Pilotos...</h5>
 							</div>
 
-							<hr>
+								<div class="clearfix"></div>
+
+								<hr>
 
 							<div class="main col-md-12">
 								<h5>Reintegração já para os perseguidos políticos da Varig...</h5>
 							</div>							
 
+								<div class="clearfix"></div>
+
+								<hr>
 							
 						</div>
 
@@ -179,10 +194,13 @@
 
 							
 
-						<div class="row">
+						<div class="row widget-space">
 							<div class="main-title col-md-12">
 								<h3>Links Úteis</h3>
 							</div>
+
+							<hr>
+
 							<div class="main col-md-12">
 								
 								<h3><a href="#">Redenet</a> </h3>
@@ -207,6 +225,11 @@
 				</div>
 			</aside>
 
+
+			<div class="separator col-md-12">
+			</div>	
+			<div class="clearfix"></div>
+
 			<!-- aqui entra a parte antes do footer -->
 			<div class="down-content col-md-12">
 				<div class="row">
@@ -217,6 +240,7 @@
 							<div class="main-title col-md-2">
 								<h3>Hora Mundial</h3>
 							</div>
+
 							<div class="main col-md-6">
 								<p>Centenas de pilotos da Varig se encontram radicados pelo mundo e  a qualquer  hora podem estar navegando também nesta página</p>
 							</div>
@@ -224,7 +248,9 @@
 								<h4>UTC:	14:03:30 - Thursday - 26 April</h4>
 							</div>
 
+
 								<div class="clearfix"></div>
+								<hr>
 
 							<div class="main col-md-5">
 								

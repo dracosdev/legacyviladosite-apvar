@@ -19,7 +19,7 @@
 				</a>
 
 				<nav class="navbar navbar-default">
-					<div class="container-fluid">
+					<div class="cabecalho container-fluid">
     					 <ul class="nav navbar-nav">
 							<li><a href="#">Principal</a></li>
 							<li><a href="#">Institucional</a></li>

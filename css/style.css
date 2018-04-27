@@ -3,3 +3,55 @@
 body{
 	background: #FFFFCC;
 }
+
+h3.m-title a {
+    color: #003366;
+    text-decoration: none;
+}
+.main-title h3 {
+    color: #003366;
+}
+.main-title h4 {
+    color: #003366;
+}
+
+.chamada h5 {
+    color: #003366;
+}
+
+hr{
+	border-color: #003366;
+}
+
+.main-title {
+    background: #ecd892;
+}
+
+.widget-space {
+    border: 3px;
+    border-color: #000;
+}
+
+.cabecalho.container-fluid {
+    background: #000;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #ecd892;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #fff;
+    background-color: #BEA839;
+}
+
+.separator.col-md-12 {
+    padding: 5px;
+}
+
+footer.footer.col-md-12 {
+    background: #c3b170;
+    padding: 10px 0;
+    text-align: center;
+    color: #003366;
+}
