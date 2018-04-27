@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>APVAR - Associação de pilotos da Varig</title>
 		
 		<?php wp_head(); ?>
