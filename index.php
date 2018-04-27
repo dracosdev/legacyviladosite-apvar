@@ -5,11 +5,8 @@
 		<div class="row content">
 			<div class="main col-md-6">
 				
-				<div class="row">
-					<div class="main col-md-12">
 
 						<!-- conteudo do topo da coluna esquerda -->
-						<div class="left row">
 
 						<div class="main-title col-md-4">
 							<h3>Apvar em Ação</h3>
@@ -39,14 +36,11 @@
 						<div class="main col-md-4">
 							
 						</div>
-
-						</div>	
+	
 
 						<div class="clearfix"></div>
 
 						<!-- conteudo do meio da coluna esquerda -->
-
-						<div class="row avisos">
 
 						<div class="main-title col-md-4">
 							<h3>Quadro de Avisos</h3>
@@ -66,24 +60,16 @@
 
 						</div>
 						
-						<div class="clearfix"></div>
-						
-
-						</div>
-
-					</div>
-
-				</div>
+						<div class="clearfix"></div>			
 
 			</div>
 
 			<!-- coluna do meio -->
 
 			<div class="second middle-section col-md-4">
-				<div class="row">
+				
 					
-					<div class="col-md-12">
-						<div class="row">
+						
 							<div class="main-title col-md-4">
 								<h3>Deu na Imprensa</h3>
 							</div>
@@ -104,13 +90,13 @@
 								<p>Cmte. Silvio FRÓES – 16/03/2011
 								... quando foi anunciada a presença do Juiz Luiz Roberto Ayoub ...<a href="#">[+]</a> </p>
 							</div>
-						</div>
+						
 
 							<div class="clearfix"></div>
 
 							<hr>
 
-						<div class="row">
+						
 							<div class="main col-md-4">
 								<h5>Terra <br>13/04/2011 19h43</h5>
 							</div>
@@ -136,20 +122,14 @@
 								<p>A covardia das ruas do Rio matou o Paulinho...<a href="#">[+]</a> </p>
 							</div>
 
-						</div>
-
-
-					</div>
-				</div>
+						
+				
 			</div>
 
 			<!-- area da sidebar -->
 			
 			<aside class="complementary col-md-2">
-				<div class="row">
 					
-					
-					<div class="col-md-12">
 						<div class="widget-space row">
 							<div class="main-title col-md-12">
 								<h3>A Falsa "recuperação" da Varig</h3>
@@ -219,10 +199,6 @@
 						</div>
 
 
-					</div>
-
-
-				</div>
 			</aside>
 
 
@@ -232,10 +208,6 @@
 
 			<!-- aqui entra a parte antes do footer -->
 			<div class="down-content col-md-12">
-				<div class="row">
-					
-					<div class="col-md-12">
-						<div class="row">
 
 							<div class="main-title col-md-2">
 								<h3>Hora Mundial</h3>
@@ -403,14 +375,9 @@
 							</div>
 
 							
-						</div>
 
 							<div class="clearfix"></div>
-
-
-
-					</div>
-				</div>
+				
 			</div>
 
 

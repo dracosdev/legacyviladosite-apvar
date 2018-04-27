@@ -12,14 +12,14 @@
 			
 		<div class="container">
 		
-			<header class="row">
+			<header class="header">
 
 				<a href="index.html">
 				<img id="logotipo" src="img/logotitulo.gif" alt="Logotipo">
 				</a>
 
 				<nav class="navbar navbar-default">
-					<div class="cabecalho container-fluid">
+					
     					 <ul class="nav navbar-nav">
 							<li><a href="#">Principal</a></li>
 							<li><a href="#">Institucional</a></li>
@@ -32,7 +32,7 @@
 							<li><a href="#">Fale Conosco</a></li>
 							<li><a href="#">Cabine de Comando</a></li>
     					 </ul>	
-  					</div>
+  					
 				</nav>
 
 			</header>
