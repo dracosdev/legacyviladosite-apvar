@@ -9,7 +9,7 @@
 						<!-- conteudo do topo da coluna esquerda -->
 
 						<div class="main-title col-md-4">
-							<h3>Apvar em Ação</h3>
+							<h4>Apvar em Ação</h4>
 						</div>
 						<div class="chamada col-md-8">
 							<h5>Confira a atuação da Apvar conforme registros em diversos meios de comunicação</h5>
@@ -20,7 +20,7 @@
 						<hr>
 
 						<div class="main col-md-8">
-							<h3 class="m-title"><a href="#">Comandante diz que venda da Varig foi uma fraude</a></h3>
+							<h4 class="m-title"><a href="#">Comandante diz que venda da Varig foi uma fraude</a></h4>
 							<p>Ao depor nesta quarta-feira(9) na Comissão de Serviços de Infra-Estrutura(CI), o presidente da Associação de Pilotos da Varig...<a href="#">[+]</a> </p>
 						</div>
 						<div class="foto-materia col-md-4">
@@ -30,7 +30,7 @@
 						<div class="clearfix"></div>
 
 						<div class="chamada col-md-8">
-							<h3 class="m-title"><a href="#">Dep.Rodrigo Maia - 15/09/2010</a></h3>
+							<h4 class="m-title"><a href="#">Dep.Rodrigo Maia - 15/09/2010</a></h4>
 							<p>Aposentados, trabalhadores e pensionistas de uma das empresas mais respeitadas do país, que ajudaram a...<a href="#">[+]</a> </p>
 						</div>
 						<div class="main col-md-4">
@@ -43,7 +43,7 @@
 						<!-- conteudo do meio da coluna esquerda -->
 
 						<div class="main-title col-md-4">
-							<h3>Quadro de Avisos</h3>
+							<h4>Quadro de Avisos</h4>
 						</div>
 						<div class="chamada col-md-8">
 							<h5>Informe-se sobre eventos e fatos relevantes para os pilotos e outros aeronautas da ativa ou aposentados</h5>
@@ -54,7 +54,7 @@
 						<hr>
 
 						<div class="main col-md-8">
-							<h3 class="m-title"><a href="#">Assembléias Gerais</a></h3>
+							<h4 class="m-title"><a href="#">Assembléias Gerais</a></h4>
 
 							<img class="center-block" src="img/lanzoni.jpg" alt="">
 
@@ -71,7 +71,7 @@
 					
 						
 							<div class="main-title col-md-4">
-								<h3>Deu na Imprensa</h3>
+								<h4>Deu na Imprensa</h4>
 							</div>
 							<div class="chamada col-md-8">
 								<h5>Notícias sobre a indústria e outros temas de interesse específico.</h5>
@@ -86,7 +86,7 @@
 							</div>
 
 							<div class="main col-md-8">
-								<h3 class="m-title"><a href="#">Tópicos de uma recuperação considerada emblemática </a></h3>
+								<h4 class="m-title"><a href="#">Tópicos de uma recuperação considerada emblemática </a></h4>
 								<p>Cmte. Silvio FRÓES – 16/03/2011
 								... quando foi anunciada a presença do Juiz Luiz Roberto Ayoub ...<a href="#">[+]</a> </p>
 							</div>
@@ -105,7 +105,7 @@
 
 							<div class="main col-md-8">
 								
-								<h3 class="m-title"> <a href="#"> vc repórter: aposentados da Varig realizam manifestação no RJ ...[+]</a> </h3>
+								<h4 class="m-title"> <a href="#"> vc repórter: aposentados da Varig realizam manifestação no RJ ...[+]</a> </h4>
 							</div>
 
 								<div class="clearfix"></div>
@@ -118,7 +118,7 @@
 							<div class="clearfix"></div>
 
 							<div class="chamada col-md-8">
-								<h3 class="m-title"><a href="#">Paulo Chefia Viola </a></h3>
+								<h4 class="m-title"><a href="#">Paulo Chefia Viola </a></h4>
 								<p>A covardia das ruas do Rio matou o Paulinho...<a href="#">[+]</a> </p>
 							</div>
 
@@ -132,7 +132,7 @@
 					
 						<div class="widget-space row">
 							<div class="main-title col-md-12">
-								<h3>A Falsa "recuperação" da Varig</h3>
+								<h4>A Falsa "recuperação" da Varig</h4>
 							</div>
 							<div class="chamada col-md-12">
 								<h5>Registros que comprovam a fraude escandalosa contra os trabalhadores da Varig.</h5>
@@ -176,23 +176,23 @@
 
 						<div class="row widget-space">
 							<div class="main-title col-md-12">
-								<h3>Links Úteis</h3>
+								<h4>Links Úteis</h4>
 							</div>
 
 							<hr>
 
 							<div class="main col-md-12">
 								
-								<h3><a href="#">Redenet</a> </h3>
-								<h3><a href="#">NOAA</a> </h3>
-								<h3><a href="#">Airtravelcenter</a> </h3>
-								<h4><a href="#">Outros Links >> </a> </h4>
+								<h4><a href="#">Redenet</a> </h4>
+								<h4><a href="#">NOAA</a> </h4>
+								<h4><a href="#">Airtravelcenter</a> </h4>
+								<h5><a href="#">Outros Links >> </a> </h5>
 							</div>
 
 							<div class="clearfix"></div>
 
 							<div class="main-title col-md-12">
-								<h3> Ouvidoria </h3>
+								<h4> Ouvidoria </h4>
 								<p>Envie-nos suas Sugestões, Dúvidas, Reclamações e etc.<a href="#"> Clique aqui>>> </a> </p>
 							</div>
 
@@ -210,7 +210,7 @@
 			<div class="down-content col-md-12">
 
 							<div class="main-title col-md-2">
-								<h3>Hora Mundial</h3>
+								<h4>Hora Mundial</h4>
 							</div>
 
 							<div class="main col-md-6">
