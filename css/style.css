@@ -1,6 +1,10 @@
 
 
 body{
+	background: linear-gradient(#09335D, #4478AA);
+}
+
+.main-container{
 	background: #FFFFCC;
 }
 

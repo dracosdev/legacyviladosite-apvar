@@ -11,15 +11,15 @@
 	
 	<body <?php body_class(); ?>>
 			
-		<div class="container">
+		<div class="container main-container">
 		
-			<header class="header">
+			<header class="header row">
 
 				<a href="index.html">
 				<img id="logotipo" src="img/logotitulo.gif" alt="Logotipo">
 				</a>
 
-				<nav class="navbar navbar-default">
+				<nav class="navbar navbar-default center-block">
 					
     					 <ul class="nav navbar-nav">
 							<li><a href="#">Principal</a></li>

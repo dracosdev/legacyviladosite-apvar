@@ -2,7 +2,7 @@
 
 			<!-- header area -->
 
-		<div class="row content">
+		<div class="row content center-block">
 			<div class="main col-md-6">
 				
 
