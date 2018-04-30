@@ -8,7 +8,7 @@ body{
 	background: #FFFFCC;
 }
 
-h3.m-title a {
+h4.m-title a {
     color: #003366;
     text-decoration: none;
 }
@@ -29,10 +29,11 @@ hr{
 
 .main-title {
     background: #ecd892;
+    border: solid 1px;
 }
 
 .widget-space {
-    border: 3px;
+    border: solid 1px;
     border-color: #000;
 }
 
@@ -51,6 +52,10 @@ hr{
 
 .separator.col-md-12 {
     padding: 5px;
+}
+
+.widget-area-down table{
+	border: solid 1px;
 }
 
 footer.footer.col-md-12 {

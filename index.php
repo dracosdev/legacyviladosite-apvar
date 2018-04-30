@@ -91,10 +91,7 @@
 								... quando foi anunciada a presença do Juiz Luiz Roberto Ayoub ...<a href="#">[+]</a> </p>
 							</div>
 						
-
 							<div class="clearfix"></div>
-
-							<hr>
 
 						
 							<div class="main col-md-4">
@@ -127,7 +124,7 @@
 			</div>
 
 			<!-- area da sidebar -->
-			
+			<div class="bordas">
 			<aside class="complementary col-md-2">
 					
 						<div class="widget-space row">
@@ -200,6 +197,7 @@
 
 
 			</aside>
+			</div>
 
 
 			<div class="separator col-md-12">
@@ -224,7 +222,7 @@
 								<div class="clearfix"></div>
 								<hr>
 
-							<div class="main col-md-5">
+							<div class="widget-area-down col-md-5">
 								
 								<table>
 
@@ -299,7 +297,7 @@
 
 							</div>
 
-							<div class="main col-md-5">
+							<div class="widget-area-down col-md-5">
 								
 								<table>
 
@@ -374,6 +372,8 @@
 
 							</div>
 
+							<div class="separator col-md-12">
+							</div>
 							
 
 							<div class="clearfix"></div>
