@@ -19,15 +19,25 @@
 				<img id='logotipo' src='wp-content/themes/<?php echo get_template(); ?>/img/logotitulo.gif' alt='Logotipo'>
 				</a>
 
-					<?php //Início da exibição do menu personalizado
-/*
+				<nav class="navbar navbar-default center-block">
+
+					<?php 
+
+					wp_nav_menu( array(
+						'menu' => 'menu_princ',
+						'items_wrap' => '<ul id="%1$s" class="nav navbar-nav %2$s">%3$s</ul>'
+					) );
+
+					/*Início da exibição do menu personalizado
+
 					wp_nav_menu( array(
 						'menu' => 'menu_princ',
 						'theme_location' => 'menu_princ',
 						'container' => 'nav',
-						'container_class' => 'container_class',
-						'container_id' => 'menu-contai-id',
+						'container_class' => '',
+						'container_id' => '',
 						'menu_class' => 'navbar navbar-default center-block',
+						'items_wrap' => '<ul id="%1$s" class="nav navbar-nav %2$s">%3$s</ul>',
 						'echo' => true,
 						'menu_id' => 'menu-princ-id',
 						'before' => '',
@@ -37,27 +47,11 @@
 						'depth' => 0,
 						'walker' => '',
 					) );
-*/
-
-					// Fim da exibição do menu personalizado ?>
 
 
-				<nav class="navbar navbar-default center-block">
-					
-    					 <ul class="nav navbar-nav">
-							<li><a href="#">Principal</a></li>
-							<li><a href="#">Institucional</a></li>
-							<li><a href="#">Diretoria</a></li>
-							<li><a href="#">Opinião</a></li>
-							<li><a href="#">Editorial</a></li>
-							<li><a href="#">Bases</a></li>
-							<li><a href="#">Arquivo</a></li>
-							<li><a href="#">Operacional</a></li>
-							<li><a href="#">Fale Conosco</a></li>
-							<li><a href="#">Cabine de Comando</a></li>
-    					 </ul>	
-  					
-				</nav>
+					 Fim da exibição do menu personalizado */ ?>
+
+				</nav>		 
 
 
 
