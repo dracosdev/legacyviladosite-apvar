@@ -128,6 +128,9 @@
 			<aside class="complementary col-md-2">
 					
 						<div class="widget-space row">
+
+							<?php if ( dynamic_sidebar('lat_right_widgets') ) : else : endif; ?>
+
 							<div class="main-title col-md-12">
 								<h4>A Falsa "recuperação" da Varig</h4>
 							</div>

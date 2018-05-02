@@ -6,6 +6,23 @@ if ( function_exists( 'register_nav_menu' ) ) {
 	register_nav_menu( 'menu_princ', 'Este é o menu principal do site' );
 }
 
+/**
+ * Criando uma area de widgets
+ *
+ */
+function widgets_novos_widgets_init() {
+
+	register_sidebar( array(
+		'name' => 'lateral_right',
+		'id' => 'lat_right_widgets',
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<h2>',
+		'after_title' => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'widgets_novos_widgets_init' );
+
 
 function carrega_scripts(){
 
