@@ -16,8 +16,31 @@
 			<header class="header row">
 
 				<a href="index.html">
-				<img id="logotipo" src="img/logotitulo.gif" alt="Logotipo">
+				<img id='logotipo' src='wp-content/themes/<?php echo get_template(); ?>/img/logotitulo.gif' alt='Logotipo'>
 				</a>
+
+					<?php //Início da exibição do menu personalizado
+/*
+					wp_nav_menu( array(
+						'menu' => 'menu_princ',
+						'theme_location' => 'menu_princ',
+						'container' => 'nav',
+						'container_class' => 'container_class',
+						'container_id' => 'menu-contai-id',
+						'menu_class' => 'navbar navbar-default center-block',
+						'echo' => true,
+						'menu_id' => 'menu-princ-id',
+						'before' => '',
+						'after' => '',
+						'link_before' => '',
+						'link_after' => '',
+						'depth' => 0,
+						'walker' => '',
+					) );
+*/
+
+					// Fim da exibição do menu personalizado ?>
+
 
 				<nav class="navbar navbar-default center-block">
 					
@@ -35,5 +58,7 @@
     					 </ul>	
   					
 				</nav>
+
+
 
 			</header>

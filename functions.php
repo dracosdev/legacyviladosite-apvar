@@ -1,5 +1,12 @@
 <?php 
 
+
+// Cria o menu principal
+if ( function_exists( 'register_nav_menu' ) ) {
+	register_nav_menu( 'menu_princ', 'Este é o menu principal do site' );
+}
+
+
 function carrega_scripts(){
 
 	wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), null, 'all');
