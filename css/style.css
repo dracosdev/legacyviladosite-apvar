@@ -63,3 +63,19 @@ footer.footer.col-md-12 {
     text-align: center;
     color: #003366;
 }
+
+h2.main-title.col-md-12 {
+    color: #003366;
+}
+
+.widget-space ul {
+    list-style: none;
+}
+
+.widget-space a {
+    text-decoration: none;
+}
+
+h2.main-title.col-md-12 {
+    margin-top: 0;
+}

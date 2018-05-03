@@ -15,9 +15,9 @@ function widgets_novos_widgets_init() {
 	register_sidebar( array(
 		'name' => 'lateral_right',
 		'id' => 'lat_right_widgets',
-		'before_widget' => '<div>',
+		'before_widget' => '<div class="widget-space row">',
 		'after_widget' => '</div>',
-		'before_title' => '<h2>',
+		'before_title' => '<h2 class="main-title col-md-12">',
 		'after_title' => '</h2>',
 	) );
 }

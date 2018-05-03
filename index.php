@@ -126,10 +126,13 @@
 			<!-- area da sidebar -->
 			<div class="bordas">
 			<aside class="complementary col-md-2">
+
+					<?php if ( dynamic_sidebar('lat_right_widgets') ) : else : endif; ?>
 					
+					<!--
 						<div class="widget-space row">
 
-							<?php if ( dynamic_sidebar('lat_right_widgets') ) : else : endif; ?>
+							
 
 							<div class="main-title col-md-12">
 								<h4>A Falsa "recuperação" da Varig</h4>
@@ -169,34 +172,10 @@
 								<hr>
 							
 						</div>
+					-->
 
-							<div class="clearfix"></div>
+						<div class="clearfix"></div>
 
-							
-
-						<div class="row widget-space">
-							<div class="main-title col-md-12">
-								<h4>Links Úteis</h4>
-							</div>
-
-							<hr>
-
-							<div class="main col-md-12">
-								
-								<h4><a href="#">Redenet</a> </h4>
-								<h4><a href="#">NOAA</a> </h4>
-								<h4><a href="#">Airtravelcenter</a> </h4>
-								<h5><a href="#">Outros Links >> </a> </h5>
-							</div>
-
-							<div class="clearfix"></div>
-
-							<div class="main-title col-md-12">
-								<h4> Ouvidoria </h4>
-								<p>Envie-nos suas Sugestões, Dúvidas, Reclamações e etc.<a href="#"> Clique aqui>>> </a> </p>
-							</div>
-
-						</div>
 
 
 			</aside>
