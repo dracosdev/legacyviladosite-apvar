@@ -1,44 +1,76 @@
 <?php get_header(); ?>
 
-			<!-- header area -->
+
+<!-- Montagem dos argumentos para cada loop -->
+
+<?php
+$arg_apvaracao = array(
+	'category_name' => 'beneficios',
+	'post_type' => 'post',
+	'posts_per_page' => 3,
+	'post__not_in' => get_option("sticky_posts"));
+
+$arg_quadroavisos = array(
+	'category_name' => 'beneficios',
+	'post_type' => 'post',
+	'posts_per_page' => 3,
+	'post__not_in' => get_option("sticky_posts"));
+
+$arg_deunaimprensa = array(
+	'category_name' => 'beneficios',
+	'post_type' => 'post',
+	'posts_per_page' => 3,
+	'post__not_in' => get_option("sticky_posts"));
+
+?>
+
+
+		<!-- header area -->
 
 		<div class="row content center-block">
 			<div class="main col-md-6">
 				
+				<div class="main-title col-md-4">
+					<h4>Apvar em Ação</h4>
+				</div>
 
-						<!-- conteudo do topo da coluna esquerda -->
-
-						<div class="main-title col-md-4">
-							<h4>Apvar em Ação</h4>
-						</div>
-						<div class="chamada col-md-8">
-							<h5>Confira a atuação da Apvar conforme registros em diversos meios de comunicação</h5>
-						</div>
-
-						<div class="clearfix"></div>
+					<div class="chamada col-md-8">
+						<h5>Confira a atuação da Apvar conforme registros em diversos meios de comunicação</h5>
+					</div>
+					<div class="clearfix"></div>
 
 						<hr>
 
-						<div class="main col-md-8">
-							<h4 class="m-title"><a href="#">Comandante diz que venda da Varig foi uma fraude</a></h4>
-							<p>Ao depor nesta quarta-feira(9) na Comissão de Serviços de Infra-Estrutura(CI), o presidente da Associação de Pilotos da Varig...<a href="#">[+]</a> </p>
-						</div>
-						<div class="foto-materia col-md-4">
-							<img src="img/foto_elnio.jpg" alt="">
-						</div>
+							<?php
 
-						<div class="clearfix"></div>
+							// Loop da área "Apvar em Ação"
+							query_posts( $args_apvaracao );
+							 
+							// The Loop
+							while ( have_posts() ) : the_post();
+							    echo '<div class="main col-md-8">';
+							    	echo '<h4 class="m-title">';
+							    		echo '<a href="#">'; the_title(); echo '</a>';
+							    	echo '</h4>'
+							    echo '</div>';
 
-						<div class="chamada col-md-8">
-							<h4 class="m-title"><a href="#">Dep.Rodrigo Maia - 15/09/2010</a></h4>
-							<p>Aposentados, trabalhadores e pensionistas de uma das empresas mais respeitadas do país, que ajudaram a...<a href="#">[+]</a> </p>
-						</div>
-						<div class="main col-md-4">
+							    echo '<p>';
+									echo 'Texto do post';
+									echo '<a href="#"> [+] </a>';
+								echo '</p>';
+
 							
-						</div>
-	
+							endwhile;
+							 
+							// Reset Query
+							wp_reset_query();
+							?>
 
-						<div class="clearfix"></div>
+							<div class="foto-materia col-md-4">
+								<img src="img/foto_elnio.jpg" alt="">
+							</div>
+
+							<div class="clearfix"></div>
 
 						<!-- conteudo do meio da coluna esquerda -->
 
