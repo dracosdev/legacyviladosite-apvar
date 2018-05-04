@@ -21,6 +21,7 @@ function widgets_novos_widgets_init() {
 add_action( 'widgets_init', 'widgets_novos_widgets_init' );
 
 
+// Carrega os scripts de javascript, bootstrap e etc
 function carrega_scripts(){
 
 	wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), null, 'all');
