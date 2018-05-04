@@ -68,6 +68,10 @@ h2.main-title.col-md-12 {
     color: #003366;
 }
 
+h3.main-title.col-md-12 {
+    color: #003366;
+}
+
 .widget-space ul {
     list-style: none;
 }
@@ -76,7 +80,7 @@ h2.main-title.col-md-12 {
     text-decoration: none;
 }
 
-h2.main-title.col-md-12 {
+h3.main-title.col-md-12 {
     margin-top: 0;
 }
 
