@@ -1,26 +1,32 @@
 <?php get_header(); ?>
 
 
-<!-- Montagem dos argumentos para cada loop -->
+
 
 <?php
-$arg_apvaracao = array(
-	'category_name' => 'beneficios',
-	'post_type' => 'post',
-	'posts_per_page' => 3,
-	'post__not_in' => get_option("sticky_posts"));
 
-$arg_quadroavisos = array(
-	'category_name' => 'beneficios',
+// Montagem dos argumentos para cada loop
+$args_apvaracao = array(
+	'cat' => 3,
 	'post_type' => 'post',
-	'posts_per_page' => 3,
-	'post__not_in' => get_option("sticky_posts"));
+	'posts_per_page' => 2
+);
 
-$arg_deunaimprensa = array(
-	'category_name' => 'beneficios',
+$args_quadroavisos = array(
+	'category_name' => 'quadroavisos',
 	'post_type' => 'post',
-	'posts_per_page' => 3,
-	'post__not_in' => get_option("sticky_posts"));
+	'posts_per_page' => 2
+);
+
+$args_deunaimprensa = array(
+	'category_name' => 'deunaimprensa',
+	'post_type' => 'post',
+	'posts_per_page' => 3
+);
+
+
+// Montagem das mensagens pré-definidas
+$nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p>';
 
 ?>
 
@@ -45,25 +51,27 @@ $arg_deunaimprensa = array(
 
 							// Loop da área "Apvar em Ação"
 							query_posts( $args_apvaracao );
-							 
-							// The Loop
-							while ( have_posts() ) : the_post();
-							    echo '<div class="main col-md-8">';
-							    	echo '<h4 class="m-title">';
-							    		echo '<a href="#">'; the_title(); echo '</a>';
-							    	echo '</h4>'
-							    echo '</div>';
 
-							    echo '<p>';
-									echo 'Texto do post';
-									echo '<a href="#"> [+] </a>';
-								echo '</p>';
+							 
+							// Loop 
+							while ( have_posts() ) : the_post();
+							    echo '
+							    <div class="main col-md-8">
+							    	<h4 class="m-title">',
+							    		'<a href="', the_permalink(), '">', the_title(), '</a>',
+							    	'</h4>',
+							    
+							    	'<p>',
+										the_excerpt(), ' <a href="', the_permalink(), '">[+]</a>',
+									'</p>',
+								'</div>';
 
 							
+								// Reseta o query de posts
+								wp_reset_postdata();
+							
 							endwhile;
-							 
-							// Reset Query
-							wp_reset_query();
+
 							?>
 
 							<div class="foto-materia col-md-4">
