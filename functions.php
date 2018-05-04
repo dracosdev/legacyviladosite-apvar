@@ -6,10 +6,7 @@ if ( function_exists( 'register_nav_menu' ) ) {
 	register_nav_menu( 'menu_princ', 'Este é o menu principal do site' );
 }
 
-/**
- * Criando uma area de widgets
- *
- */
+// Criando uma area de widgets
 function widgets_novos_widgets_init() {
 
 	register_sidebar( array(
