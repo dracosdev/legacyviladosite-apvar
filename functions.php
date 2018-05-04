@@ -39,4 +39,21 @@ function carrega_scripts(){
 
 add_action('wp_enqueue_scripts', 'carrega_scripts');
 
+// Modifica o excerpt padrão para 20 caracteres
+function wpdocs_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+
+// Modifica o link de leia mais do excerpt padrão para deixa-lo vazio e montar direto no html
+function wpdocs_excerpt_more( $more ) {
+    return '';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+// Adiciona suporte à imagens de destaque em posts e páginas
+add_theme_support('post-thumbnails');
+
+
  ?>
