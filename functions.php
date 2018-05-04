@@ -23,6 +23,21 @@ function widgets_novos_widgets_init() {
 }
 add_action( 'widgets_init', 'widgets_novos_widgets_init' );
 
+class ouvidoria_widget extends WP_Widget {
+	
+	function __construct() {
+	parent::__construct(
+	// widget ID
+	'ouvidoria_widget',
+	// widget name
+	__('Ouvidoria Sample Widget', ' ouvidoria_widget_domain'),
+	// widget description
+	array( 'description' => __( 'Ouvidoria Widget Use', 'ouvidoria_widget_domain' ), )
+	);
+	}
+ 
+}
+
 
 function carrega_scripts(){
 
