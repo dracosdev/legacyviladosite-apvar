@@ -13,9 +13,9 @@ function widgets_novos_widgets_init() {
 		'name' => 'lateral_right',
 		'id' => 'lat_right_widgets',
 		'before_widget' => '<div class="widget-space row">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3 class="main-title col-md-12">',
-		'after_title' => '</h3>',
+		'after_widget' => '</div> <div class="separator col-md-12"></div> <div class="clearfix"></div>',
+		'before_title' => '<h4 class="main-title col-md-12">',
+		'after_title' => '</h4>',
 	) );
 }
 add_action( 'widgets_init', 'widgets_novos_widgets_init' );
