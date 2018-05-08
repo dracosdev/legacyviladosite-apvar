@@ -13,13 +13,13 @@ $args_apvaracao = array(
 );
 
 $args_quadroavisos = array(
-	'category_name' => 'quadroavisos',
+	'cat' => 4,
 	'post_type' => 'post',
 	'posts_per_page' => 2
 );
 
 $args_deunaimprensa = array(
-	'category_name' => 'deunaimprensa',
+	'cat' => 5,
 	'post_type' => 'post',
 	'posts_per_page' => 3
 );
@@ -32,7 +32,6 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 
 
 		<!-- header area -->
-
 		<div class="row content center-block">
 			<div class="main col-md-6">
 				
@@ -43,6 +42,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 					<div class="chamada col-md-8">
 						<h5>Confira a atuação da Apvar conforme registros em diversos meios de comunicação</h5>
 					</div>
+					
 					<div class="clearfix"></div>
 
 						<hr>
@@ -80,87 +80,97 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 
 							<div class="clearfix"></div>
 
-						<!-- conteudo do meio da coluna esquerda -->
 
-						<div class="main-title col-md-4">
-							<h4>Quadro de Avisos</h4>
-						</div>
-						<div class="chamada col-md-8">
-							<h5>Informe-se sobre eventos e fatos relevantes para os pilotos e outros aeronautas da ativa ou aposentados</h5>
-						</div>
+				<div class="main-title col-md-4">
+					<h4>Quadro de Avisos</h4>
+				</div>
 
-						<div class="clearfix"></div>
+					<div class="chamada col-md-8">
+						<h5>Informe-se sobre eventos e fatos relevantes para os pilotos e outros aeronautas da ativa ou aposentados</h5>
+					</div>
 
-						<hr>
+					<div class="clearfix"></div>
 
-						<div class="main col-md-8">
-							<h4 class="m-title"><a href="#">Assembléias Gerais</a></h4>
+					<hr>
 
-							<img class="center-block" src="img/lanzoni.jpg" alt="">
+						<?php
 
-						</div>
+						// Loop da área "Quadro de Avisos"
+						query_posts( $args_quadroavisos );
+
+						 
+						// Loop 
+						while ( have_posts() ) : the_post();
+						    echo '
+						    <div class="main col-md-8">
+						    	<h4 class="m-title">',
+						    		'<a href="', the_permalink(), '">', the_title(), '</a>',
+						    	'</h4>',
+						    
+						    	'<p>',
+									the_excerpt(), ' <a href="', the_permalink(), '">[+]</a>',
+								'</p>',
+							'</div>';
+
 						
-						<div class="clearfix"></div>			
+							// Reseta o query de posts
+							wp_reset_postdata();
+						
+						endwhile;
+
+						?>
+
+					<div class="clearfix"></div>			
 
 			</div>
 
-			<!-- coluna do meio -->
 
+			<!-- coluna do meio -->
 			<div class="second middle-section col-md-4">
 				
+				<div class="main-title col-md-4">
+					<h4>Deu na Imprensa</h4>
+				</div>
 					
-						
-							<div class="main-title col-md-4">
-								<h4>Deu na Imprensa</h4>
-							</div>
-							<div class="chamada col-md-8">
-								<h5>Notícias sobre a indústria e outros temas de interesse específico.</h5>
-							</div>
+					<div class="chamada col-md-8">
+						<h5>Notícias sobre a indústria e outros temas de interesse específico.</h5>
+					</div>
 
-								<div class="clearfix"></div>
+					<div class="clearfix"></div>
 
-							<hr>	
+					<hr>
 
-							<div class="foto-materia col-md-8">
-								<img src="img/foto_elnio.jpg" alt="">
-							</div>
+					<?php
 
-							<div class="main col-md-8">
-								<h4 class="m-title"><a href="#">Tópicos de uma recuperação considerada emblemática </a></h4>
-								<p>Cmte. Silvio FRÓES – 16/03/2011
-								... quando foi anunciada a presença do Juiz Luiz Roberto Ayoub ...<a href="#">[+]</a> </p>
-							</div>
-						
-							<div class="clearfix"></div>
+					// Loop da área "Deu na Imprensa"
+					query_posts( $args_deunaimprensa );
 
-						
-							<div class="main col-md-4">
-								<h5>Terra <br>13/04/2011 19h43</h5>
-							</div>
-								
-								<div class="clearfix"></div>
+					 
+					// Loop 
+					while ( have_posts() ) : the_post();
+					    echo '
+					    <div class="main col-md-8">
+					    	<h4 class="m-title">',
+					    		'<a href="', the_permalink(), '">', the_title(), '</a>',
+					    	'</h4>',
+					    
+					    	'<p>',
+								the_excerpt(), ' <a href="', the_permalink(), '">[+]</a>',
+							'</p>',
+						'</div>';
 
-							<div class="main col-md-8">
-								
-								<h4 class="m-title"> <a href="#"> vc repórter: aposentados da Varig realizam manifestação no RJ ...[+]</a> </h4>
-							</div>
+					
+						// Reseta o query de posts
+						wp_reset_postdata();
+					
+					endwhile;
 
-								<div class="clearfix"></div>
+					?>
 
-							
-							<div class="chamada col-md-8">
-								<p>Fruto da falsa paz que impera em nossa cidade, perdemos mais um fiel associado da APVAR. </p>
-							</div>
-
-							<div class="clearfix"></div>
-
-							<div class="chamada col-md-8">
-								<h4 class="m-title"><a href="#">Paulo Chefia Viola </a></h4>
-								<p>A covardia das ruas do Rio matou o Paulinho...<a href="#">[+]</a> </p>
-							</div>
-
-						
-				
+					<div class="foto-materia col-md-8">
+						<img src="img/foto_elnio.jpg" alt="">
+					</div>
+			
 			</div>
 
 			<!-- area da sidebar -->
