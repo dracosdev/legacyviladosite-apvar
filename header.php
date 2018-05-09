@@ -12,6 +12,8 @@
 	<body <?php body_class(); ?>>
 			
 		<div class="container main-container">
+
+			<div class="siteArea col-sm-12 col-md-10 col-md-offset-1">			
 		
 			<header class="header row">
 

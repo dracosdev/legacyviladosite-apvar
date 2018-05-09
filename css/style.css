@@ -2,11 +2,34 @@
 
 body{
 	background: linear-gradient(#09335D, #4478AA);
+    font-size: 12px;
 }
 
-.main-container{
+.h5, h5 {
+    font-size: 13px;
+}
+
+.h4, h4 {
+    font-size: 15px;
+}
+
+.h3, h3 {
+    font-size: 17px;
+}
+
+.h2, h2 {
+    font-size: 22px;
+}
+
+.h1, h1 {
+    font-size: 30px;
+}
+
+.siteArea{
 	background: #FFFFCC;
 }
+
+
 
 h4.m-title a {
     color: #003366;
@@ -55,6 +78,7 @@ hr{
 
 .widget-area-down table{
 	border: solid 1px;
+    font-size: 11px;
 }
 
 footer.footer.col-md-12 {
@@ -68,6 +92,10 @@ h2.main-title.col-md-12 {
     color: #003366;
 }
 
+h3.main-title.col-md-12 {
+    color: #003366;
+}
+
 .widget-space ul {
     list-style: none;
 }
@@ -76,6 +104,36 @@ h2.main-title.col-md-12 {
     text-decoration: none;
 }
 
-h2.main-title.col-md-12 {
+h3.main-title.col-md-12 {
     margin-top: 0;
+}
+
+h4.main-title.col-md-12 {
+    padding: 10px;
+    margin-top: 0;
+}
+
+.ouvidoria-text{
+    text-align: center;
+}
+
+header.header.row {
+    text-align: center;
+    background: linear-gradient(to right, #fff, #FFFFCC);
+}
+
+.row.content.center-block {
+    margin-top: 20px;
+}
+
+nav.navbar.navbar-default.center-block {
+    margin-bottom: 0;
+}
+
+#logotipo {
+    margin: 25px;
+}
+
+.chamada h5 {
+    margin-top: 1px;
 }

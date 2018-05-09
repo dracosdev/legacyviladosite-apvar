@@ -1,8 +1,5 @@
 <?php get_header(); ?>
 
-
-
-
 <?php
 
 // Montagem dos argumentos para cada loop
@@ -13,13 +10,13 @@ $args_apvaracao = array(
 );
 
 $args_quadroavisos = array(
-	'category_name' => 'quadroavisos',
+	'cat' => 4,
 	'post_type' => 'post',
 	'posts_per_page' => 2
 );
 
 $args_deunaimprensa = array(
-	'category_name' => 'deunaimprensa',
+	'cat' => 5,
 	'post_type' => 'post',
 	'posts_per_page' => 3
 );
@@ -32,7 +29,6 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 
 
 		<!-- header area -->
-
 		<div class="row content center-block">
 			<div class="main col-md-6">
 				
@@ -43,6 +39,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 					<div class="chamada col-md-8">
 						<h5>Confira a atuação da Apvar conforme registros em diversos meios de comunicação</h5>
 					</div>
+					
 					<div class="clearfix"></div>
 
 						<hr>
@@ -56,6 +53,11 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 							// Loop 
 							while ( have_posts() ) : the_post();
 							    echo '
+
+							    <div class="foto-materia col-md-4">
+									<img src="wp-content/themes/', get_template(), 'img/foto_elnio.jpg" alt="">
+								</div>
+
 							    <div class="main col-md-8">
 							    	<h4 class="m-title">',
 							    		'<a href="', the_permalink(), '">', the_title(), '</a>',
@@ -74,93 +76,113 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 
 							?>
 
+
+							<div class="clearfix"></div>
+
+
+				<div class="main-title col-md-4">
+					<h4>Quadro de Avisos</h4>
+				</div>
+
+					<div class="chamada col-md-8">
+						<h5>Informe-se sobre eventos e fatos relevantes para os pilotos e outros aeronautas da ativa ou aposentados</h5>
+					</div>
+
+					<div class="clearfix"></div>
+
+					<hr>
+
+						<?php
+
+						// Loop da área "Quadro de Avisos"
+						query_posts( $args_quadroavisos );
+
+						 
+						// Loop 
+						while ( have_posts() ) : the_post();
+						    echo '
+						    
+						    <div class="foto-materia col-md-4">
+								<img src="wp-content/themes/', get_template(), 'img/foto_elnio.jpg" alt="">
+							</div>
+
+						    <div class="main col-md-8">
+						    	<h4 class="m-title">',
+						    		'<a href="', the_permalink(), '">', the_title(), '</a>',
+						    	'</h4>',
+						    
+						    	'<p>',
+									the_excerpt(), ' <a href="', the_permalink(), '">[+]</a>',
+								'</p>',
+							'</div>';
+
+						
+							// Reseta o query de posts
+							wp_reset_postdata();
+						
+						endwhile;
+
+						?>
+
+					<div class="clearfix"></div>			
+
+			</div>
+
+
+			<!-- coluna do meio -->
+			<div class="second middle-section col-md-4">
+				
+				<div class="main-title col-md-4">
+					<h4>Deu na Imprensa</h4>
+				</div>
+					
+					<div class="chamada col-md-8">
+						<h5>Notícias sobre a indústria e outros temas de interesse específico.</h5>
+					</div>
+
+					<div class="clearfix"></div>
+
+					<hr>
+
 							<div class="foto-materia col-md-4">
 								<img src="img/foto_elnio.jpg" alt="">
 							</div>
 
-							<div class="clearfix"></div>
+					<?php
+					// Loop da área "Deu na Imprensa"
+					query_posts( $args_deunaimprensa );
 
-						<!-- conteudo do meio da coluna esquerda -->
-
-						<div class="main-title col-md-4">
-							<h4>Quadro de Avisos</h4>
+					 
+					// Loop 
+					while ( have_posts() ) : the_post();
+					    echo '
+					    
+					    <div class="foto-materia col-md-4">
+							<img src="wp-content/themes/', get_template(), 'img/foto_elnio.jpg" alt="">
 						</div>
-						<div class="chamada col-md-8">
-							<h5>Informe-se sobre eventos e fatos relevantes para os pilotos e outros aeronautas da ativa ou aposentados</h5>
-						</div>
 
-						<div class="clearfix"></div>
+					    <div class="main col-md-8">
+					    	<h4 class="m-title">',
+					    		'<a href="', the_permalink(), '">', the_title(), '</a>',
+					    	'</h4>',
+					    
+					    	'<p>',
+								the_excerpt(), ' <a href="', the_permalink(), '">[+]</a>',
+							'</p>',
+						'</div>';
 
-						<hr>
-
-						<div class="main col-md-8">
-							<h4 class="m-title"><a href="#">Assembléias Gerais</a></h4>
-
-							<img class="center-block" src="img/lanzoni.jpg" alt="">
-
-						</div>
-						
-						<div class="clearfix"></div>			
-
-			</div>
-
-			<!-- coluna do meio -->
-
-			<div class="second middle-section col-md-4">
-				
 					
-						
-							<div class="main-title col-md-4">
-								<h4>Deu na Imprensa</h4>
-							</div>
-							<div class="chamada col-md-8">
-								<h5>Notícias sobre a indústria e outros temas de interesse específico.</h5>
-							</div>
+						// Reseta o query de posts
+						wp_reset_postdata();
+					
+					endwhile;
 
-								<div class="clearfix"></div>
+					?>
 
-							<hr>	
-
-							<div class="foto-materia col-md-8">
-								<img src="img/foto_elnio.jpg" alt="">
-							</div>
-
-							<div class="main col-md-8">
-								<h4 class="m-title"><a href="#">Tópicos de uma recuperação considerada emblemática </a></h4>
-								<p>Cmte. Silvio FRÓES – 16/03/2011
-								... quando foi anunciada a presença do Juiz Luiz Roberto Ayoub ...<a href="#">[+]</a> </p>
-							</div>
-						
-							<div class="clearfix"></div>
-
-						
-							<div class="main col-md-4">
-								<h5>Terra <br>13/04/2011 19h43</h5>
-							</div>
-								
-								<div class="clearfix"></div>
-
-							<div class="main col-md-8">
-								
-								<h4 class="m-title"> <a href="#"> vc repórter: aposentados da Varig realizam manifestação no RJ ...[+]</a> </h4>
-							</div>
-
-								<div class="clearfix"></div>
-
-							
-							<div class="chamada col-md-8">
-								<p>Fruto da falsa paz que impera em nossa cidade, perdemos mais um fiel associado da APVAR. </p>
-							</div>
-
-							<div class="clearfix"></div>
-
-							<div class="chamada col-md-8">
-								<h4 class="m-title"><a href="#">Paulo Chefia Viola </a></h4>
-								<p>A covardia das ruas do Rio matou o Paulinho...<a href="#">[+]</a> </p>
-							</div>
-
-						
-				
+					<div class="foto-materia col-md-8">
+						<img src="img/foto_elnio.jpg" alt="">
+					</div>
+			
 			</div>
 
 			<!-- area da sidebar -->
@@ -237,7 +259,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 								<p>Centenas de pilotos da Varig se encontram radicados pelo mundo e  a qualquer  hora podem estar navegando também nesta página</p>
 							</div>
 							<div class="main-title col-md-4">
-								<h4>UTC:	14:03:30 - Thursday - 26 April</h4>
+								<h5>UTC:	14:03:30 - Thursday - 26 April</h5>
 							</div>
 
 
