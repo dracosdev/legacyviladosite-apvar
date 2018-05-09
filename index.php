@@ -53,6 +53,11 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 							// Loop 
 							while ( have_posts() ) : the_post();
 							    echo '
+
+							    <div class="foto-materia col-md-4">
+									<img src="wp-content/themes/', get_template(), 'img/foto_elnio.jpg" alt="">
+								</div>
+
 							    <div class="main col-md-8">
 							    	<h4 class="m-title">',
 							    		'<a href="', the_permalink(), '">', the_title(), '</a>',
@@ -71,9 +76,6 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 
 							?>
 
-							<div class="foto-materia col-md-4">
-								<img src="img/foto_elnio.jpg" alt="">
-							</div>
 
 							<div class="clearfix"></div>
 
@@ -99,6 +101,11 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 						// Loop 
 						while ( have_posts() ) : the_post();
 						    echo '
+						    
+						    <div class="foto-materia col-md-4">
+								<img src="wp-content/themes/', get_template(), 'img/foto_elnio.jpg" alt="">
+							</div>
+
 						    <div class="main col-md-8">
 						    	<h4 class="m-title">',
 						    		'<a href="', the_permalink(), '">', the_title(), '</a>',
@@ -141,6 +148,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 								<img src="img/foto_elnio.jpg" alt="">
 							</div>
 
+					<?php
 					// Loop da área "Deu na Imprensa"
 					query_posts( $args_deunaimprensa );
 
@@ -148,6 +156,11 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 					// Loop 
 					while ( have_posts() ) : the_post();
 					    echo '
+					    
+					    <div class="foto-materia col-md-4">
+							<img src="wp-content/themes/', get_template(), 'img/foto_elnio.jpg" alt="">
+						</div>
+
 					    <div class="main col-md-8">
 					    	<h4 class="m-title">',
 					    		'<a href="', the_permalink(), '">', the_title(), '</a>',
