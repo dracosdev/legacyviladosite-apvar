@@ -78,6 +78,7 @@ hr{
 
 .widget-area-down table{
 	border: solid 1px;
+    font-size: 11px;
 }
 
 footer.footer.col-md-12 {
@@ -114,4 +115,17 @@ h4.main-title.col-md-12 {
 
 .ouvidoria-text{
     text-align: center;
+}
+
+header.header.row {
+    text-align: center;
+    background: linear-gradient(to right, #fff, #FFFFCC);
+}
+
+.row.content.center-block {
+    margin-top: 20px;
+}
+
+nav.navbar.navbar-default.center-block {
+    margin-bottom: 0;
 }

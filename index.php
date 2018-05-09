@@ -1,8 +1,5 @@
 <?php get_header(); ?>
 
-
-
-
 <?php
 
 // Montagem dos argumentos para cada loop
@@ -237,7 +234,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 								<p>Centenas de pilotos da Varig se encontram radicados pelo mundo e  a qualquer  hora podem estar navegando também nesta página</p>
 							</div>
 							<div class="main-title col-md-4">
-								<h4>UTC:	14:03:30 - Thursday - 26 April</h4>
+								<h5>UTC:	14:03:30 - Thursday - 26 April</h5>
 							</div>
 
 
