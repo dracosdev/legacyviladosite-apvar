@@ -118,7 +118,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 
 							<hr>	
 
-							<div class="foto-materia col-md-8">
+							<div class="foto-materia col-md-4">
 								<img src="img/foto_elnio.jpg" alt="">
 							</div>
 

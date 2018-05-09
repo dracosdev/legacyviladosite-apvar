@@ -129,3 +129,11 @@ header.header.row {
 nav.navbar.navbar-default.center-block {
     margin-bottom: 0;
 }
+
+#logotipo {
+    margin: 25px;
+}
+
+.chamada h5 {
+    margin-top: 1px;
+}
