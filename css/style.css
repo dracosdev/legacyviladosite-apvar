@@ -137,3 +137,9 @@ nav.navbar.navbar-default.center-block {
 .chamada h5 {
     margin-top: 1px;
 }
+
+/* ajuste do thumbnail das matérias */
+.foto-materia img {
+    max-width: 100%;
+    height: auto;
+}

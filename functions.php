@@ -1,5 +1,7 @@
 <?php 
 
+//suporte para imagens de destaque
+add_theme_support( 'post-thumbnails' );
 
 // Cria o menu principal
 if ( function_exists( 'register_nav_menu' ) ) {
