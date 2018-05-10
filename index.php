@@ -53,6 +53,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 							// Loop 
 							while ( have_posts() ) : the_post();
 							    echo '
+							    <div class="envolve row">
 
 							    <div class="foto-materia col-md-4">',
 									the_post_thumbnail(), 
@@ -66,7 +67,8 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 							    	'<p>',
 										the_excerpt(), ' <a href="', the_permalink(), '">[+]</a>',
 									'</p>',
-								'</div>';
+								'</div>
+								</div>';
 
 							
 								// Reseta o query de posts
@@ -101,7 +103,8 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 						// Loop 
 						while ( have_posts() ) : the_post();
 						    echo '
-						    
+						    <div class="envolve row">
+
 						    <div class="foto-materia col-md-4">',
 									the_post_thumbnail(), 
 								'</div>
@@ -114,7 +117,8 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 						    	'<p>',
 									the_excerpt(), ' <a href="', the_permalink(), '">[+]</a>',
 								'</p>',
-							'</div>';
+							'</div>
+							</div>';
 
 						
 							// Reseta o query de posts
@@ -153,6 +157,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 					// Loop 
 					while ( have_posts() ) : the_post();
 					    echo '
+					    <div class="envolve row">
 					    
 					    <div class="foto-materia col-md-4">',
 							the_post_thumbnail(), 
@@ -166,7 +171,8 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 					    	'<p>',
 								the_excerpt(), ' <a href="', the_permalink(), '">[+]</a>',
 							'</p>',
-						'</div>';
+						'</div>
+						</div>';
 
 					
 						// Reseta o query de posts

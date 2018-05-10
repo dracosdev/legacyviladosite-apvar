@@ -18,10 +18,10 @@
 			<header class="header row">
 
 				<a href="index.html">
-				<img id='logotipo' src='wp-content/themes/<?php echo get_template(); ?>/img/logotitulo.gif' alt='Logotipo'>
+				<img id='logotipo' src='wp-content/themes/<?php echo get_template(); ?>/img/apvar-logo.png' alt='Logotipo'>
 				</a>
 
-				<nav class="navbar navbar-default center-block">
+				<nav class="navbar navbar-default menu-barra">
 
 					<?php 
 
