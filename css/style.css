@@ -118,7 +118,6 @@ h4.main-title.col-md-12 {
 }
 
 header.header.row {
-    text-align: center;
     background: linear-gradient(to right, #fff, #FFFFCC);
 }
 
@@ -131,7 +130,7 @@ nav.navbar.navbar-default.center-block {
 }
 
 #logotipo {
-    margin: 25px;
+    margin: 20px;
 }
 
 .chamada h5 {
@@ -142,4 +141,10 @@ nav.navbar.navbar-default.center-block {
 .foto-materia img {
     max-width: 100%;
     height: auto;
+}
+
+nav.navbar.navbar-default.menu-barra {
+    margin-bottom: 0;
+    border: solid 4px #717171;
+    border-radius: 0;
 }
