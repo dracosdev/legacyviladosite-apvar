@@ -61,11 +61,11 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 
 							    <div class="main col-md-8">
 							    	<h4 class="m-title">',
-							    		'<a href="', the_permalink(), '">', the_title(), '</a>',
+							    		'<a href="', the_permalink(), '">', the_title(),
 							    	'</h4>',
 							    
 							    	'<p>',
-										the_excerpt(), ' <a href="', the_permalink(), '">[+]</a>',
+										the_excerpt(), ' [+]</a>',
 									'</p>',
 								'</div>
 								</div>';
