@@ -53,21 +53,22 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 							// Loop 
 							while ( have_posts() ) : the_post();
 							    echo '
-							    <div class="envolve row">
+							    <div class="envolve row col-md-12">
 
-							    <div class="foto-materia col-md-4">',
-									the_post_thumbnail(), 
-								'</div>
+								    <div class="foto-materia col-md-4">',
+										the_post_thumbnail(), 
+									'</div>
 
-							    <div class="main col-md-8">
-							    	<h4 class="m-title">',
-							    		'<a href="', the_permalink(), '">', the_title(),
-							    	'</h4>',
-							    
-							    	'<p>',
-										the_excerpt(), ' [+]</a>',
-									'</p>',
-								'</div>
+								    <div class="main col-md-8">
+								    	<h4 class="m-title">',
+								    		'<a href="', the_permalink(), '">', the_title(),
+								    	'</h4>',
+								    
+								    	'<p>',
+											the_excerpt(), '</a>',
+										'</p>',
+									'</div>
+
 								</div>';
 
 							
@@ -103,7 +104,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 						// Loop 
 						while ( have_posts() ) : the_post();
 						    echo '
-						    <div class="envolve row">
+						    <div class="envolve row col-md-12">
 
 						    <div class="foto-materia col-md-4">',
 									the_post_thumbnail(), 
@@ -111,11 +112,11 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 
 						    <div class="main col-md-8">
 						    	<h4 class="m-title">',
-						    		'<a href="', the_permalink(), '">', the_title(), '</a>',
+						    		'<a href="', the_permalink(), '">', the_title(),
 						    	'</h4>',
 						    
 						    	'<p>',
-									the_excerpt(), ' <a href="', the_permalink(), '">[+]</a>',
+									the_excerpt(), '</a>',
 								'</p>',
 							'</div>
 							</div>';
@@ -157,7 +158,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 					// Loop 
 					while ( have_posts() ) : the_post();
 					    echo '
-					    <div class="envolve row">
+					    <div class="envolve row  col-md-12">
 					    
 					    <div class="foto-materia col-md-4">',
 							the_post_thumbnail(), 
@@ -165,11 +166,11 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 
 					    <div class="main col-md-8">
 					    	<h4 class="m-title">',
-					    		'<a href="', the_permalink(), '">', the_title(), '</a>',
+					    		'<a href="', the_permalink(), '">', the_title(),
 					    	'</h4>',
 					    
 					    	'<p>',
-								the_excerpt(), ' <a href="', the_permalink(), '">[+]</a>',
+								the_excerpt(), '</a>',
 							'</p>',
 						'</div>
 						</div>';
