@@ -30,14 +30,14 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 
 		<!-- header area -->
 		<div class="row content center-block">
-			<div class="main col-md-6">
+			<div class="main col-md-10">
 				
-				<div class="main-title col-md-4">
-					<h4><i class="fas fa-plane"></i>Apvar em Ação</h4>
+				<div class="main-title col-md-12">
+					<h4><i class="fa fa-plane"></i>Apvar em Ação</h4>
 				</div>
 
 				<?php if (have_posts()) : while(have_posts()) : the_post(); ?>
-					<div class="chamada col-md-8">
+					<div class="chamada col-md-12">
 						<h5></h5>
 						<?php the_content(); ?>
 
@@ -50,7 +50,6 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 					<hr>
 
 					<div class="clearfix"></div>			
-
 			</div>
 
 			<!-- area da sidebar -->
