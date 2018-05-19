@@ -53,6 +53,11 @@
 
 					 Fim da exibição do menu personalizado */ ?>
 
+					<div class="responsive-icon responsive-nav">
+                       <i class="fa fa-navicon"></i>
+                       <?php wp_nav_menu(array('depth' => 2, 'theme_location' => 'primary', 'container' => false)); ?>
+                    </div>
+
 				</nav>		 
 
 
