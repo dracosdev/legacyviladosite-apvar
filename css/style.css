@@ -72,6 +72,39 @@ hr{
     background-color: #BEA839;
 }
 
+.menu-barra ul ul {
+    display: none;
+    position: absolute;
+    z-index: 800;
+    text-align: left;
+    background: #000;
+    list-style: none;
+}
+
+.menu-barra ul li:hover > ul {
+    display: block;
+}
+
+.sub-menu a {
+    color: #ecd892;
+    text-decoration: none;
+        display: block;
+    padding: 15px 30px;
+}
+
+.sub-menu a:hover{
+    color: #fff;
+} 
+
+.sub-menu li:hover{
+    background: #BEA839;
+}
+
+ul.sub-menu {
+    padding: 0;
+    margin: 0;
+}
+
 .separator.col-md-12 {
     padding: 5px;
 }

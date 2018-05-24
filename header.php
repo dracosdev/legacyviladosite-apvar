@@ -27,6 +27,8 @@
 
 					wp_nav_menu( array(
 						'menu' => 'menu_princ',
+						'theme_location' => 'menu_princ',
+						'container' => 'nav',
 						'items_wrap' => '<ul id="%1$s" class="nav navbar-nav %2$s">%3$s</ul>'
 					) );
 
@@ -53,10 +55,6 @@
 
 					 Fim da exibição do menu personalizado */ ?>
 
-					<div class="responsive-icon responsive-nav">
-                       <i class="fa fa-navicon"></i>
-                       <?php wp_nav_menu(array('depth' => 2, 'theme_location' => 'primary', 'container' => false)); ?>
-                    </div>
 
 				</nav>		 
 
