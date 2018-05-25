@@ -32,18 +32,17 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 		<div class="row content center-block">
 			<div class="main col-md-10">
 				
-				
-
-				<?php if (have_posts()) : while(have_posts()) : the_post(); ?>
-
-					<div class="main-title col-md-12">
+				<div class="main-title col-md-12">
 					<h3><i class="fa fa-plane"></i><?php global $post;
 					$categoria = get_the_category($post->id);
 					$nomeCategoria = $categoria[0]->cat_name;
 					echo $nomeCategoria;
 					?>
 					</h3>
-					</div>
+				</div>
+
+				<?php if (have_posts()) : while(have_posts()) : the_post(); ?>
+
 
 					<div class="chamada col-md-12">
 						<h2><?php the_title(); ?></h2>
