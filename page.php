@@ -29,53 +29,30 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 
 
 		<!-- header area -->
-		<div class="row content center-block content-category">
+		<div class="row content center-block">
 			<div class="main col-md-10">
 				
 				<div class="main-title col-md-12">
-					<h3><i class="fa fa-plane"></i><?php single_cat_title('Categoria atual: ');
-					?>
+					<h3>
+						<i class="fa fa-plane"></i>
+						<?php echo the_category(' '); ?> 	
 					</h3>
 				</div>
 
-				<?php
+				<?php if (have_posts()) : while(have_posts()) : the_post(); ?>
 
-				 
-				// Loop 
-				while ( have_posts() ) : the_post();
-				    echo '
-				    <div class="chamada col-md-12">
 
-					    <div class="foto-materia col-md-4">',
-					    	'<a href="', the_permalink(), '">',
-							the_post_thumbnail(),
-							'</a>', 
-						'</div>
+					<div class="chamada col-md-12">
+						<h2><?php the_title(); ?></h2>
+						<?php the_content(); ?>
 
-					    <div class="main col-md-8">
-					    	<h4 class="m-title">',
-					    		'<a href="', the_permalink(), '">', the_title(),
-					    	'</h4>',
-					    
-					    	'<p>',
-								the_excerpt(), '[ leia mais ]</a>',
-							'</p>',
-						'</div>
-
-						<div class="clearfix"></div>
-
-						<hr>
-
-					</div>';
-
-				
-					// Reseta o query de posts
-					wp_reset_postdata();
-				
-				endwhile;
-
-				?>	
+					</div>
+				<?php endwhile; else: ?>
+				<?php endif; ?>	
 					
+					<div class="clearfix"></div>
+
+					<hr>
 
 					<div class="clearfix"></div>			
 			</div>
@@ -102,7 +79,6 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 
 
 		</div>
-
 
 		<!-- footer area -->
 <?php get_footer(); ?>
