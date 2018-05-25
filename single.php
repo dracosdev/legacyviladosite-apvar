@@ -64,52 +64,8 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 			<div class="bordas">
 			<aside class="complementary col-md-2">
 
-					<?php if ( dynamic_sidebar('lat_right_widgets') ) : else : endif; ?>
+					<?php get_sidebar(); ?>
 					
-					<!--
-						<div class="widget-space row">
-
-							
-
-							<div class="main-title col-md-12">
-								<h4>A Falsa "recuperação" da Varig</h4>
-							</div>
-							<div class="chamada col-md-12">
-								<h5>Registros que comprovam a fraude escandalosa contra os trabalhadores da Varig.</h5>
-							</div>
-
-								
-
-								<div class="clearfix"></div>
-
-								<hr>
-							
-							<div class="main col-md-12">
-								<h5>Graziela Baggio usurpa o voto da categoria aero-nauta para trair o interesse dos trabalhadores....</h5>
-							</div>
-
-								<div class="clearfix"></div>
-
-								<hr>
-							
-							<div class="main col-md-12">
-								<h5>Marco histórico para o Grupo de Pilotos...</h5>
-							</div>
-
-								<div class="clearfix"></div>
-
-								<hr>
-
-							<div class="main col-md-12">
-								<h5>Reintegração já para os perseguidos políticos da Varig...</h5>
-							</div>							
-
-								<div class="clearfix"></div>
-
-								<hr>
-							
-						</div>
-					-->
 
 						<div class="clearfix"></div>
 
