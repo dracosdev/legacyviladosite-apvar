@@ -38,7 +38,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 
 				<?php if (have_posts()) : while(have_posts()) : the_post(); ?>
 					<div class="chamada col-md-12">
-						<h5></h5>
+						<h5><?php the_title(); ?></h5>
 						<?php the_content(); ?>
 
 					</div>
