@@ -33,11 +33,9 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 			<div class="main col-md-10">
 				
 				<div class="main-title col-md-12">
-					<h3><i class="fa fa-plane"></i><?php global $post;
-					$categoria = get_the_category($post->id);
-					$nomeCategoria = $categoria[0]->cat_name;
-					echo $nomeCategoria;
-					?>
+					<h3>
+						<i class="fa fa-plane"></i>
+						<?php echo the_category(' '); ?> 	
 					</h3>
 				</div>
 

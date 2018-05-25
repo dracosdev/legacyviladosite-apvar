@@ -40,9 +40,6 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 
 				<?php
 
-				// Loop da área "Apvar em Ação"
-				query_posts( $args_apvaracao );
-
 				 
 				// Loop 
 				while ( have_posts() ) : the_post();
@@ -50,7 +47,9 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 				    <div class="chamada col-md-12">
 
 					    <div class="foto-materia col-md-4">',
-							the_post_thumbnail(), 
+					    	'<a href="', the_permalink(), '">',
+							the_post_thumbnail(),
+							'</a>', 
 						'</div>
 
 					    <div class="main col-md-8">
@@ -59,7 +58,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 					    	'</h4>',
 					    
 					    	'<p>',
-								the_excerpt(), '[ leia mais]</a>',
+								the_excerpt(), '[ leia mais ]</a>',
 							'</p>',
 						'</div>
 
