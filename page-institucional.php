@@ -4,7 +4,7 @@
 
 		<!-- header area -->
 		<div class="row content center-block">
-			<div class="main col-md-10 col-md-offset-1">
+			<div class="main col-md-10">
 
 				<?php if (have_posts()) : while(have_posts()) : the_post(); ?>
 
@@ -34,7 +34,16 @@
 			</div>
 
 			<!-- area da sidebar -->
-			
+			<div class="bordas">
+			<aside class="complementary col-md-2">
+
+					<?php get_sidebar(); ?>
+					
+
+						<div class="clearfix"></div>
+
+			</aside>
+			</div>
 
 
 			<div class="separator col-md-12">

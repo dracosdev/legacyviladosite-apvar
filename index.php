@@ -33,7 +33,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 			<div class="main col-md-6">
 				
 				<div class="main-title col-md-4">
-					<h4>Apvar em Ação</h4>
+					<a href="http://www.apvar.org.br/v1/category/apvaracao/"><h4>Apvar em Ação</h4></a>
 				</div>
 
 					<div class="chamada col-md-8">
@@ -84,7 +84,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 
 
 				<div class="main-title col-md-4">
-					<h4>Quadro de Avisos</h4>
+					<a href="http://www.apvar.org.br/v1/category/quadroavisos/"><h4>Quadro de Avisos</h4></a>
 				</div>
 
 					<div class="chamada col-md-8">
@@ -138,7 +138,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 			<div class="second middle-section col-md-4">
 				
 				<div class="main-title col-md-4">
-					<h4>Deu na Imprensa</h4>
+					<a href="http://www.apvar.org.br/v1/category/deunaimprensa/"><h4>Deu na Imprensa</h4></a>
 				</div>
 					
 					<div class="chamada col-md-8">
