@@ -181,3 +181,13 @@ nav.navbar.navbar-default.menu-barra {
     border: solid 4px #717171;
     border-radius: 0;
 }
+
+
+.plane-title {
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.envolve-titulo h2 {
+    display: inline-block;
+}
