@@ -18,7 +18,7 @@
 			<header class="header row">
 
 				<a href="index.html">
-				<img id='logotipo' src='wp-content/themes/<?php echo get_template(); ?>/img/apvar-logo.png' alt='Logotipo'>
+				<img id='logotipo' src='<?php echo get_bloginfo('template_directory') . '/img/apvar-logo.png'; ?>' alt='Logotipo'>
 				</a>
 
 				<nav class="navbar navbar-default menu-barra">
