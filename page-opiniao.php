@@ -41,10 +41,13 @@
 			<div class="bordas">
 			<aside class="complementary col-md-2">
 
-					<?php get_sidebar(); ?>
-					
+				<?php
+		        if(is_active_sidebar('lat_right_opiniao_widgets')){
+		            dynamic_sidebar('lat_right_opiniao_widgets');
+    			};
+    			?>
 
-						<div class="clearfix"></div>
+				<div class="clearfix"></div>
 
 			</aside>
 			</div>

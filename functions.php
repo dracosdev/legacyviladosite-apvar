@@ -14,11 +14,33 @@ function widgets_novos_widgets_init() {
 	register_sidebar( array(
 		'name' => 'lateral_right',
 		'id' => 'lat_right_widgets',
+		'description' => esc_html('Widget da direita da home'),
 		'before_widget' => '<div class="widget-space row">',
 		'after_widget' => '</div> <div class="separator col-md-12"></div> <div class="clearfix"></div>',
 		'before_title' => '<h4 class="main-title col-md-12">',
 		'after_title' => '</h4>',
 	) );
+
+	register_sidebar( array(
+		'name' => 'lateral_right_institucional',
+		'id' => 'lat_right_institucional_widgets',
+		'description' => esc_html('Widget da direita da Institucional'),
+		'before_widget' => '<div class="widget-space row">',
+		'after_widget' => '</div> <div class="separator col-md-12"></div> <div class="clearfix"></div>',
+		'before_title' => '<h4 class="main-title col-md-12">',
+		'after_title' => '</h4>',
+	) );
+
+	register_sidebar( array(
+		'name' => 'lateral_right_opiniao',
+		'id' => 'lat_right_opiniao_widgets',
+		'description' => esc_html('Widget da direita da Opiniao'),
+		'before_widget' => '<div class="widget-space row">',
+		'after_widget' => '</div> <div class="separator col-md-12"></div> <div class="clearfix"></div>',
+		'before_title' => '<h4 class="main-title col-md-12">',
+		'after_title' => '</h4>',
+	) );
+
 }
 add_action( 'widgets_init', 'widgets_novos_widgets_init' );
 

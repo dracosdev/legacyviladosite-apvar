@@ -32,7 +32,8 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 		<div class="row content center-block">
 			<div class="main col-md-6">
 				
-				<div class="main-title col-md-4">
+				<div class="main-title-home col-md-4">
+					<img id='circle-titulo' class="circle-titulo" src='<?php echo get_bloginfo('template_directory') . '/img/logo-circulo-titulo.png'; ?>' alt='circulo do titulo'>
 					<a href="http://www.apvar.org.br/v1/category/apvaracao/"><h4>Apvar em Ação</h4></a>
 				</div>
 
@@ -83,7 +84,8 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 							<div class="clearfix"></div>
 
 
-				<div class="main-title col-md-4">
+				<div class="main-title-home col-md-4">
+					<img id='circle-titulo' class="circle-titulo" src='<?php echo get_bloginfo('template_directory') . '/img/logo-circulo-titulo.png'; ?>' alt='circulo do titulo'>
 					<a href="http://www.apvar.org.br/v1/category/quadroavisos/"><h4>Quadro de Avisos</h4></a>
 				</div>
 
@@ -137,7 +139,8 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 			<!-- coluna do meio -->
 			<div class="second middle-section col-md-4">
 				
-				<div class="main-title col-md-4">
+				<div class="main-title-home col-md-4">
+					<img id='circle-titulo' class="circle-titulo" src='<?php echo get_bloginfo('template_directory') . '/img/logo-circulo-titulo.png'; ?>' alt='circulo do titulo'>
 					<a href="http://www.apvar.org.br/v1/category/deunaimprensa/"><h4>Deu na Imprensa</h4></a>
 				</div>
 					
@@ -207,7 +210,8 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 			<!-- aqui entra a parte antes do footer -->
 			<div class="down-content col-md-12">
 
-							<div class="main-title col-md-2">
+							<div class="main-title-home col-md-2">
+								<img id='circle-titulo' class="circle-titulo" src='<?php echo get_bloginfo('template_directory') . '/img/logo-circulo-titulo.png'; ?>' alt='circulo do titulo'>
 								<h4>Hora Mundial</h4>
 							</div>
 

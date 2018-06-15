@@ -191,3 +191,13 @@ nav.navbar.navbar-default.menu-barra {
 .envolve-titulo h2 {
     display: inline-block;
 }
+
+.circle-titulo {
+    position: relative;
+    padding: 2% 5%;
+}
+.main-title-home h4 {
+    position: absolute;
+    top: 0;
+    font-weight: bold;
+}

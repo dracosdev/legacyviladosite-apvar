@@ -21,7 +21,13 @@
 
 					<div class="clearfix"></div>
 
-					<div class="chamada col-md-12">
+					<div class="chamada col-md-2 col-xs-2">
+						
+						<img id='logo-title' class="plane-title" src='<?php echo get_bloginfo('template_directory') . '/img/quemsomos_vert.gif'; ?>' alt='Logotipo'>
+
+					</div>
+
+					<div class="chamada col-md-10 col-xs-10">
 						
 						<?php the_content(); ?>
 
@@ -40,11 +46,13 @@
 			<!-- area da sidebar -->
 			<div class="bordas">
 			<aside class="complementary col-md-2">
-
-					<?php get_sidebar(); ?>
+				<?php
+		        if(is_active_sidebar('lat_right_institucional_widgets')){
+		            dynamic_sidebar('lat_right_institucional_widgets');
+    			};
+    			?>
 					
-
-						<div class="clearfix"></div>
+					<div class="clearfix"></div>
 
 			</aside>
 			</div>
