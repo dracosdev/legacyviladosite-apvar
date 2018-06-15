@@ -4,7 +4,7 @@
 
 		<!-- header area -->
 		<div class="row content center-block">
-			<div class="main col-md-10 col-md-offset-1">
+			<div class="main col-md-12">
 
 				<?php if (have_posts()) : while(have_posts()) : the_post(); ?>
 
