@@ -5,6 +5,10 @@ body{
     font-size: 12px;
 }
 
+p{
+    text-align:  justify;
+}
+
 .h5, h5 {
     font-size: 13px;
 }
@@ -200,4 +204,15 @@ nav.navbar.navbar-default.menu-barra {
     position: absolute;
     top: 0;
     font-weight: bold;
+}
+
+/* pagina de diretores */
+.chamada-conteudo-dir {
+    /*margin-left: 15px;*/
+}
+.chamada-conteudo-dir p img{
+    float: left;
+}
+.dir-container {
+    display: inline;
 }
