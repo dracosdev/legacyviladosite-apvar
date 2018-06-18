@@ -1,15 +1,66 @@
 <?php 
 
-//suporte para imagens de destaque
-add_theme_support( 'post-thumbnails' );
+// ----------------------------------------------------------
+// Funções e recursos básicos do template
+// ----------------------------------------------------------
+
+
+// Adiciona suporte à imagens de destaque em posts e páginas
+add_theme_support('post-thumbnails');
 
 // Cria o menu principal
 if ( function_exists( 'register_nav_menu' ) ) {
 	register_nav_menu( 'menu_princ', 'Este é o menu principal do site' );
 }
 
-// Criando uma area de widgets
-function widgets_novos_widgets_init() {
+// Modifica o excerpt padrão para 20 caracteres
+function wpdocs_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+
+// Modifica o link de leia mais do excerpt padrão para deixa-lo vazio e montar direto no html
+function wpdocs_excerpt_more( $more ) {
+    return '';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+
+
+
+// ----------------------------------------------------------
+// Scripts
+// ----------------------------------------------------------
+
+
+// Carrega os scripts de javascript, bootstrap e etc
+function carrega_scripts(){
+
+	wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), null, 'all');
+
+	wp_enqueue_style('style', get_template_directory_uri().'/css/style.css', array(), null, 'all');
+
+
+	wp_enqueue_script('template', get_template_directory_uri().'/js/template.js', array(), null, true);
+
+	wp_enqueue_script('template', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array('jquery'), null, true);
+
+	wp_enqueue_script('template', 'https://use.fontawesome.com/releases/v5.0.10/js/all.js', array('jquery'), null, true);
+	
+}
+
+// Registra o carregamento dos scripts
+add_action('wp_enqueue_scripts', 'carrega_scripts');
+
+
+// ----------------------------------------------------------
+// Sidebars
+// ----------------------------------------------------------
+
+
+// Criando as sidebars básicas do template
+function sidebars_init() {
 
 	register_sidebar( array(
 		'name' => 'lateral_right',
@@ -42,15 +93,19 @@ function widgets_novos_widgets_init() {
 	) );
 
 }
-add_action( 'widgets_init', 'widgets_novos_widgets_init' );
+
+// Registra a inicialização das sidebars
+add_action( 'widgets_init', 'sidebars_init' );
 
 
-function ouvidoria_register_widget() {
-register_widget( 'ouvidoria_widget' );
-}
 
-add_action( 'widgets_init', 'ouvidoria_register_widget' );
 
+// ----------------------------------------------------------
+// Widgets
+// ----------------------------------------------------------
+
+
+// Cria o widget de Ouvidoria
 class ouvidoria_widget extends WP_Widget {
 	
 	function __construct() {
@@ -101,39 +156,15 @@ class ouvidoria_widget extends WP_Widget {
 }
 
 
-// Carrega os scripts de javascript, bootstrap e etc
-function carrega_scripts(){
 
-	wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), null, 'all');
-
-	wp_enqueue_style('style', get_template_directory_uri().'/css/style.css', array(), null, 'all');
-
-
-	wp_enqueue_script('template', get_template_directory_uri().'/js/template.js', array(), null, true);
-
-	wp_enqueue_script('template', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array('jquery'), null, true);
-
-	wp_enqueue_script('template', 'https://use.fontawesome.com/releases/v5.0.10/js/all.js', array('jquery'), null, true);
+// Registra e inicializa os widgets
+function register_widgets() {
 	
+	register_widget( 'ouvidoria_widget' );
+
 }
 
-add_action('wp_enqueue_scripts', 'carrega_scripts');
-
-// Modifica o excerpt padrão para 20 caracteres
-function wpdocs_custom_excerpt_length( $length ) {
-    return 20;
-}
-add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
-
-
-// Modifica o link de leia mais do excerpt padrão para deixa-lo vazio e montar direto no html
-function wpdocs_excerpt_more( $more ) {
-    return '';
-}
-add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
-
-// Adiciona suporte à imagens de destaque em posts e páginas
-add_theme_support('post-thumbnails');
+add_action( 'widgets_init', 'register_widgets' );
 
 
  ?>
