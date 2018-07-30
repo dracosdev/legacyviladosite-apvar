@@ -13,18 +13,47 @@ if ( function_exists( 'register_nav_menu' ) ) {
 	register_nav_menu( 'menu_princ', 'Este é o menu principal do site' );
 }
 
-// Modifica o excerpt padrão para 20 caracteres
-function wpdocs_custom_excerpt_length( $length ) {
-    return 20;
-}
-add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
-
-
 // Modifica o link de leia mais do excerpt padrão para deixa-lo vazio e montar direto no html
 function wpdocs_excerpt_more( $more ) {
     return '';
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+
+// Função para delimitar o excerpt
+function the_excerpt_max($charlength) {
+    $excerpt = get_the_excerpt();
+    $charlength++;
+
+    if ( mb_strlen( $excerpt ) > $charlength ) {
+        $subex = mb_substr( $excerpt, 0, $charlength - 5 );
+        $exwords = explode( ' ', $subex );
+        $excut = - ( mb_strlen( $exwords[ count( $exwords ) - 1 ] ) );
+        if ( $excut < 0 ) {
+            echo mb_substr( $subex, 0, $excut );
+        } else {
+            echo $subex;
+        }
+        echo '[...]';
+    } else {
+        echo $excerpt;
+    }
+}
+
+
+
+// Função para delimitar o title
+function the_title_max($thelength) {
+    $thetitle = get_the_title(); /* or you can use get_the_title() */
+    $getlength = strlen($thetitle);
+    echo substr($thetitle, 0, $thelength);
+    if ($getlength > $thelength) echo "...";
+}
+
+
+
+
+
 
 
 

@@ -67,7 +67,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 								    	</h4>
 								    
 								    	<p>
-											<?php the_excerpt() ?> </a>
+											<?php the_excerpt_max(200) ?> </a>
 										</p>
 									</div>
 
@@ -120,7 +120,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 						    			<?php echo the_title() ?>
 						    	</h4>
 						    
-						    	<p><?php the_excerpt() ?></a>
+						    	<p><?php the_excerpt_max(200) ?></a>
 								</p>
 							</div>
 							</div>
@@ -176,7 +176,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 					    	</h4>
 					    
 					    	<p>
-								<?php the_excerpt() ?></a>
+								<?php the_excerpt_max(120) ?></a>
 							</p>
 						</div>
 						</div>
