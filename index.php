@@ -106,24 +106,24 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 
 						 
 						// Loop 
-						while ( have_posts() ) : the_post();
-						    echo '
+						while ( have_posts() ) : the_post(); ?>
+						   
 						    <div class="envolve row col-md-12">
 
-						    <div class="foto-materia col-md-4">',
-									the_post_thumbnail(), 
-								'</div>
+						    <div class="foto-materia col-md-4">
+								<?php the_post_thumbnail() ?> 
+							</div>
 
 						    <div class="main col-md-8">
-						    	<h4 class="m-title">',
-						    		'<a href="', the_permalink(), '">', the_title(),
-						    	'</h4>',
+						    	<h4 class="m-title">
+						    		<a href=' <?php echo the_permalink() ?>'>
+						    			<?php echo the_title() ?>
+						    	</h4>
 						    
-						    	'<p>',
-									the_excerpt(), '</a>',
-								'</p>',
-							'</div>
-							</div>';
+						    	<p><?php the_excerpt() ?></a>
+								</p>
+							</div>
+							</div>
 
 						
 							// Reseta o query de posts
@@ -161,24 +161,24 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 
 					 
 					// Loop 
-					while ( have_posts() ) : the_post();
-					    echo '
+					while ( have_posts() ) : the_post(); ?>
+					    
 					    <div class="envolve row  col-md-12">
 					    
-					    <div class="foto-materia col-md-4">',
-							the_post_thumbnail(), 
-						'</div>
+					    <div class="foto-materia col-md-4">
+							<?php the_post_thumbnail() ?> 
+						</div>
 
 					    <div class="main col-md-8">
-					    	<h4 class="m-title">',
-					    		'<a href="', the_permalink(), '">', the_title(),
-					    	'</h4>',
+					    	<h4 class="m-title">
+					    		<a href='<?php the_permalink() ?>'> <?php the_title() ?>
+					    	</h4>
 					    
-					    	'<p>',
-								the_excerpt(), '</a>',
-							'</p>',
-						'</div>
-						</div>';
+					    	<p>
+								<?php the_excerpt() ?></a>
+							</p>
+						</div>
+						</div>
 
 					
 						// Reseta o query de posts
