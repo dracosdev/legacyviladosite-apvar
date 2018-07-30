@@ -51,18 +51,18 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 							query_posts( $args_apvaracao );
 
 							 
-							// Loop 
+							// Loop
 							while ( have_posts() ) : the_post(); ?>
 
 							    <div class="envolve row col-md-12">
 
 								    <div class="foto-materia col-md-4">
 										<?php echo the_post_thumbnail() ?>
-									'</div>
+									</div>
 
 								    <div class="main col-md-8">
 								    	<h4 class="m-title">
-								    		<a href=' <?php echo the_permalink() ?>'>
+								    		<a href=' <?php echo the_permalink() ?> '>
 								    			<?php echo the_title() ?>
 								    	</h4>
 								    
