@@ -63,7 +63,7 @@ add_action('wp_enqueue_scripts', 'carrega_scripts');
 function sidebars_init() {
 
 	register_sidebar( array(
-		'name' => 'lateral_right',
+		'name' => 'Página Inicial (Direita)',
 		'id' => 'lat_right_widgets',
 		'description' => esc_html('Widget da direita da home'),
 		'before_widget' => '<div class="widget-space row">',
@@ -73,9 +73,9 @@ function sidebars_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => 'lateral_right_institucional',
+		'name' => 'Institucional (Direita)',
 		'id' => 'lat_right_institucional_widgets',
-		'description' => esc_html('Widget da direita da Institucional'),
+		'description' => esc_html('Widget da direita da página Institucional'),
 		'before_widget' => '<div class="widget-space row">',
 		'after_widget' => '</div> <div class="separator col-md-12"></div> <div class="clearfix"></div>',
 		'before_title' => '<h4 class="main-title col-md-12">',
@@ -83,9 +83,9 @@ function sidebars_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => 'lateral_right_opiniao',
+		'name' => 'Opinião (Direita)',
 		'id' => 'lat_right_opiniao_widgets',
-		'description' => esc_html('Widget da direita da Opiniao'),
+		'description' => esc_html('Widget da direita da página Opiniao'),
 		'before_widget' => '<div class="widget-space row">',
 		'after_widget' => '</div> <div class="separator col-md-12"></div> <div class="clearfix"></div>',
 		'before_title' => '<h4 class="main-title col-md-12">',
