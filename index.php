@@ -111,7 +111,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 						    <div class="envolve row col-md-12">
 
 						    <div class="foto-materia col-md-4">
-								<?php the_post_thumbnail() ?> 
+								<?php echo the_post_thumbnail() ?> 
 							</div>
 
 						    <div class="main col-md-8">
@@ -126,8 +126,9 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 							</div>
 
 						
+						<?php
 							// Reseta o query de posts
-							wp_reset_postdata();
+							 wp_reset_postdata();
 						
 						endwhile;
 
@@ -166,12 +167,12 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 					    <div class="envolve row  col-md-12">
 					    
 					    <div class="foto-materia col-md-4">
-							<?php the_post_thumbnail() ?> 
+							<?php echo the_post_thumbnail() ?> 
 						</div>
 
 					    <div class="main col-md-8">
 					    	<h4 class="m-title">
-					    		<a href='<?php the_permalink() ?>'> <?php the_title() ?>
+					    		<a href='<?php echo the_permalink() ?>'> <?php echo the_title() ?>
 					    	</h4>
 					    
 					    	<p>
@@ -180,7 +181,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 						</div>
 						</div>
 
-					
+					<?php 
 						// Reseta o query de posts
 						wp_reset_postdata();
 					
