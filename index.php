@@ -31,15 +31,18 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 		<!-- header area -->
 		<div class="row content center-block">
 			<div class="main col-md-6">
-				
-				<div class="main-title-home col-md-4">
-					<img id='circle-titulo' class="circle-titulo" src='<?php echo get_bloginfo('template_directory') . '/img/logo-circulo-titulo.png'; ?>' alt='circulo do titulo'>
-					<a href="http://www.apvar.org.br/v1/category/apvaracao/"><h4>Apvar em Ação</h4></a>
-				</div>
+
+				<div class="envolve-chamada col-md-12">
+					<div class="main-title-home col-md-4">
+						<img id='circle-titulo' class="circle-titulo" src='<?php echo get_bloginfo('template_directory') . '/img/logo-circulo-titulo.png'; ?>' alt='circulo do titulo'>
+						<a href="http://www.apvar.org.br/v1/category/apvaracao/"><h4>Apvar em Ação</h4></a>
+					</div>
 
 					<div class="chamada col-md-8">
 						<h5>Confira a atuação da Apvar conforme registros em diversos meios de comunicação</h5>
 					</div>
+
+				</div>	
 					
 					<div class="clearfix"></div>
 
@@ -72,15 +75,16 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 
 							<div class="clearfix"></div>
 
-
-				<div class="main-title-home col-md-4">
-					<img id='circle-titulo' class="circle-titulo" src='<?php echo get_bloginfo('template_directory') . '/img/logo-circulo-titulo.png'; ?>' alt='circulo do titulo'>
-					<a href="http://www.apvar.org.br/v1/category/quadroavisos/"><h4>Quadro de Avisos</h4></a>
-				</div>
+				<div class="envolve-chamada envolve-chamada-par col-md-12">
+					<div class="main-title-home col-md-4">
+						<img id='circle-titulo' class="circle-titulo" src='<?php echo get_bloginfo('template_directory') . '/img/logo-circulo-titulo.png'; ?>' alt='circulo do titulo'>
+						<a href="http://www.apvar.org.br/v1/category/quadroavisos/"><h4>Quadro de Avisos</h4></a>
+					</div>
 
 					<div class="chamada col-md-8">
 						<h5>Informe-se sobre eventos e fatos relevantes para os pilotos e outros aeronautas da ativa ou aposentados</h5>
 					</div>
+				</div>
 
 					<div class="clearfix"></div>
 
@@ -117,15 +121,18 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 
 			<!-- coluna do meio -->
 			<div class="second middle-section col-md-4">
-				
-				<div class="main-title-home col-md-4">
-					<img id='circle-titulo' class="circle-titulo" src='<?php echo get_bloginfo('template_directory') . '/img/logo-circulo-titulo.png'; ?>' alt='circulo do titulo'>
-					<a href="http://www.apvar.org.br/v1/category/deunaimprensa/"><h4>Deu na Imprensa</h4></a>
-				</div>
+
+				<div class="envolve-chamada col-md-12">
+					<div class="main-title-home col-md-4">
+						<img id='circle-titulo' class="circle-titulo" src='<?php echo get_bloginfo('template_directory') . '/img/logo-circulo-titulo.png'; ?>' alt='circulo do titulo'>
+						<a href="http://www.apvar.org.br/v1/category/deunaimprensa/"><h4>Deu na Imprensa</h4></a>
+					</div>
 					
 					<div class="chamada col-md-8">
 						<h5>Notícias sobre a indústria e outros temas de interesse específico.</h5>
 					</div>
+
+				</div>	
 
 					<div class="clearfix"></div>
 

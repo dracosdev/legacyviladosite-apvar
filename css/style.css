@@ -52,6 +52,8 @@ h4.m-title a {
 
 hr{
 	border-color: #003366;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .main-title {
@@ -215,4 +217,17 @@ nav.navbar.navbar-default.menu-barra {
 }
 .dir-container {
     display: inline;
+}
+
+.envolve-chamada.envolve-chamada-par.col-md-12 {
+    margin-top: 30px;
+}
+
+.envolve-chamada.col-md-12 {
+    margin-top: 0;
+}
+
+
+.main-title-home.col-md-4{
+    padding: 0;
 }
