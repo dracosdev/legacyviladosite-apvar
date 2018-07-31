@@ -57,18 +57,18 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 							    <div class="envolve row col-md-12">
 
 								    <div class="foto-materia col-md-4">
-										<?php echo the_post_thumbnail() ?>
+										<?php echo the_post_thumbnail(); ?>
 									</div>
 
 								    <div class="main col-md-8">
-								    	<h4 class="m-title">
-								    		<a href=' <?php echo the_permalink() ?> '>
-								    			<?php echo the_title() ?>
-								    	</h4>
-								    
-								    	<p>
-											<?php the_excerpt_max(200) ?> </a>
-										</p>
+								    	<a href=' <?php echo the_permalink(); ?> '>
+								    		<h4 class="m-title">	    		
+								    			<?php echo the_title(); ?>
+								    		</h4>
+								    		<p>
+												<?php the_excerpt_max(200); ?>
+											</p>
+										</a>
 									</div>
 
 								</div>
@@ -111,17 +111,18 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 						    <div class="envolve row col-md-12">
 
 						    <div class="foto-materia col-md-4">
-								<?php echo the_post_thumbnail() ?> 
+								<?php echo the_post_thumbnail(); ?> 
 							</div>
 
 						    <div class="main col-md-8">
-						    	<h4 class="m-title">
-						    		<a href=' <?php echo the_permalink() ?>'>
-						    			<?php echo the_title() ?>
-						    	</h4>
+						    	<a href=' <?php echo the_permalink(); ?>'>
+						    		<h4 class="m-title">
+						    			<?php echo the_title(); ?>
+						    		</h4>
 						    
-						    	<p><?php the_excerpt_max(200) ?></a>
-								</p>
+						    		<p><?php the_excerpt_max(200); ?>
+									</p>
+								</a>	
 							</div>
 							</div>
 
@@ -167,17 +168,19 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 					    <div class="envolve row  col-md-12">
 					    
 					    <div class="foto-materia col-md-4">
-							<?php echo the_post_thumbnail() ?> 
+							<?php echo the_post_thumbnail(); ?> 
 						</div>
 
 					    <div class="main col-md-8">
-					    	<h4 class="m-title">
-					    		<a href='<?php echo the_permalink() ?>'> <?php echo the_title() ?>
-					    	</h4>
+					    	<a href='<?php echo the_permalink(); ?>'> 
+					    		<h4 class="m-title">
+					    			<?php echo the_title(); ?>
+					    		</h4>
 					    
-					    	<p>
-								<?php the_excerpt_max(120) ?></a>
-							</p>
+					    		<p>
+									<?php the_excerpt_max(120); ?>
+								</p>
+							</a>	
 						</div>
 						</div>
 
