@@ -56,20 +56,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 
 							    <div class="envolve row col-md-12">
 
-								    <div class="foto-materia col-md-4">
-										<?php echo the_post_thumbnail(); ?>
-									</div>
-
-								    <div class="main col-md-8">
-								    	<a href=' <?php echo the_permalink(); ?> '>
-								    		<h4 class="m-title">	    		
-								    			<?php echo the_title(); ?>
-								    		</h4>
-								    		<p>
-												<?php the_excerpt_max(200); ?>
-											</p>
-										</a>
-									</div>
+								    <?php post_checaimg(); ?>
 
 								</div>
 
@@ -110,20 +97,8 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 						   
 						    <div class="envolve row col-md-12">
 
-						    <div class="foto-materia col-md-4">
-								<?php echo the_post_thumbnail(); ?> 
-							</div>
+						    <?php post_checaimg(); ?>
 
-						    <div class="main col-md-8">
-						    	<a href=' <?php echo the_permalink(); ?>'>
-						    		<h4 class="m-title">
-						    			<?php echo the_title(); ?>
-						    		</h4>
-						    
-						    		<p><?php the_excerpt_max(200); ?>
-									</p>
-								</a>	
-							</div>
 							</div>
 
 						
@@ -167,21 +142,8 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 					    
 					    <div class="envolve row  col-md-12">
 					    
-					    <div class="foto-materia col-md-4">
-							<?php echo the_post_thumbnail(); ?> 
-						</div>
+					   		<?php post_checaimg(); ?>
 
-					    <div class="main col-md-8">
-					    	<a href='<?php echo the_permalink(); ?>'> 
-					    		<h4 class="m-title">
-					    			<?php echo the_title(); ?>
-					    		</h4>
-					    
-					    		<p>
-									<?php the_excerpt_max(120); ?>
-								</p>
-							</a>	
-						</div>
 						</div>
 
 					<?php 
