@@ -22,11 +22,6 @@
 
 					<div class="envolve-base col-md-9">		
 
-						<div class="chamada col-md-1 col-xs-1">
-
-						</div>
-
-						<div class="chamada-conteudo-dir col-md-11 col-xs-11">
 						<?php
 							if (tem_filhos()) {
 								pega_filhos();
@@ -34,7 +29,7 @@
 								the_content();
 							}
 						?>
-						</div>
+
 
 						<?php endwhile; else: ?>
 						<?php endif; ?>	
