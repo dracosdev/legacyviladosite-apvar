@@ -20,6 +20,12 @@
 
 					<div class="clearfix"></div>
 
+					<div class="chamada col-md-1 col-xs-1">
+
+
+
+					</div>
+
 					<div class="chamada-conteudo-dir col-md-11 col-xs-11">
 					<?php
 						if (tem_filhos()) {

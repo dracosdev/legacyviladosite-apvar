@@ -23,14 +23,18 @@
 
 					<div class="chamada col-md-1 col-xs-1">
 						
-						<img id='logo-title' class="plane-title" src='<?php echo get_bloginfo('template_directory') . '/img/quemsomos_vert.gif'; ?>' alt='Logotipo'>
+<!-- 						<img id='logo-title' class="plane-title" src='<?php echo get_bloginfo('template_directory') . '/img/quemsomos_vert.gif'; ?>' alt='Logotipo'> -->
 
 					</div>
 
 					<div class="chamada col-md-8 col-xs-8">
-						
-						<?php the_content(); ?>
-
+					<?php
+						if (tem_filhos()) {
+							pega_filhos();
+						} else {
+							the_content();
+						}
+					?>
 					</div>
 
 				<?php endwhile; else: ?>
