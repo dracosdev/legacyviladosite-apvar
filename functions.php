@@ -52,7 +52,6 @@ function the_title_max($thelength) {
 
 
 // Função para carregar post na home com imagem
-
 function post_comimagem() {
 	?>
 	<div class="foto-materia col-md-4">
@@ -101,7 +100,6 @@ function carrega_scripts(){
 	wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), null, 'all');
 
 	wp_enqueue_style('style', get_template_directory_uri().'/css/style.css', array(), null, 'all');
-
 
 	wp_enqueue_script('template', get_template_directory_uri().'/js/template.js', array(), null, true);
 
