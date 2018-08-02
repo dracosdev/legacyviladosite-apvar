@@ -26,8 +26,7 @@
 								the_content();
 							}
 						?>
-					</div>
-					
+					</div>			
 				<?php endwhile; else: ?>
 				<?php endif; ?>
 					

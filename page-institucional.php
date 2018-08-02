@@ -16,20 +16,11 @@
 						</div>
 					</div>
 
-					<div class="separator col-md-12">
-					</div>
+					<div class="separator col-md-12"></div>
 
 					<div class="clearfix"></div>
 
 					<div class="envolve-base col-md-9">
-
-						<div class="chamada col-md-1 col-xs-1">
-							
-						<!-- <img id='logo-title' class="plane-title" src='<?php echo get_bloginfo('template_directory') . '/img/quemsomos_vert.gif'; ?>' alt='Logotipo'> -->
-
-						</div>
-
-						<div class="chamada col-md-11 col-xs-11">
 						<?php
 							if (tem_filhos()) {
 								pega_filhos();
@@ -37,12 +28,9 @@
 								the_content();
 							}
 						?>
-						</div>
-
-						<?php endwhile; else: ?>
-						<?php endif; ?>	
-					
 					</div>
+				<?php endwhile; else: ?>
+				<?php endif; ?>	
 
 				<!-- area da sidebar -->
 				<div class="bordas">
