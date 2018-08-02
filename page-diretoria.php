@@ -15,13 +15,10 @@
 						</div>
 					</div>
 
-					<div class="separator col-md-12">
-					</div>
-
+					<div class="separator col-md-12"></div>
 					<div class="clearfix"></div>
 
 					<div class="envolve-base col-md-9">		
-
 						<?php
 							if (tem_filhos()) {
 								pega_filhos();
@@ -29,12 +26,12 @@
 								the_content();
 							}
 						?>
-
-
-						<?php endwhile; else: ?>
-						<?php endif; ?>	
-					
 					</div>
+					
+				<?php endwhile; else: ?>
+				<?php endif; ?>
+					
+					
 
 					<!-- area da sidebar -->
 					<div class="bordas">
