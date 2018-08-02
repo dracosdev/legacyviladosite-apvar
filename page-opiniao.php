@@ -21,14 +21,26 @@
 
 					<div class="clearfix"></div>
 
-					<div class="chamada col-md-9">
-						
-						<?php the_content(); ?>
+					<div class="envolve-base col-md-9">
 
-					</div>
+						<div class="chamada col-md-1 col-xs-1">
 
-				<?php endwhile; else: ?>
-				<?php endif; ?>	
+						</div>
+
+						<div class="chamada col-md-11 col-xs-11">
+						<?php
+							if (tem_filhos()) {
+								pega_filhos();
+							} else {
+								the_content();
+							}
+						?>
+						</div>
+
+						<?php endwhile; else: ?>
+						<?php endif; ?>	
+					
+					</div>	
 
 				<!-- area da sidebar -->
 				<div class="bordas">

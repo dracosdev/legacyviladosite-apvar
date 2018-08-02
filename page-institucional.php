@@ -21,26 +21,28 @@
 
 					<div class="clearfix"></div>
 
-					<div class="chamada col-md-1 col-xs-1">
-						
-<!-- 						<img id='logo-title' class="plane-title" src='<?php echo get_bloginfo('template_directory') . '/img/quemsomos_vert.gif'; ?>' alt='Logotipo'> -->
+					<div class="envolve-base col-md-9">
 
-					</div>
+						<div class="chamada col-md-1 col-xs-1">
+							
+						<!-- <img id='logo-title' class="plane-title" src='<?php echo get_bloginfo('template_directory') . '/img/quemsomos_vert.gif'; ?>' alt='Logotipo'> -->
 
-					<div class="chamada col-md-8 col-xs-8">
-					<?php
-						if (tem_filhos()) {
-							pega_filhos();
-						} else {
-							the_content();
-						}
-					?>
-					</div>
+						</div>
 
-				<?php endwhile; else: ?>
-				<?php endif; ?>	
+						<div class="chamada col-md-11 col-xs-11">
+						<?php
+							if (tem_filhos()) {
+								pega_filhos();
+							} else {
+								the_content();
+							}
+						?>
+						</div>
+
+						<?php endwhile; else: ?>
+						<?php endif; ?>	
 					
-					
+					</div>
 
 				<!-- area da sidebar -->
 				<div class="bordas">

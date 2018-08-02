@@ -20,26 +20,42 @@
 
 					<div class="clearfix"></div>
 
-					<div class="chamada col-md-1 col-xs-1">
+					<div class="envolve-base col-md-9">		
 
+						<div class="chamada col-md-1 col-xs-1">
 
+						</div>
 
+						<div class="chamada-conteudo-dir col-md-11 col-xs-11">
+						<?php
+							if (tem_filhos()) {
+								pega_filhos();
+							} else {
+								the_content();
+							}
+						?>
+						</div>
+
+						<?php endwhile; else: ?>
+						<?php endif; ?>	
+					
 					</div>
 
-					<div class="chamada-conteudo-dir col-md-11 col-xs-11">
-					<?php
-						if (tem_filhos()) {
-							pega_filhos();
-						} else {
-							the_content();
-						}
-					?>
+					<!-- area da sidebar -->
+					<div class="bordas">
+					<aside class="complementary col-md-3">
+						<?php
+				        if(is_active_sidebar('lat_right_institucional_widgets')){
+				            dynamic_sidebar('lat_right_institucional_widgets');
+		    			};
+		    			?>
+							
+							<div class="clearfix"></div>
+
+					</aside>
 					</div>
 
-				<?php endwhile; else: ?>
-				<?php endif; ?>	
-
-				<div class="clearfix"></div>		
+				<div class="clearfix"></div>	
 
 					<hr>
 
