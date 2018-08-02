@@ -89,6 +89,45 @@ function post_checaimg() {
 }
 
 
+
+// Função para verificar se uma página tem páginas filhas
+function tem_filhos($post_ID = null) {
+    if ($post_ID === null) {
+        global $post;
+        $post_ID = $post->ID;
+    }
+    $query = new WP_Query(array('post_parent' => $post_ID, 'post_type' => 'any'));
+
+    return $query->have_posts();
+}
+
+
+// Função para carregar as páginas filhas de um item
+function pega_filhos() {
+	$childArgs = array(
+	'sort_order' => 'ASC',
+    'sort_column' => 'menu_order',
+    'child_of' => get_the_ID()
+	);
+	
+	$childList = get_pages($childArgs);
+
+	foreach ($childList as $child) { ?>
+		<br>
+		<br>
+		<div class="child-page">
+	    	<h2 class="child-title">
+	    		<?php echo $child->post_title; ?></h2>
+	        <?php echo apply_filters( 'the_content', $child->post_content); ?>
+	    </div>
+	<?php }
+}
+
+
+
+
+
+
 // ----------------------------------------------------------
 // Scripts
 // ----------------------------------------------------------

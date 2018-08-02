@@ -10,9 +10,8 @@
 
 					<div class="main-title col-md-12">
 						<div class="envolve-titulo">
-						<img id='logo-title' class="plane-title" src='<?php echo get_bloginfo('template_directory') . '/img/title-apvar.png'; ?>' alt='Logotipo'>
-						
-						<h2><?php the_title(); ?></h2>
+							<img id='logo-title' class="plane-title" src='<?php echo get_bloginfo('template_directory') . '/img/title-apvar.png'; ?>' alt='Logotipo'>
+							<h2><?php the_title(); ?></h2>
 						</div>
 					</div>
 
@@ -21,16 +20,14 @@
 
 					<div class="clearfix"></div>
 
-					<div class="chamada col-md-1 col-xs-1">
-						
-						<img id='logo-title' class="plane-title" src='<?php echo get_bloginfo('template_directory') . '/img/tit_dir_exec_.gif'; ?>' alt='Logotipo'>
-
-					</div>
-
 					<div class="chamada-conteudo-dir col-md-11 col-xs-11">
-						
-						<?php the_content(); ?>
-
+					<?php
+						if (tem_filhos()) {
+							pega_filhos();
+						} else {
+							the_content();
+						}
+					?>
 					</div>
 
 				<?php endwhile; else: ?>
