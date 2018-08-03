@@ -88,8 +88,6 @@ function post_checaimg() {
 	}
 }
 
-
-
 // Função para verificar se uma página tem páginas filhas
 function tem_filhos($post_ID = null) {
     if ($post_ID === null) {
