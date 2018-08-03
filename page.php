@@ -32,20 +32,20 @@
 				<?php endwhile; else: ?>
 				<?php endif; ?>					
 
-					<!-- area da sidebar -->
-					<div class="bordas">
-						<aside class="complementary col-md-3">
+				<!-- area da sidebar -->
+				<div class="bordas">
+					<aside class="complementary col-md-3">
 
-							<?php
-					        if(is_active_sidebar('lat_right_pages_widgets')){
-					            dynamic_sidebar('lat_right_pages_widgets');
-			    			};
-			    			?>
+						<?php
+				        if(is_active_sidebar('lat_right_pages_widgets')){
+				            dynamic_sidebar('lat_right_pages_widgets');
+		    			};
+		    			?>
 
-							<div class="clearfix"></div>
+						<div class="clearfix"></div>
 
-						</aside>
-					</div>
+					</aside>
+				</div>
 					
 					<div class="clearfix"></div>
 
