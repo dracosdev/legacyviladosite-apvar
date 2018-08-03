@@ -185,6 +185,16 @@ function sidebars_init() {
 	) );
 
 	register_sidebar( array(
+		'name' => 'Categorias (Direita)',
+		'id' => 'lat_right_categories_widgets',
+		'description' => esc_html('Widget exibido à direita nas categorias'),
+		'before_widget' => '<div class="widget-space row">',
+		'after_widget' => '</div> <div class="separator col-md-12"></div> <div class="clearfix"></div>',
+		'before_title' => '<h4 class="main-title col-md-12">',
+		'after_title' => '</h4>',
+	) );
+
+	register_sidebar( array(
 		'name' => 'Institucional (Direita)',
 		'id' => 'lat_right_institucional_widgets',
 		'description' => esc_html('Widget da direita da página Institucional'),
