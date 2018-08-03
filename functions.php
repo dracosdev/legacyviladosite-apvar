@@ -175,6 +175,16 @@ function sidebars_init() {
 	) );
 
 	register_sidebar( array(
+		'name' => 'Páginas (Direita)',
+		'id' => 'lat_right_pages_widgets',
+		'description' => esc_html('Widget da direita à ser exibido por padrão nas páginas gerais'),
+		'before_widget' => '<div class="widget-space row">',
+		'after_widget' => '</div> <div class="separator col-md-12"></div> <div class="clearfix"></div>',
+		'before_title' => '<h4 class="main-title col-md-12">',
+		'after_title' => '</h4>',
+	) );
+
+	register_sidebar( array(
 		'name' => 'Institucional (Direita)',
 		'id' => 'lat_right_institucional_widgets',
 		'description' => esc_html('Widget da direita da página Institucional'),

@@ -16,19 +16,36 @@
 						</div>
 					</div>
 
-					<div class="separator col-md-12">
-					</div>
+					<div class="separator col-md-12"></div>
 
 					<div class="clearfix"></div>
 
-					<div class="chamada col-md-12">
-						
-						<?php the_content(); ?>
-
+					<div class="envolve-base col-md-9">
+						<?php
+							if (tem_filhos()) {
+								pega_filhos();
+							} else {
+								the_content();
+							}
+						?>
 					</div>
-
 				<?php endwhile; else: ?>
-				<?php endif; ?>	
+				<?php endif; ?>					
+
+					<!-- area da sidebar -->
+					<div class="bordas">
+						<aside class="complementary col-md-3">
+
+							<?php
+					        if(is_active_sidebar('lat_right_pages_widgets')){
+					            dynamic_sidebar('lat_right_pages_widgets');
+			    			};
+			    			?>
+
+							<div class="clearfix"></div>
+
+						</aside>
+					</div>
 					
 					<div class="clearfix"></div>
 
@@ -36,10 +53,6 @@
 
 					<div class="clearfix"></div>			
 			</div>
-
-			<!-- area da sidebar -->
-			
-
 
 			<div class="separator col-md-12">
 			</div>	
