@@ -126,7 +126,14 @@ function pega_filhos() {
 }
 
 
-
+// Função para alteração da coluna de conteúdo nas páginas
+function col_pages() {
+	if(is_active_sidebar('lat_right_pages_widgets')){
+		echo '<div class="col-md-9">';
+	} else {
+		echo '<div class="col-md-12">';
+	};
+}
 
 
 

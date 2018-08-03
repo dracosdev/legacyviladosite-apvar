@@ -2,7 +2,11 @@
 		<div class="row content center-block">
 			<div class="main col-md-12">
 			
-			<?php get_template_part('layout/loop-pages'); ?>
+				<?php
+				// Função que abre a div de coluna variando de acordo com apresença da sidebar
+				col_pages();
+				get_template_part('layout/loop-pages'); ?>
+				</div>
 
 				<!-- area da sidebar -->
 				<div class="bordas">
