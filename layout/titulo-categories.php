@@ -4,3 +4,6 @@
 		<h2><?php the_category( ' ' ); ?></h2>
 	</div>
 </div>
+
+<div class="separator col-md-12"></div>
+<div class="clearfix"></div>

@@ -111,9 +111,7 @@ function pega_filhos() {
 	$childList = get_pages($childArgs);
 
 	foreach ($childList as $child) { ?>
-		<br>
-		<br>
-
+		<p>&nbsp;</p>
 		<div class="chamada col-md-1 col-xs-1">
 	    	<h2><?php echo $child->post_title; ?></h2>
 		</div>
@@ -121,7 +119,8 @@ function pega_filhos() {
 		<div class="chamada-conteudo-dir col-md-11 col-xs-11">
     	    <?php echo apply_filters( 'the_content', $child->post_content); ?>
 		</div>
-
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
 	<?php }
 }
 
