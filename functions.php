@@ -193,6 +193,16 @@ function sidebars_init() {
 	) );
 
 	register_sidebar( array(
+		'name' => 'Home (Rodapé)',
+		'id' => 'home_bottom',
+		'description' => esc_html('Sidebar exibida na parte de baixo da home'),
+		'before_widget' => '<div class="home-bottom">',
+		'after_widget' => '</div>',
+		'before_title' => '',
+		'after_title' => '',
+	) );
+
+	register_sidebar( array(
 		'name' => 'Institucional (Direita)',
 		'id' => 'lat_right_institucional_widgets',
 		'description' => esc_html('Widget da direita da página Institucional'),
