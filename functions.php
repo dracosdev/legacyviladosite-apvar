@@ -189,7 +189,7 @@ function sidebars_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => 'Home (Rodapé)',
+		'name' => 'Página Inicial (Rodapé)',
 		'id' => 'home_bottom',
 		'description' => esc_html('Sidebar exibida na parte de baixo da home'),
 		'before_widget' => '<div class="home-bottom">',
