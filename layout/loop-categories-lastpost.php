@@ -18,8 +18,7 @@ if (have_posts()) : while(have_posts()) : the_post();	?>
 	
 	<div class="chamada col-md-12">
 	
-		<div class="envolve-titulo">
-			<img id='logo-title' class="plane-title" src='<?php echo get_bloginfo('template_directory') . '/img/title-apvar.png'; ?>' alt='Logotipo'>
+		<div class="envolve-titulo envolve-titulo-interno">
 			<h2><?php the_title(); ?></h2>
 		</div>
 
