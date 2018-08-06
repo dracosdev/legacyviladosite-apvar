@@ -3,7 +3,7 @@
 	
 	<div class="chamada col-md-12">
 	
-		<div class="envolve-titulo">
+		<div class="envolve-titulo envolve-titulo-interno">
 			<h2><?php the_title(); ?></h2>
 		</div>
 
