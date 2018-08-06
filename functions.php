@@ -281,7 +281,84 @@ class ouvidoria_widget extends WP_Widget {
 		if ( isset( $instance[ 'title' ] ) )
 		$title = $instance[ 'title' ];
 		else
-		$title = __( 'Ouvidoria', 'hstngr_widget_domain' );
+		$title = __( 'Ouvidoria', 'ouvidoria_widget_domain' );
+		?>
+		<p>
+		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+		</p>
+		<?php
+	}
+
+	public function update( $new_instance, $old_instance ) {
+		$instance = array();
+		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+		return $instance;
+	}
+ 
+}
+
+
+
+
+// Cria o widget de Ouvidoria
+class categ_last_widget extends WP_Widget {
+	
+	function __construct() {
+	parent::__construct(
+	// widget ID
+	'categ_last_widget',
+	// widget name
+	__('Últimos Posts da Categoria', 'categ_last_widget_domain'),
+	// widget description
+	array( 'description' => __( 'Um widget que mostra os 10 posts mais recentes da categoria em exibição.', 'categ_lastpost_widget_domain' ), )
+	);
+	}
+
+	public function widget( $args, $instance ) {
+		$title = apply_filters( 'widget_title', $instance['title'] );
+
+		// Before Widget
+		echo $args['before_widget'];
+
+		// If title is present
+		if ( ! empty( $title ) )
+		echo $args['before_title'] . $title . $args['after_title'];
+
+		// WIDGET
+		// Variáveis para saber categoria
+		$categ = get_category( get_query_var( 'cat' ) );
+		$categ_id = $categ->cat_ID;
+
+		//Argumentos da query
+	    $lastposts = get_posts( array(
+   			'posts_per_page' => 10,
+	        'cat' => $categ_id,
+	        'orderby' => 'date',
+	        'order' => 'DESC',
+	        'suppress_filters' => true
+	    ) );
+
+		// Loop de posts
+		global $post;
+	    if ( $lastposts ) {
+	        foreach ( $lastposts as $post ) {
+	            setup_postdata( $post ); ?>
+	            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+	        <?php
+	        }
+	    }
+	    wp_reset_postdata();
+
+		// After Widget
+		echo $args['after_widget'];
+	}
+
+	public function form( $instance ) {
+		if ( isset( $instance[ 'title' ] ) )
+		$title = $instance[ 'title' ];
+		else
+		$title = __( 'Últimos posts da Categoria', 'categ_last_widget_domain' );
 		?>
 		<p>
 		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
@@ -303,7 +380,8 @@ class ouvidoria_widget extends WP_Widget {
 // Registra e inicializa os widgets
 function register_widgets() {
 	
-	register_widget( 'ouvidoria_widget' );
+	register_widget('ouvidoria_widget');
+	register_widget('categ_last_widget');
 
 }
 
