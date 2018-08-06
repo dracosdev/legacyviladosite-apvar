@@ -1,41 +1,41 @@
-<?php get_header(); ?>
+<?php get_header();
+
+// Define o nome da sidebar usada nessa página
+// Deixar vazio caso não queira sidebar nesta página
+$sidebar_name = 'lat_right_pages_widgets'; ?>
 
 		<div class="row content center-block">
-			<div class="main col-md-10">
-				
-				<div class="main-title col-md-12">
-					<h3>
-						<i class="fa fa-plane"></i>
-						<?php echo the_category(' '); ?> 	
-					</h3>
-				</div>
+			<div class="main col-md-12">
+				<?php
 
-				<?php if (have_posts()) : while(have_posts()) : the_post(); ?>
+				get_template_part('layout/titulo-categories');
 
-					<div class="chamada col-md-12">
-						<h2><?php the_title(); ?></h2>
-						<?php the_content(); ?>
+				if (have_posts()) : while(have_posts()) : the_post();
+
+					// Função que abre a div de coluna variando de acordo com apresença da sidebar
+					if (is_active_sidebar($sidebar_name)) {echo '<div class="col-md-9">';}
+					else {echo '<div id="conteudo" class="col-md-12">';};
+
+					get_template_part('layout/titulo-posts');
+					the_content();
+					echo "</div>";
+
+				endwhile; else:
+				endif; ?>
+
+					<!-- area da sidebar -->
+					<div class="bordas">
+						<aside class="complementary col-md-3">
+							<?php if(is_active_sidebar($sidebar_name)){
+					            dynamic_sidebar($sidebar_name);
+			    			}; ?>
+							<div class="clearfix"></div>
+						</aside>
 					</div>
-
-				<?php endwhile; else: ?>
-				<?php endif; ?>	
-					
-				<div class="clearfix"></div>
-				<hr>
-				<div class="clearfix"></div>			
-
-			</div>
-
-			<!-- area da sidebar -->
-			<div class="bordas">
-				<aside class="complementary col-md-2">
-					<?php get_sidebar(); ?>
 					<div class="clearfix"></div>
-				</aside>
-			</div>
-
-			<div class="separator col-md-12"></div>	
-			<div class="clearfix"></div>
+					<hr>
+					<div class="clearfix"></div>			
+				</div>
+				<?php bs_separator(); ?>
 		</div>
-
 <?php get_footer(); ?>
