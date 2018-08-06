@@ -2,19 +2,24 @@
 
 // Define o nome da sidebar usada nessa página
 // Deixar vazio caso não queira sidebar nesta página
-$sidebar_name = 'lat_right_editorial_widgets'; ?>
+$sidebar_name = ''; ?>
 
 		<div class="row content center-block">
 			<div class="main col-md-12">
-				<?php get_template_part('layout/titulo-categories');
+
+			<?php
+			if (have_posts()) : while(have_posts()) : the_post();
+
+				get_template_part('layout/titulo-pages');
 
 				// Função que abre a div de coluna variando de acordo com apresença da sidebar
 				if (is_active_sidebar($sidebar_name)) {echo '<div class="col-md-9">';}
 				else {echo '<div id="conteudo" class="col-md-12">';};
-					get_template_part('layout/loop-categories-lastpost');
+					get_template_part('layout/loop-pages');
 				echo "</div>";
-				
-				?>
+
+			endwhile; else:
+			endif; ?>
 
 				<!-- area da sidebar -->
 				<div class="bordas">
