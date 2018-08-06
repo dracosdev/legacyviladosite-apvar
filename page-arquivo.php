@@ -2,7 +2,7 @@
 
 // Define o nome da sidebar usada nessa página
 // Deixar vazio caso não queira sidebar nesta página
-$sidebar_name = 'lat_right_pages_widgets'; ?>
+$sidebar_name = ''; ?>
 
 		<div class="row content center-block">
 			<div class="main col-md-12">
