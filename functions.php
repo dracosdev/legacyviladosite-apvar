@@ -124,6 +124,13 @@ function pega_filhos() {
 	<?php }
 }
 
+// Função para inserir o separador do Bootstrap
+function bs_separator() {
+	echo ('
+		<div class="separator col-md-12"></div>	
+		<div class="clearfix"></div>
+	');
+}
 
 
 // ----------------------------------------------------------
