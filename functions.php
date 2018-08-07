@@ -324,13 +324,7 @@ class categ_last_widget extends WP_Widget {
 	    if ( $lastposts ) {
 	        foreach ( $lastposts as $post ) {
 	            setup_postdata( $post ); ?>
-	            <p>
-	            	<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-	            </p>
-	            <br>
-	            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-	            <br>
-
+	            <p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
 	        <?php
 	        }
 	    }
