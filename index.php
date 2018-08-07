@@ -164,164 +164,116 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 			<hr>
 
 		<div class="widget-area-down col-md-5">
-			
 			<table>
-
-				<tbody><tr>
-
-			      <td width="93" bgcolor="#BBC8D8"><strong><span class="style1">-- </span>Dubai</strong></td>
-
-			      <td width="274" bgcolor="#BBC8D8">18:03:30 - Thursday - 26 April</td>
-
-			    </tr>
-
-			   <tr>
-
-			      <td><strong><span class="style2">-- </span>Hong Kong</strong></td>
-
-			      <td>22:03:30 - Thursday - 26 April </td>
-
-			    </tr>
-
-			    <tr>
-
-			      <td bgcolor="#BBC8D8"><strong><span class="style1">-- </span>Macau</strong></td>
-
-			      <td bgcolor="#BBC8D8">22:03:30 - Thursday - 26 April</td>
-
-			    </tr>
-
-			    <tr>
-
-			      <td><strong><span class="style2">-- </span>Peking</strong></td>
-
-			      <td>22:03:30 - Thursday - 26 April </td>
-
-			    </tr>
-
-			    <tr>
-
-			      <td bgcolor="#BBC8D8"><strong><span class="style1">-- </span>Shanghai</strong></td>
-
-			      <td bgcolor="#BBC8D8">22:03:30 - Thursday - 26 April</td>
-
-			    </tr>
-
-				<tr>
-
-				  <td><strong><span class="style2">-- </span>Luanda</strong></td>
-
-				  <td>15:03:30 - Thursday - 26 April</td>
-
-				  </tr>
-
-				<tr>
-
-				  <td bgcolor="#BBC8D8"><strong><span class="style1">-- </span>New York </strong></td>
-
-				  <td bgcolor="#BBC8D8">10:03:30 - Thursday - 26 April</td>
-
-				  </tr>
-
-				<tr>
-
-			      <td><strong> <span class="style2">--</span> Tóquio  </strong></td>
-
-			      <td>23:03:30 - Thursday - 26 April</td>
-
-			    </tr>
-
+				<tbody>
+					<tr>
+					    <td width="93" bgcolor="#BBC8D8">
+					    	<strong><span class="style1">-- </span>Dubai</strong>
+					    </td>
+					    <td width="274" bgcolor="#BBC8D8">18:03:30 - Thursday - 26 April</td>
+			    	</tr>
+					<tr>
+						<td>
+							<strong><span class="style2">-- </span>Hong Kong</strong>
+						</td>
+						<td>22:03:30 - Thursday - 26 April </td>
+					</tr>
+				    <tr>
+					    <td bgcolor="#BBC8D8">
+					    	<strong><span class="style1">-- </span>Macau</strong>
+					    </td>
+					    <td bgcolor="#BBC8D8">22:03:30 - Thursday - 26 April</td>
+				    </tr>
+				    <tr>
+				    	<td>
+				    		<strong><span class="style2">-- </span>Peking</strong>
+				    	</td>
+				    	<td>22:03:30 - Thursday - 26 April </td>
+				    </tr>
+				    <tr>
+					    <td bgcolor="#BBC8D8">
+					    	<strong><span class="style1">-- </span>Shanghai</strong>
+					    </td>
+					    <td bgcolor="#BBC8D8">22:03:30 - Thursday - 26 April</td>
+				    </tr>
+					<tr>
+						<td>
+							<strong><span class="style2">-- </span>Luanda</strong>
+						</td>
+						<td>15:03:30 - Thursday - 26 April</td>
+					</tr>
+					<tr>
+						<td bgcolor="#BBC8D8">
+							<strong><span class="style1">-- </span>New York </strong>
+						</td>
+						<td bgcolor="#BBC8D8">10:03:30 - Thursday - 26 April</td>
+					</tr>
+					<tr>
+					    <td>
+					    	<strong> <span class="style2">--</span> Tóquio  </strong>
+					    </td>
+					    <td>23:03:30 - Thursday - 26 April</td>
+				    </tr>
 			  </tbody>
-
 			</table>
-
-
 		</div>
-
 		<div class="widget-area-down col-md-5">
-			
 			<table>
-
 				<tbody><tr>
-
-			      <td width="93" bgcolor="#BBC8D8"><strong><span class="style1">-- </span>Dubai</strong></td>
-
+			      <td width="93" bgcolor="#BBC8D8">
+			      	<strong><span class="style1">-- </span>Dubai</strong>
+			      </td>
 			      <td width="274" bgcolor="#BBC8D8">18:03:30 - Thursday - 26 April</td>
-
 			    </tr>
-
 			   <tr>
-
-			      <td><strong><span class="style2">-- </span>Hong Kong</strong></td>
-
+			      <td>
+			      	<strong><span class="style2">-- </span>Hong Kong</strong>
+			      </td>
 			      <td>22:03:30 - Thursday - 26 April </td>
-
 			    </tr>
-
 			    <tr>
-
-			      <td bgcolor="#BBC8D8"><strong><span class="style1">-- </span>Macau</strong></td>
-
+			      <td bgcolor="#BBC8D8">
+			      	<strong><span class="style1">-- </span>Macau</strong>
+			      </td>
 			      <td bgcolor="#BBC8D8">22:03:30 - Thursday - 26 April</td>
-
 			    </tr>
-
 			    <tr>
-
-			      <td><strong><span class="style2">-- </span>Peking</strong></td>
-
+			      <td>
+			      	<strong><span class="style2">-- </span>Peking</strong>
+			      </td>
 			      <td>22:03:30 - Thursday - 26 April </td>
-
 			    </tr>
-
 			    <tr>
-
-			      <td bgcolor="#BBC8D8"><strong><span class="style1">-- </span>Shanghai</strong></td>
-
+			      <td bgcolor="#BBC8D8">
+			      	<strong><span class="style1">-- </span>Shanghai</strong>
+			      </td>
 			      <td bgcolor="#BBC8D8">22:03:30 - Thursday - 26 April</td>
-
 			    </tr>
-
 				<tr>
-
-				  <td><strong><span class="style2">-- </span>Luanda</strong></td>
-
+				  <td>
+				  	<strong><span class="style2">-- </span>Luanda</strong>
+				  </td>
 				  <td>15:03:30 - Thursday - 26 April</td>
-
 				  </tr>
-
 				<tr>
-
-				  <td bgcolor="#BBC8D8"><strong><span class="style1">-- </span>New York </strong></td>
-
+				  <td bgcolor="#BBC8D8">
+				  	<strong><span class="style1">-- </span>New York </strong>
+				  </td>
 				  <td bgcolor="#BBC8D8">10:03:30 - Thursday - 26 April</td>
-
 				  </tr>
-
 				<tr>
-
-			      <td><strong> <span class="style2">--</span> Tóquio  </strong></td>
-
+			      <td>
+			      	<strong><span class="style2">--</span> Tóquio  </strong>
+			      </td>
 			      <td>23:03:30 - Thursday - 26 April</td>
-
 			    </tr>
-
 			  </tbody>
-
 			</table>
-
-
 		</div>
-
 		<div class="separator col-md-12">
 		</div>
-		
-
 		<div class="clearfix"></div>
-		
 	</div>
-
-
 </div>
 
 <!-- footer area -->
