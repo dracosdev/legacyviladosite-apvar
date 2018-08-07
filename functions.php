@@ -215,26 +215,6 @@ function sidebars_init() {
 		'after_title' => '</h4>',
 	) );
 
-	register_sidebar( array(
-		'name' => 'Opinião (Direita)',
-		'id' => 'lat_right_opiniao_widgets',
-		'description' => esc_html('Sidebar da direita da página Opiniao'),
-		'before_widget' => '<div class="widget-space row">',
-		'after_widget' => '</div> <div class="separator col-md-12"></div> <div class="clearfix"></div>',
-		'before_title' => '<h4 class="main-title col-md-12">',
-		'after_title' => '</h4>',
-	) );
-
-	register_sidebar( array(
-		'name' => 'Operacional (Direita)',
-		'id' => 'lat_right_operacional_widgets',
-		'description' => esc_html('Sidebar da direita da página Operacional'),
-		'before_widget' => '<div class="widget-space row">',
-		'after_widget' => '</div> <div class="separator col-md-12"></div> <div class="clearfix"></div>',
-		'before_title' => '<h4 class="main-title col-md-12">',
-		'after_title' => '</h4>',
-	) );
-
 }
 
 // Registra a inicialização das sidebars
