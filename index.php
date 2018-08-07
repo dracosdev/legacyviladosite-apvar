@@ -144,7 +144,10 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
         dynamic_sidebar('home_bottom');
 	}; ?>
 
-	<!-- aqui entra a parte antes do footer -->
+
+
+<!--
+
 	<div class="down-content col-md-12">
 
 		<div class="main-title-home col-md-2">
@@ -274,6 +277,10 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 		</div>
 		<div class="clearfix"></div>
 	</div>
+
+-->
+
+
 </div>
 
 <!-- footer area -->
