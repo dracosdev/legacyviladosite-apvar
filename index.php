@@ -106,7 +106,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 			</div>
 			
 			<div class="chamada col-md-8">
-				<h5>Notícias sobre a indústria e outros temas de interesse específico.</h5>
+				<h5>Notícias sobre a indústria e temas de interesse específico.</h5>
 			</div>
 
 		</div>	
