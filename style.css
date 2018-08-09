@@ -333,9 +333,7 @@ nav.navbar.navbar-default.menu-barra {
 .chamada-conteudo-dir {
     /*margin-left: 15px;*/
 }
-.chamada-conteudo-dir p img{
-    float: left;
-}
+
 .dir-container {
     display: inline;
 }
