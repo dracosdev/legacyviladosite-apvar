@@ -117,3 +117,238 @@ a img.aligncenter {
 	z-index: 100000;
 	/* Above WP toolbar. */
 }
+
+/* estilos adicionais */
+
+
+body{
+	background: linear-gradient(#09335D, #4478AA);
+    font-size: 12px;
+}
+
+.envolve p{
+    text-align:  justify;
+}
+
+.h5, h5 {
+    font-size: 13px;
+}
+
+.h4, h4 {
+    font-size: 15px;
+}
+
+.h3, h3 {
+    font-size: 17px;
+}
+
+.h2, h2 {
+    font-size: 22px;
+}
+
+.h1, h1 {
+    font-size: 30px;
+}
+
+.siteArea{
+	background: #FFFFCC;
+}
+
+
+
+h4.m-title a {
+    color: #003366;
+    text-decoration: none;
+}
+.main-title h3 {
+    color: #003366;
+}
+.main-title h4 {
+    color: #003366;
+}
+
+.chamada h5 {
+    color: #003366;
+}
+
+hr{
+	border-color: #003366;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.main-title {
+    background: #ecd892;
+}
+
+.widget-space {
+    border: solid 1px;
+    border-color: #000;
+}
+
+.navbar-default {
+    background: #000;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #ecd892;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #fff;
+    background-color: #BEA839;
+}
+
+.menu-barra ul ul {
+    display: none;
+    position: absolute;
+    z-index: 800;
+    text-align: left;
+    background: #000;
+    list-style: none;
+}
+
+.menu-barra ul li:hover > ul {
+    display: block;
+}
+
+.sub-menu a {
+    color: #ecd892;
+    text-decoration: none;
+        display: block;
+    padding: 15px 30px;
+}
+
+.sub-menu a:hover{
+    color: #fff;
+} 
+
+.sub-menu li:hover{
+    background: #BEA839;
+}
+
+ul.sub-menu {
+    padding: 0;
+    margin: 0;
+}
+
+.separator.col-md-12 {
+    padding: 5px;
+}
+
+.widget-area-down table{
+	border: solid 1px;
+    font-size: 11px;
+}
+
+footer{
+    background: #c3b170;
+    padding: 10px 0;
+    text-align: center;
+    color: #003366;
+}
+
+h2.main-title.col-md-12 {
+    color: #003366;
+}
+
+h3.main-title.col-md-12 {
+    color: #003366;
+}
+
+.widget-space ul {
+    list-style: none;
+}
+
+.widget-space a {
+    text-decoration: none;
+}
+
+h3.main-title.col-md-12 {
+    margin-top: 0;
+}
+
+h4.main-title.col-md-12 {
+    padding: 10px;
+    margin-top: 0;
+}
+
+.ouvidoria-text{
+    text-align: center;
+}
+
+header.header.row {
+    background: linear-gradient(to right, #fff, #FFFFCC);
+}
+
+.row.content.center-block {
+    margin-top: 20px;
+}
+
+nav.navbar.navbar-default.center-block {
+    margin-bottom: 0;
+}
+
+#logotipo {
+    margin: 20px;
+}
+
+.chamada h5 {
+    margin-top: 1px;
+}
+
+/* ajuste do thumbnail das matérias */
+.foto-materia img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav.navbar.navbar-default.menu-barra {
+    margin-bottom: 0;
+    border: solid 4px #717171;
+    border-radius: 0;
+}
+
+
+.plane-title {
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.envolve-titulo h2 {
+    display: inline-block;
+}
+
+.circle-titulo {
+    position: relative;
+    padding: 2% 5%;
+}
+.main-title-home h4 {
+    position: absolute;
+    top: 0;
+    font-weight: bold;
+}
+
+/* pagina de diretores */
+.chamada-conteudo-dir {
+    /*margin-left: 15px;*/
+}
+.chamada-conteudo-dir p img{
+    float: left;
+}
+.dir-container {
+    display: inline;
+}
+
+.envolve-chamada.envolve-chamada-par.col-md-12 {
+    margin-top: 30px;
+}
+
+.envolve-chamada.col-md-12 {
+    margin-top: 0;
+}
+
+
+.main-title-home.col-md-4{
+    padding: 0;
+}

@@ -17,7 +17,7 @@
 		
 			<header class="header row">
 
-				<a href="index.html">
+				<a href='<?php get_site_url(); ?>'>
 				<img id='logotipo' src='<?php echo get_bloginfo('template_directory') . '/img/apvar-logo.png'; ?>' alt='Logotipo'>
 				</a>
 
@@ -31,29 +31,7 @@
 						'container' => 'nav',
 						'items_wrap' => '<ul id="%1$s" class="nav navbar-nav %2$s">%3$s</ul>'
 					) );
-
-					/*Início da exibição do menu personalizado
-
-					wp_nav_menu( array(
-						'menu' => 'menu_princ',
-						'theme_location' => 'menu_princ',
-						'container' => 'nav',
-						'container_class' => '',
-						'container_id' => '',
-						'menu_class' => 'navbar navbar-default center-block',
-						'items_wrap' => '<ul id="%1$s" class="nav navbar-nav %2$s">%3$s</ul>',
-						'echo' => true,
-						'menu_id' => 'menu-princ-id',
-						'before' => '',
-						'after' => '',
-						'link_before' => '',
-						'link_after' => '',
-						'depth' => 0,
-						'walker' => '',
-					) );
-
-
-					 Fim da exibição do menu personalizado */ ?>
+					 ?>
 
 
 				</nav>		 
