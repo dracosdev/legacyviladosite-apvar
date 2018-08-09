@@ -250,7 +250,7 @@ class ouvidoria_widget extends WP_Widget {
 		echo $args['before_title'] . $title . $args['after_title'];
 		//output
 		echo __( '<p class="ouvidoria-text">
-			Envie-nos suas Sugestões, Dúvidas, Reclamações etc.
+			Envie-nos suas Sugestões, Dúvidas, Reclamações etc. <br>
 			<a href="http://www.apvar.org.br/v1/ouvidoria/">Clique aqui >>>> </a>
 			</p>' );
 
