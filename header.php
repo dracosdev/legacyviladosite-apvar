@@ -17,7 +17,7 @@
 		
 			<header class="header row">
 
-				<a href='<?php get_site_url(); ?>'>
+				<a href='<?php echo home_url(); ?>'>
 				<img id='logotipo' src='<?php echo get_bloginfo('template_directory') . '/img/apvar-logo.png'; ?>' alt='Logotipo'>
 				</a>
 
