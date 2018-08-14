@@ -79,10 +79,35 @@ function post_semimagem() {
 	<?php
 }
 
+// Função para carregar post na home com imagem na sessão da direita
+function post_comimagem_right() {
+	?>
+	<div class="foto-materia col-md-12">
+		<?php the_post_thumbnail(); ?>
+	</div>
+
+    <div class="main col-md-12">
+    	<a href=' <?php echo the_permalink(); ?> '>
+	    	<h4 class="m-title"> <?php echo the_title(); ?> </h4>
+    		<p> <?php the_excerpt_max(200); ?> </p>
+		</a>
+	</div>
+	<?php
+}
+
 // Função para verificar se o post tem ou não imagem e carregar a versão correta
 function post_checaimg() {
 	if (has_post_thumbnail($post->ID)) {
 		post_comimagem();
+	} else {
+		post_semimagem();
+	}
+}
+
+// Função para verificar se o post tem ou não imagem e carregar a versão correta na sessão da direita
+function post_checaimg_right() {
+	if (has_post_thumbnail($post->ID)) {
+		post_comimagem_right();
 	} else {
 		post_semimagem();
 	}

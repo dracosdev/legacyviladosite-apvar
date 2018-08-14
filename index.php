@@ -121,7 +121,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 			while ( have_posts() ) : the_post(); ?>
 			    
 			    <div class="envolve row  col-md-12">
-			   		<?php post_checaimg(); ?>
+			   		<?php post_checaimg_right(); ?>
 				</div>
 
 			<?php wp_reset_postdata();			
