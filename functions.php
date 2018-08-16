@@ -55,7 +55,9 @@ function the_title_max($thelength) {
 function post_comimagem() {
 	?>
 	<div class="foto-materia col-md-4">
-		<?php the_post_thumbnail(); ?>
+		<a href=' <?php echo the_permalink(); ?> '>
+			<?php the_post_thumbnail(); ?>
+		</a>
 	</div>
 
     <div class="main col-md-8">
@@ -83,7 +85,9 @@ function post_semimagem() {
 function post_comimagem_right() {
 	?>
 	<div class="foto-materia col-md-12">
-		<?php the_post_thumbnail(); ?>
+		<a href=' <?php echo the_permalink(); ?> '>
+			<?php the_post_thumbnail(); ?>
+		</a>
 	</div>
 
     <div class="main col-md-12">
