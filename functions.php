@@ -445,7 +445,7 @@ class falsa_recup_widget extends WP_Widget {
 
 		//Argumentos da query
 	    $lastposts = get_posts( array(
-   			'posts_per_page' => 10,
+   			'posts_per_page' => 4,
 	        'cat' => $categ_id,
 	        'orderby' => 'date',
 	        'order' => 'DESC',
