@@ -399,9 +399,94 @@ class categ_last_widget extends WP_Widget {
 
 
 
+
+
+
+// Cria o widget de Ouvidoria
+class falsa_recup_widget extends WP_Widget {
+	
+	function __construct() {
+	parent::__construct(
+	// widget ID
+	'falsa_recup_widget',
+	// widget name
+	__('Falsa Recuperação', 'falsa_recup_widget_domain'),
+	// widget description
+	array( 'description' => __( 'Este widget mostra os últimos posts da categoria Falsa recuperação da Varig e um link para ver esta categoria completa.', 'falsa_recup_widget_domain' ), )
+	);
+	}
+
+	public function widget( $args, $instance ) {
+		$title = apply_filters( 'widget_title', $instance['title'] );
+
+		// Before Widget
+		echo $args['before_widget'];
+
+		// If title is present
+		if ( ! empty( $title ) )
+		echo $args['before_title'] . $title . $args['after_title'];
+
+		// WIDGET
+		// Variáveis para obetr a categoria a partir do slug
+		$slug = "falsarecuperacao";
+		$categ = get_category_by_slug( $slug );
+		$categ_id = $categ->cat_ID;
+
+		//Argumentos da query
+	    $lastposts = get_posts( array(
+   			'posts_per_page' => 10,
+	        'cat' => $categ_id,
+	        'orderby' => 'date',
+	        'order' => 'DESC',
+	        'suppress_filters' => true
+	    ) );
+
+		// Loop de posts
+		global $post;
+	    if ( $lastposts ) {
+	        foreach ( $lastposts as $post ) {
+	            setup_postdata( $post ); ?>
+	            <p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+	        <?php
+	        }
+	    }
+	    wp_reset_postdata();
+
+		// After Widget
+		echo $args['after_widget'];
+	}
+
+	public function form( $instance ) {
+		if ( isset( $instance[ 'title' ] ) )
+		$title = $instance[ 'title' ];
+		else
+		$title = __( 'Últimos posts da Categoria', 'categ_last_widget_domain' );
+		?>
+		<p>
+		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+		</p>
+		<?php
+	}
+
+	public function update( $new_instance, $old_instance ) {
+		$instance = array();
+		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+		return $instance;
+	}
+ 
+}
+
+
+
+
+
+
+
 // Registra e inicializa os widgets
 function register_widgets() {
 	
+	register_widget('falsa_recup_widget');
 	register_widget('ouvidoria_widget');
 	register_widget('categ_last_widget');
 
