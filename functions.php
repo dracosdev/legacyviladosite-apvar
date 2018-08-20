@@ -463,6 +463,9 @@ class falsa_recup_widget extends WP_Widget {
 	    }
 	    wp_reset_postdata();
 
+	    $category_link = get_category_link( 11 );
+	    echo "<a href='$category_link;' title='Falsa recuperação'><p>Ver todas</p></a>";
+
 		// After Widget
 		echo $args['after_widget'];
 	}
