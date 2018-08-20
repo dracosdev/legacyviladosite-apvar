@@ -348,9 +348,20 @@ class categ_last_widget extends WP_Widget {
 		echo $args['before_title'] . $title . $args['after_title'];
 
 		// WIDGET
-		// Variáveis para saber categoria
-		$categ = get_category( get_query_var( 'cat' ) );
-		$categ_id = $categ->cat_ID;
+		
+		// Carrega as variáveis caso a página carregada seja uma categoria
+		if (is_category()) {
+			// Variáveis para saber categoria
+			$categ = get_category( get_query_var( 'cat' ) );
+			$categ_id = $categ->cat_ID;
+		};
+		
+		// Carrega as variáveis caso a página carregada seja um post
+		if (is_single()) {
+			// Variáveis para saber categoria
+			$categ = get_the_category($post->ID);
+			$categ_id = $categ->cat_ID;
+		};
 
 		//Argumentos da query
 	    $lastposts = get_posts( array(
@@ -446,7 +457,7 @@ class falsa_recup_widget extends WP_Widget {
 	    if ( $lastposts ) {
 	        foreach ( $lastposts as $post ) {
 	            setup_postdata( $post ); ?>
-	            <p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+	            <a href="<?php the_permalink(); ?>"><p><?php the_title(); ?></p></a>
 	        <?php
 	        }
 	    }
