@@ -338,6 +338,7 @@ class categ_last_widget extends WP_Widget {
 	}
 
 	public function widget( $args, $instance ) {
+		global $post;
 		$title = apply_filters( 'widget_title', $instance['title'] );
 
 		// Before Widget
@@ -360,7 +361,7 @@ class categ_last_widget extends WP_Widget {
 		if (is_single()) {
 			// Variáveis para saber categoria
 			$categ = get_the_category($post->ID);
-			$categ_id = $categ->cat_ID;
+			$categ_id = $categ[0]->cat_ID;
 		};
 
 		//Argumentos da query
@@ -373,7 +374,6 @@ class categ_last_widget extends WP_Widget {
 	    ) );
 
 		// Loop de posts
-		global $post;
 	    if ( $lastposts ) {
 	        foreach ( $lastposts as $post ) {
 	            setup_postdata( $post ); ?>
