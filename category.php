@@ -11,7 +11,7 @@ $sidebar_name = 'lat_right_categories_widgets'; ?>
 				if (is_active_sidebar($sidebar_name)) {echo '<div class="col-md-9">';}
 				else {echo '<div id="conteudo" class="col-md-12">';};
 
-					get_template_part('layout/loop-geral');
+					get_template_part('layout/loop-geral-paginado');
 
 					echo "<div class='col-md-12 center-block paginacao'> ";
 					wordpress_pagination();
