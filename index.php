@@ -18,7 +18,8 @@ $args_quadroavisos = array(
 $args_deunaimprensa = array(
 	'cat' => 5,
 	'post_type' => 'post',
-	'posts_per_page' => 3
+	'posts_per_page' => 4
+	/*'posts_per_page' => 3*/
 );
 
 
