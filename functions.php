@@ -1,4 +1,4 @@
-<?php 
+sem<?php 
 
 // ----------------------------------------------------------
 // Funções e recursos básicos do template
@@ -88,7 +88,7 @@ function post_semimagem() {
     <div class="main col-md-12">
     	<a href=' <?php echo the_permalink(); ?> '>
 	    	<h4 class="m-title"> <?php echo the_title(); ?> </h4>
-    		<p> <?php the_excerpt_max(200); ?> </p>
+    		<p> <?php the_excerpt_max(320); ?> </p>
 		</a>
 	</div>
 	<?php
