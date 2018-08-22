@@ -18,7 +18,7 @@ $args_quadroavisos = array(
 $args_deunaimprensa = array(
 	'cat' => 5,
 	'post_type' => 'post',
-	'posts_per_page' => 4
+	'posts_per_page' => 3
 	/*'posts_per_page' => 3*/
 );
 
@@ -123,7 +123,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 			    
 			    <div class="envolve row  col-md-12">
 			   		<?php /*post_checaimg_right();*/ post_semimagem(); ?>
-			   		
+
 				</div>
 
 			<?php wp_reset_postdata();			
