@@ -413,7 +413,7 @@ class categ_last_widget extends WP_Widget {
 
 
 
-// Cria o widget de Ouvidoria
+// Cria o widget de Falsa Recuperação
 class falsa_recup_widget extends WP_Widget {
 	
 	function __construct() {
@@ -464,7 +464,7 @@ class falsa_recup_widget extends WP_Widget {
 	    wp_reset_postdata();
 
 	    $category_link = get_category_link( $categ_id );
-	    echo "<a href='$category_link' title='Falsa recuperação'><p>Ver todas</p></a>";
+	    echo "<a href='$category_link' title='Falsa recuperação'><p style='text-align:center;'>Ver todas</p></a>";
 
 		// After Widget
 		echo $args['after_widget'];
