@@ -187,9 +187,7 @@ function carrega_scripts(){
 
 	wp_enqueue_style('style', get_template_directory_uri().'/style.css', array(), null, 'all');
 
-	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', array(), null, true);
-
-	wp_enqueue_script('template', get_template_directory_uri().'/js/template.js', array(), null, true);
+	wp_enqueue_script('js_template', get_template_directory_uri().'/js/template.js', array(), null, true);
 
 	wp_enqueue_script('bs_template', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array('jquery'), null, true);
 
