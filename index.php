@@ -31,7 +31,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 <!-- header area -->
 <div class="row content center-block">
 	<div class="main col-md-6">
-		<div class="envolve-chamada col-md-12">
+		<div class="envolve-chamada row">
 			<div class="main-title-home col-md-4">
 				<img id='circle-titulo' class="circle-titulo" src='<?php echo get_bloginfo('template_directory') . '/img/logo-circulo-titulo.png'; ?>' alt='circulo do titulo'>
 				<a href="http://www.apvar.org.br/v1/category/apvaracao/">
@@ -45,7 +45,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 		</div>	
 			
 		<div class="clearfix"></div>
-			<hr>
+			<hr class="row col-md-12">
 
 			<?php
 			// Loop da área "Apvar em Ação"
@@ -54,14 +54,14 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 			// Loop
 			while ( have_posts() ) : the_post(); ?>
 			
-			    <div class="envolve row col-md-12"> <?php post_checaimg(); ?> </div>
+			    <div class="envolve row"> <?php post_checaimg(); ?> </div>
 				
 			<?php wp_reset_postdata();
 			endwhile; ?>
 
 			<div class="clearfix"></div>
 
-		<div class="envolve-chamada envolve-chamada-par col-md-12">
+		<div class="envolve-chamada envolve-chamada-par row">
 			<div class="main-title-home col-md-4">
 				<img id='circle-titulo' class="circle-titulo" src='<?php echo get_bloginfo('template_directory') . '/img/logo-circulo-titulo.png'; ?>' alt='circulo do titulo'>
 
@@ -77,7 +77,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 
 		<div class="clearfix"></div>
 
-			<hr>
+			<hr class="row col-md-12">
 
 			<?php
 			// Loop da área "Quadro de Avisos"
@@ -85,7 +85,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 
 			while ( have_posts() ) : the_post(); ?>
 			   
-			    <div class="envolve row col-md-12">
+			    <div class="envolve row">
 				    <?php post_checaimg(); ?>
 				</div>
 			<?php wp_reset_postdata();			
@@ -98,7 +98,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 	<!-- coluna do meio -->
 	<div class="second middle-section col-md-4">
 
-		<div class="envolve-chamada col-md-12">
+		<div class="envolve-chamada row">
 			<div class="main-title-home col-md-4">
 				<img id='circle-titulo' class="circle-titulo" src='<?php echo get_bloginfo('template_directory') . '/img/logo-circulo-titulo.png'; ?>' alt='circulo do titulo'>
 				<a href="http://www.apvar.org.br/v1/category/deunaimprensa/">
@@ -121,7 +121,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 		 
 			while ( have_posts() ) : the_post(); ?>
 			    
-			    <div class="envolve row  col-md-12">
+			    <div class="envolve row">
 			   		<?php /*post_checaimg_right();*/ post_semimagem(); ?>
 
 				</div>
@@ -132,12 +132,12 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 	</div>
 
 	<!-- area da sidebar -->
-	<div class="bordas">
+	
 		<aside class="complementary col-md-2">
 			<?php get_sidebar(); ?>
 			<div class="clearfix"></div>
 		</aside>
-	</div>
+	
 
 	<div class="separator col-md-12"></div>	
 	<div class="clearfix"></div>
