@@ -12,7 +12,7 @@ $args_apvaracao = array(
 $args_quadroavisos = array(
 	'cat' => 4,
 	'post_type' => 'post',
-	'posts_per_page' => 2
+	'posts_per_page' => 4
 );
 
 $args_deunaimprensa = array(
