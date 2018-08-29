@@ -98,18 +98,18 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 	<!-- coluna do meio -->
 	<div class="second middle-section col-md-4">
 
-		<div class="envolve-chamada row">
-			<div class="main-title-home col-md-4">
-				<img id='circle-titulo' class="circle-titulo" src='<?php echo get_bloginfo('template_directory') . '/img/logo-circulo-titulo.png'; ?>' alt='circulo do titulo'>
+		<div class="envolve-chamada chamada-dni">
+			<div class="main-title-home m-t-left">
+				<img id='circle-titulo' class="circle-titulo img-dni" src='<?php echo get_bloginfo('template_directory') . '/img/logo-circulo-titulo.png'; ?>' alt='circulo do titulo'>
 				<a href="http://www.apvar.org.br/v1/category/deunaimprensa/">
-					<h4>Deu na Imprensa</h4>
+					<h4>Deu na <br> Imprensa</h4>
 				</a>
 			</div>
 			
-			<div class="chamada col-md-8">
+			<div class="chamada chamada-dni">
 				<h5>Notícias sobre a indústria e temas de interesse específico.</h5>
 			</div>
-
+			<div class="clearfix"></div>
 		</div>	
 
 			<div class="clearfix"></div>

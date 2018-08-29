@@ -322,6 +322,7 @@ nav.navbar.navbar-default.menu-barra {
 .circle-titulo {
     position: relative;
     padding: 2% 5%;
+    max-width: fit-content;
 }
 .main-title-home h4 {
     position: absolute;
@@ -338,7 +339,7 @@ nav.navbar.navbar-default.menu-barra {
     display: inline;
 }
 
-.envolve-chamada.envolve-chamada-par.col-md-12 {
+.envolve-chamada.envolve-chamada-par{
     margin-top: 10px;
 }
 
@@ -349,4 +350,40 @@ nav.navbar.navbar-default.menu-barra {
 
 .main-title-home.col-md-4{
     padding: 0;
+}
+
+.main-title-home.m-t-left {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+}
+.chamada.chamada-dni {
+    width: 65%;
+    float: right;
+}
+
+.envolve-chamada {
+    height: auto;
+}
+
+.main-title-home.m-t-left h4 {
+    top: -8px;
+}
+
+.envolve-chamada.chamada-dni {
+    margin-bottom: 2px;
+}
+
+@media (max-width: 990px) {
+    .main-title-home.m-t-left{
+        clear: both;
+        width: 100%;
+    }
+
+    .chamada.chamada-dni{
+        width: auto;
+        margin: 0 15px;
+        float: none;
+        clear: both;
+    }
 }
