@@ -176,6 +176,9 @@ hr{
     margin-top: 0;
     margin-bottom: 10px;
 }
+hr.row.col-md-12 {
+    padding-left: 0px;
+}
 
 .main-title {
     background: #ecd892;
