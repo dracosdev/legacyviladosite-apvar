@@ -257,6 +257,16 @@ function sidebars_init() {
 		'after_title' => '</h4>',
 	) );
 
+	register_sidebar( array(
+		'name' => 'Links Úteis (Direita)',
+		'id' => 'lat_right_links_widgets',
+		'description' => esc_html('Sidebar da direita da página Links Úteis'),
+		'before_widget' => '<div id="%1$s" class="widget-space row %2$s">',
+		'after_widget' => '</div> <div class="separator col-md-12"></div> <div class="clearfix"></div>',
+		'before_title' => '<h4 class="main-title col-md-12">',
+		'after_title' => '</h4>',
+	) );
+
 }
 
 // Registra a inicialização das sidebars
