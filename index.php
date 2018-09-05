@@ -1,28 +1,5 @@
 <?php get_header();
 
-
-
-// Montagem dos argumentos para cada loop
-$args_apvaracao = array(
-	'cat' => 3,
-	'post_type' => 'post',
-	'posts_per_page' => 2
-);
-
-$args_quadroavisos = array(
-	'cat' => 4,
-	'post_type' => 'post',
-	'posts_per_page' => 4
-);
-
-$args_deunaimprensa = array(
-	'cat' => 5,
-	'post_type' => 'post',
-	'posts_per_page' => 3
-	/*'posts_per_page' => 3*/
-);
-
-
 // Montagem das mensagens pré-definidas
 $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p>';
 
@@ -48,6 +25,13 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 			<hr class="row col-md-12">
 
 			<?php
+			// Argumentos do loop
+			$args_apvaracao = array(
+				'cat' => 3,
+				'post_type' => 'post',
+				'posts_per_page' => 2
+			);
+
 			// Loop da área "Apvar em Ação"
 			query_posts( $args_apvaracao );
 			 
@@ -80,6 +64,13 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 			<hr class="row col-md-12">
 
 			<?php
+			// Argumentos do loop
+			$args_quadroavisos = array(
+				'cat' => 4,
+				'post_type' => 'post',
+				'posts_per_page' => 3
+			);
+
 			// Loop da área "Quadro de Avisos"
 			query_posts( $args_quadroavisos );
 
@@ -116,14 +107,20 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 			<hr>
 
 			<?php
+			// Argumentos do loop
+			$args_deunaimprensa = array(
+				'cat' => 5,
+				'post_type' => 'post',
+				'posts_per_page' => 4
+			);
+
 			// Loop da área "Deu na Imprensa"
 			query_posts( $args_deunaimprensa );
 		 
 			while ( have_posts() ) : the_post(); ?>
 			    
 			    <div class="envolve row">
-			   		<?php /*post_checaimg_right();*/ post_semimagem(); ?>
-
+			   		<?php /*post_checaimg();*/ post_semimagem(); ?>
 				</div>
 
 			<?php wp_reset_postdata();			
