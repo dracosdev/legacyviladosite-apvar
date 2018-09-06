@@ -54,6 +54,12 @@ function the_excerpt_max($charlength) {
 }
 
 
+// Função para usar um excerpt maior do que o máximo permitido, usando o the content
+function the_big_excerpt($chars) {
+	$charnumber = $chars;
+    echo wp_trim_words( get_the_content(), $charnumber );
+}
+
 
 // Função para delimitar o title
 function the_title_max($thelength) {
@@ -94,24 +100,6 @@ function post_semimagem() {
 	<?php
 }
 
-// Função para carregar post na home com imagem na sessão da direita
-function post_comimagem_right() {
-	?>
-	<div class="foto-materia col-md-12">
-		<a href=' <?php echo the_permalink(); ?> '>
-			<?php the_post_thumbnail(); ?>
-		</a>
-	</div>
-
-    <div class="main col-md-12">
-    	<a href=' <?php echo the_permalink(); ?> '>
-	    	<h4 class="m-title"> <?php echo the_title(); ?> </h4>
-    		<p> <?php the_excerpt_max(200); ?> </p>
-		</a>
-	</div>
-	<?php
-}
-
 // Função para verificar se o post tem ou não imagem e carregar a versão correta
 function post_checaimg() {
 	if (has_post_thumbnail($post->ID)) {
@@ -121,12 +109,58 @@ function post_checaimg() {
 	}
 }
 
-// Função para verificar se o post tem ou não imagem e carregar a versão correta na sessão da direita
-function post_checaimg_right() {
+
+// Função para carregar post na home com a imagem no topo
+function post_comimagem_topo() { ?>
+	
+	<div class="foto-materia col-md-12">
+		<a href=' <?php echo the_permalink(); ?> '>
+			<?php the_post_thumbnail(); ?>
+		</a>
+	</div>
+
+    <div class="main col-md-12">
+    	<a href=' <?php echo the_permalink(); ?> '>
+	    	<h4 class="m-title"> <?php echo the_title(); ?> </h4>
+    		<p> <?php the_excerpt_max(120); ?> </p>
+		</a>
+	</div>
+	<?php
+}
+
+
+// Função para carregar post na home sem imagem para o modelo com imagem no topo
+function post_semimagem_topo() {
+	?>
+    <div class="main col-md-12">
+    	<a href=' <?php echo the_permalink(); ?> '>
+	    	<h4 class="m-title"> <?php echo the_title(); ?> </h4>
+    		<p> <?php the_excerpt_max(180); ?> </p>
+		</a>
+	</div>
+	<?php
+}
+
+
+// Função para carregar post na home sem imagem para o modelo com imagem no topo
+function post_semimagem_topofirst() {
+	?>
+    <div class="main col-md-12">
+    	<a href=' <?php echo the_permalink(); ?> '>
+	    	<h4 class="m-title"> <?php echo the_title(); ?> </h4>
+    		<p> <?php the_big_excerpt(100); ?> </p>
+		</a>
+	</div>
+	<?php
+}
+
+
+// Função para verificar se o post tem ou não imagem e carregar a versão de imagem no topo para o Deu na Imprensa
+function post_checaimg_topo() {
 	if (has_post_thumbnail($post->ID)) {
-		post_comimagem_right();
+		post_comimagem_topo();
 	} else {
-		post_semimagem();
+		post_semimagem_topofirst();
 	}
 }
 

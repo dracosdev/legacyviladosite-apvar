@@ -37,10 +37,8 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 			 
 			// Loop
 			while ( have_posts() ) : the_post(); ?>
-			
-			    <div class="envolve row"> <?php post_checaimg(); ?> </div>
-				
-			<?php wp_reset_postdata();
+			    <div class="envolve row"> <?php post_checaimg(); ?>	</div>
+				<?php wp_reset_postdata();			
 			endwhile; ?>
 
 			<div class="clearfix"></div>
@@ -75,11 +73,8 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 			query_posts( $args_quadroavisos );
 
 			while ( have_posts() ) : the_post(); ?>
-			   
-			    <div class="envolve row">
-				    <?php post_checaimg(); ?>
-				</div>
-			<?php wp_reset_postdata();			
+			    <div class="envolve row"> <?php post_checaimg(); ?>	</div>
+				<?php wp_reset_postdata();			
 			endwhile; ?>
 
 			<div class="clearfix"></div>			
@@ -116,14 +111,14 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 
 			// Loop da área "Deu na Imprensa"
 			query_posts( $args_deunaimprensa );
-		 
-			while ( have_posts() ) : the_post(); ?>
-			    
-			    <div class="envolve row">
-			   		<?php /*post_checaimg();*/ post_semimagem(); ?>
-				</div>
-
-			<?php wp_reset_postdata();			
+		 	
+		 	$postCount = 0;
+			while ( have_posts() ) : $postCount++; the_post();
+				if ($postCount == 1)
+					{ echo '<div class="envolve row">', post_checaimg_topo(), '</div>'; }
+				else
+					{ echo '<div class="envolve row">', post_semimagem_topo(), '</div>'; }
+				wp_reset_postdata();
 			endwhile; ?>
 	
 	</div>
