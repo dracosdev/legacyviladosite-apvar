@@ -464,16 +464,16 @@ class categ_last_widget extends WP_Widget {
 
 
 // Cria o User data widget
-class user_data_widget extends WP_Widget {
+class userdata_widget extends WP_Widget {
 	
 	function __construct() {
 	parent::__construct(
 	// widget ID
-	'user_data_widget',
+	'userdata_widget',
 	// widget name
-	__('Informações de Usuário', 'user_data_widget_domain'),
+	__('Informações de Usuário', 'userdata_widget_domain'),
 	// widget description
-	array( 'description' => __( 'Um widget que mostra os dados de usuário quando logado.', 'user_data_widget_domain' ), )
+	array( 'description' => __( 'Um widget que mostra os dados de usuário quando logado.', 'userdata_widget_domain' ), )
 	);
 	}
 
@@ -497,7 +497,7 @@ class user_data_widget extends WP_Widget {
 		$us_categ ='Administrador';
 
 		//monta a exibição dos dados
-		echo "<p>Olá ".$nome;.".</p>";
+		echo "<p>Olá, ".$us_name.".</p>";
 		echo "<p>Você está logado como: </p>";
 		echo "<p> Login - ".$us_login."</p>";
 		echo "<p> Matrícula - ".$us_matricula."</p>";
@@ -507,8 +507,6 @@ class user_data_widget extends WP_Widget {
 		echo "<a href='#' title=''>Prestação de Contas</a>";
 		echo "<a href='#' title=''>Fale com a diretoria</a>";
 
-	    wp_reset_postdata();
-
 		// After Widget
 		echo $args['after_widget'];
 	}
@@ -517,7 +515,7 @@ class user_data_widget extends WP_Widget {
 		if ( isset( $instance[ 'title' ] ) )
 		$title = $instance[ 'title' ];
 		else
-		$title = __( 'Informações de Usuário', 'user_data_widget_domain' );
+		$title = __( 'Informações de Usuário', 'userdata_widget_domain' );
 		?>
 		<p>
 		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
