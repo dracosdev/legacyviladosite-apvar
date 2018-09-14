@@ -463,77 +463,6 @@ class categ_last_widget extends WP_Widget {
 }
 
 
-// Cria o User data widget
-class userdata_widget extends WP_Widget {
-	
-	function __construct() {
-	parent::__construct(
-	// widget ID
-	'userdata_widget',
-	// widget name
-	__('Informações de Usuário', 'userdata_widget_domain'),
-	// widget description
-	array( 'description' => __( 'Um widget que mostra os dados de usuário quando logado.', 'userdata_widget_domain' ), )
-	);
-	}
-
-	public function widget( $args, $instance ) {
-		global $post;
-		$title = apply_filters( 'widget_title', $instance['title'] );
-
-		// Before Widget
-		echo $args['before_widget'];
-
-		// If title is present
-		if ( ! empty( $title ) )
-		echo $args['before_title'] . $title . $args['after_title'];
-
-		// WIDGET
-		
-		//obtem os dados de usuário.
-		$us_name = 'Vila do Site';
-		$us_login ='viladosite';
-		$us_matricula ='1234';
-		$us_categ ='Administrador';
-
-		//monta a exibição dos dados
-		echo "<p>Olá, ".$us_name.".</p>";
-		echo "<p>Você está logado como: </p>";
-		echo "<p> Login - ".$us_login."</p>";
-		echo "<p> Matrícula - ".$us_matricula."</p>";
-		echo "<p> Categoria - ".$us_categ."</p>";
-
-		echo "<p> Links para associado:</p>";
-		echo "<a href='#' title=''>Prestação de Contas</a>";
-		echo "<a href='#' title=''>Fale com a diretoria</a>";
-
-		// After Widget
-		echo $args['after_widget'];
-	}
-
-	public function form( $instance ) {
-		if ( isset( $instance[ 'title' ] ) )
-		$title = $instance[ 'title' ];
-		else
-		$title = __( 'Informações de Usuário', 'userdata_widget_domain' );
-		?>
-		<p>
-		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
-		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
-		</p>
-		<?php
-	}
-
-	public function update( $new_instance, $old_instance ) {
-		$instance = array();
-		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-		return $instance;
-	}
- 
-}
-
-
-
 // Cria o widget de Falsa Recuperação
 class falsa_recup_widget extends WP_Widget {
 	
@@ -615,12 +544,93 @@ class falsa_recup_widget extends WP_Widget {
 
 
 
+// Cria o User data widget
+class userdata_widget extends WP_Widget {
+	
+	function __construct() {
+	parent::__construct(
+	// widget ID
+	'userdata_widget',
+	// widget name
+	__('Dados de Usuário', 'userdata_widget_domain'),
+	// widget description
+	array( 'description' => __( 'Um widget que mostra os dados de usuário quando logado.', 'userdata_widget_domain' ), )
+	);
+	}
+
+	public function widget( $args, $instance ) {
+		global $post;
+		$title = apply_filters( 'widget_title', $instance['title'] );
+
+		// Before Widget
+		echo $args['before_widget'];
+
+		// If title is present
+		if ( ! empty( $title ) )
+		echo $args['before_title'] . $title . $args['after_title'];
+
+		// WIDGET
+		
+		// Obtem os dados de usuário.
+		$us_name = 'Vila do Site';
+		$us_login ='viladosite';
+		$us_matricula ='1234';
+		$us_categ ='Administrador';
+
+		// Monta a exibição dos dados
+		?>
+
+		<p> Olá, <?php echo $us_name; ?></p>
+		<p><strong> Você está logado como: </strong><br>
+			Login - <?php echo $us_login; ?><br>
+			Matrícula - <?php echo $us_matricula; ?><br>
+			Categoria - <?php echo $us_categ; ?><br>
+		</p>
+
+		<p> Links para associado:</p>
+		<p>
+			<a href='#' title=''>Prestação de Contas</a>
+			<br>
+			<a href='#' title=''>Fale com a diretoria</a>
+		</p>
+
+		<?php
+		// After Widget
+		echo $args['after_widget'];
+	}
+
+	public function form( $instance ) {
+		if ( isset( $instance[ 'title' ] ) )
+		$title = $instance[ 'title' ];
+		else
+		$title = __( 'Informações de Usuário', 'userdata_widget_domain' );
+		?>
+		<p>
+		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+		</p>
+		<?php
+	}
+
+	public function update( $new_instance, $old_instance ) {
+		$instance = array();
+		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+		return $instance;
+	}
+ 
+}
+
+
+
+
+
 // Registra e inicializa os widgets
 function register_widgets() {
 	
 	register_widget('falsa_recup_widget');
 	register_widget('ouvidoria_widget');
 	register_widget('categ_last_widget');
+	register_widget('userdata_widget');
 
 }
 
