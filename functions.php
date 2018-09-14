@@ -463,7 +463,76 @@ class categ_last_widget extends WP_Widget {
 }
 
 
+// Cria o User data widget
+class user_data_widget extends WP_Widget {
+	
+	function __construct() {
+	parent::__construct(
+	// widget ID
+	'user_data_widget',
+	// widget name
+	__('Informações de Usuário', 'user_data_widget_domain'),
+	// widget description
+	array( 'description' => __( 'Um widget que mostra os dados de usuário quando logado.', 'user_data_widget_domain' ), )
+	);
+	}
 
+	public function widget( $args, $instance ) {
+		global $post;
+		$title = apply_filters( 'widget_title', $instance['title'] );
+
+		// Before Widget
+		echo $args['before_widget'];
+
+		// If title is present
+		if ( ! empty( $title ) )
+		echo $args['before_title'] . $title . $args['after_title'];
+
+		// WIDGET
+		
+		//obtem os dados de usuário.
+		$us_name = 'Vila do Site';
+		$us_login ='viladosite';
+		$us_matricula ='1234';
+		$us_categ ='Administrador';
+
+		//monta a exibição dos dados
+		echo "<p>Olá ".$nome;.".</p>";
+		echo "<p>Você está logado como: </p>";
+		echo "<p> Login - ".$us_login."</p>";
+		echo "<p> Matrícula - ".$us_matricula."</p>";
+		echo "<p> Categoria - ".$us_categ."</p>";
+
+		echo "<p> Links para associado:</p>";
+		echo "<a href='#' title=''>Prestação de Contas</a>";
+		echo "<a href='#' title=''>Fale com a diretoria</a>";
+
+	    wp_reset_postdata();
+
+		// After Widget
+		echo $args['after_widget'];
+	}
+
+	public function form( $instance ) {
+		if ( isset( $instance[ 'title' ] ) )
+		$title = $instance[ 'title' ];
+		else
+		$title = __( 'Informações de Usuário', 'user_data_widget_domain' );
+		?>
+		<p>
+		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+		</p>
+		<?php
+	}
+
+	public function update( $new_instance, $old_instance ) {
+		$instance = array();
+		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+		return $instance;
+	}
+ 
+}
 
 
 
@@ -544,6 +613,7 @@ class falsa_recup_widget extends WP_Widget {
 	}
  
 }
+
 
 
 
