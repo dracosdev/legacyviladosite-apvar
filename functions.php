@@ -188,15 +188,19 @@ function pega_filhos() {
 
 	foreach ($childList as $child) { ?>
 		<p>&nbsp;</p>
-		<div class="chamada col-md-1 col-xs-1">
-	    	<h2><?php echo $child->post_title; ?></h2>
-		</div>
+		<div class="envolvefilho">
+			<div class="chamada col-md-1 col-xs-1">
+		    	<h2><?php echo $child->post_title; ?></h2>
+			</div>
 
-		<div class="chamada-conteudo-dir col-md-11 col-xs-11">
-    	    <?php echo apply_filters( 'the_content', $child->post_content); ?>
+			<div class="chamada-conteudo-dir col-md-11 col-xs-11">
+	    	    <?php echo apply_filters( 'the_content', $child->post_content); ?>
+			</div>
 		</div>
 		<p>&nbsp;</p>
 		<p>&nbsp;</p>
+		<br>
+		<br>
 	<?php }
 }
 

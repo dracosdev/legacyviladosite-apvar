@@ -338,6 +338,11 @@ nav.navbar.navbar-default.menu-barra {
     /*margin-left: 15px;*/
 }
 
+.envolvefilho {
+    height: auto;
+    display: inline-block;
+}
+
 .dir-container {
     display: inline;
 }

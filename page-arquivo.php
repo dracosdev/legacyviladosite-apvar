@@ -15,7 +15,7 @@ $sidebar_name = ''; ?>
 				// Função que abre a div de coluna variando de acordo com apresença da sidebar
 				if (is_active_sidebar($sidebar_name)) {echo '<div class="col-md-9">';}
 				else {echo '<div id="conteudo" class="col-md-12">';};
-					the_content();
+					get_template_part('layout/loop-pages');
 				echo "</div>";
 
 			endwhile; else:
