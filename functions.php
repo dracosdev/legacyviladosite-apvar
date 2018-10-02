@@ -213,6 +213,14 @@ function bs_separator() {
 }
 
 
+// Redireciona subscribers não-admins para a página "Lounge" após logado
+function apvar_login_redirect( $redirect_to, $request, $user  ) {
+	$user_lounge = site_url() . "/lounge";
+	return ( is_array( $user->roles ) && in_array( 'administrator', $user->roles ) ) ? admin_url() : $user_lounge;
+}
+add_filter( 'login_redirect', 'apvar_login_redirect', 10, 3 );
+
+
 // ----------------------------------------------------------
 // Scripts
 // ----------------------------------------------------------
@@ -576,22 +584,32 @@ class userdata_widget extends WP_Widget {
 		// WIDGET
 		
 		// Obtem os dados de usuário.
-		$us_name = 'Vila do Site';
-		$us_login ='viladosite';
-		$us_matricula ='1234';
-		$us_categ ='Administrador';
+		$user_info = wp_get_current_user();
+		$us_name = $user_info->user_nicename;
+		$us_login = $user_info->user_login;
+		$us_matricula = $user_info->matricula;
+		$us_categ = implode(', ', $user_info->roles);
+		$us_id = $user_info->ID;
 
 		// Monta a exibição dos dados
 		?>
 
 		<p> Olá, <?php echo $us_name; ?></p>
 		<p><strong> Você está logado como: </strong><br>
-			Login - <?php echo $us_login; ?><br>
-			Matrícula - <?php echo $us_matricula; ?><br>
-			Categoria - <?php echo $us_categ; ?><br>
+			<p><strong>Login</strong>
+				<br><?php echo $us_login; ?>
+			</p>
+			
+			<p><strong>Matrícula</strong>
+				<br><?php echo $us_matricula; ?>
+			</p>
+			
+			<p><strong>Categoria</strong>
+				<br><?php echo $us_categ; ?>
+			</p>
 		</p>
 
-		<p> Links para associado:</p>
+		<p><strong>Exclusivo para associados:</strong></p>
 		<p>
 			<a href='http://www.apvar.org.br/v1/prestacao-de-contas/' title=''>Prestação de Contas</a>
 			<br>
