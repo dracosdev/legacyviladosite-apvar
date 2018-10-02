@@ -593,9 +593,9 @@ class userdata_widget extends WP_Widget {
 
 		<p> Links para associado:</p>
 		<p>
-			<a href='#' title=''>Prestação de Contas</a>
+			<a href='http://www.apvar.org.br/v1/prestacao-de-contas/' title=''>Prestação de Contas</a>
 			<br>
-			<a href='#' title=''>Fale com a diretoria</a>
+			<a href='http://www.apvar.org.br/v1/fale-com-a-diretoria/' title=''>Fale com a diretoria</a>
 		</p>
 
 		<?php
