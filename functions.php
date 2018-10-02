@@ -221,6 +221,15 @@ function apvar_login_redirect( $redirect_to, $request, $user  ) {
 add_filter( 'login_redirect', 'apvar_login_redirect', 10, 3 );
 
 
+
+// Redireciona os usuários após o logout para a página inicial
+add_action('wp_logout','auto_redirect_after_logout');
+function auto_redirect_after_logout(){
+  wp_redirect( home_url() );
+  exit();
+}
+
+
 // ----------------------------------------------------------
 // Scripts
 // ----------------------------------------------------------
