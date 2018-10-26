@@ -13,10 +13,6 @@ $sidebar_name = 'lat_right_categories_widgets'; ?>
 
 					get_template_part('layout/loop-geral-lastpost');
 
-					echo "<div class='col-md-12 center-block paginacao'> ";
-					wordpress_pagination();
-					echo "</div>";
-
 				echo "</div>";
 				
 				?>
