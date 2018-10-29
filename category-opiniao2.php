@@ -13,6 +13,11 @@ $sidebar_name = 'lat_right_categories_widgets'; ?>
 
 					get_template_part('layout/loop-geral-lastpost');
 
+					$category_id = get_cat_ID('opiniao');
+					$category_link = get_category_link( $category_id );
+
+					echo '<a href="'.$category_link.'" title="nome da categoria">Ver todas</a>';
+
 				echo "</div>";
 				
 				?>
