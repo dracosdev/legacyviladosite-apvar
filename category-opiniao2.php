@@ -13,12 +13,15 @@ $sidebar_name = 'lat_right_categories_widgets'; ?>
 
 					get_template_part('layout/loop-geral-lastpost');
 
+					//pega o slug da categoria atual
+					if(is_category()) {
+					$categoria = get_query_var('cat');
+					$current_categoria = get_category($categoria); }
 
-					$categoria_slug = '';
-					$categoria_id = get_cat_ID('opiniao');
-					$categoria_link = get_category_link( $categoria_id );
+					//remove o caractere 2 do slug para ser usado no link
+					$categoria_slug = substr($current_categoria->slug, 0, -1);
 
-					echo '<a href="'.$categoria_link.'" title="nome da categoria">Ver todas</a>';
+					echo '<a href="'.$categoria_slug.'" title="nome da categoria">Ver todas as postagens.</a>';
 
 				echo "</div>";
 				
