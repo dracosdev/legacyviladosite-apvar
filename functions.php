@@ -235,16 +235,16 @@ function checa_categ() {
 	// Pega o slug da categoria atual
 	if(is_category()) {
 	$categoria = get_query_var('cat');
-	$current_categoria = get_category($categoria); }
-	$categoria_slug_2 = $current_categoria->slug;
+	$categoria_atual = get_category($categoria); }
+	$categoria_slug = $categoria_atual->slug;
 	// Verifica se a categoria é "category2" e define a variável caso seja.
-	if (substr($categoria_slug_2, -1) == '2') {
-		$categoria_slug_2 = substr($categoria_slug_2, 0, -1);
+	if (substr($categoria_slug, -1) == '2') {
+		$categoria_slug = substr($categoria_slug, 0, -1);
 	} else {
-		$categoria_slug_2 = 'deixou vazio';
+		$categoria_slug = 'vazio';
 	}
 
-return $categoria_slug_2;
+	return $categoria_slug;
 
 }
 
