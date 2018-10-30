@@ -232,6 +232,7 @@ function auto_redirect_after_logout(){
 
 // Função para checar se a categoria é "category2" ou não.
 function checa_categ() {
+	global $categoria_slug;
 	// Pega o slug da categoria atual
 	if(is_category()) {
 	$categoria = get_query_var('cat');
@@ -241,7 +242,7 @@ function checa_categ() {
 	if (substr($categoria_slug, -1) == '2') {
 		$categoria_slug = substr($categoria_slug, 0, -1);
 	} else {
-		$categoria_slug = '';
+		$categoria_slug = 'vazio';
 	}
 
 	return $categoria_slug;
