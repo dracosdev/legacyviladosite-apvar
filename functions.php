@@ -230,6 +230,29 @@ function auto_redirect_after_logout(){
 }
 
 
+// Função para checar se a categoria é "category2" ou não.
+function checa_categ() {
+	// Pega o slug da categoria atual
+	if(is_category()) {
+	$categoria = get_query_var('cat');
+	$current_categoria = get_category($categoria); }
+
+	// Verifica se a categoria é "category2" e define a variável caso seja.
+	if (substr($current_categoria, -1) == '2') {
+		$current_categoria = substr($current_categoria, -1)
+	} else {
+		$current_categoria = '';
+	}
+
+return $current_categoria;
+
+}
+
+
+
+
+
+
 
 // ----------------------------------------------------------
 // Scripts
@@ -253,6 +276,15 @@ function carrega_scripts(){
 
 // Registra o carregamento dos scripts
 add_action('wp_enqueue_scripts', 'carrega_scripts');
+
+
+
+
+
+
+
+
+
 
 
 // ----------------------------------------------------------

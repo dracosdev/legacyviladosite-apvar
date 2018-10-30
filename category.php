@@ -5,21 +5,31 @@
 $sidebar_name = 'lat_right_categories_widgets'; ?>
 		<div class="row content center-block">
 			<div class="main col-md-12">
-				<?php get_template_part('layout/titulo-geral');
 
-				// Função que abre a div de coluna variando de acordo com apresença da sidebar
-				if (is_active_sidebar($sidebar_name)) {echo '<div class="col-md-9">';}
-				else {echo '<div id="conteudo" class="col-md-12">';};
+				<?php
 
-					get_template_part('layout/loop-geral-paginado');
+				// Função que verifica se a categoria tem uma versão "2" e carrega o category2.php caso tenha.
 
-					echo "<div class='col-md-12 center-block paginacao'> ";
-					wordpress_pagination();
+				// Roda a função de checagem de categoria
+				// checa_categ()
+
+				// if $current_categoria =! 
+
+					// Carrega o título
+					get_template_part('layout/titulo-geral');
+
+					// Função que abre a div de coluna variando de acordo com apresença da sidebar
+					if (is_active_sidebar($sidebar_name)) {echo '<div class="col-md-9">';}
+					else {echo '<div id="conteudo" class="col-md-12">';};
+
+						get_template_part('layout/loop-geral-paginado');
+						echo "<div class='col-md-12 center-block paginacao'> ";
+						wordpress_pagination();
+						echo "</div>";
+
 					echo "</div>";
-
-				echo "</div>";
-				
-				?>
+					
+					?>
 
 				<!-- area da sidebar -->
 				<div class="bordas">
