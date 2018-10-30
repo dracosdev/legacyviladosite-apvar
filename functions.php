@@ -236,15 +236,15 @@ function checa_categ() {
 	if(is_category()) {
 	$categoria = get_query_var('cat');
 	$current_categoria = get_category($categoria); }
-
+	$categoria_slug_2 = $current_categoria->slug;
 	// Verifica se a categoria é "category2" e define a variável caso seja.
-	if (substr($current_categoria, -1) == '2') {
-		$current_categoria = substr($current_categoria, -1)
+	if (substr($categoria_slug_2, -1) == '2') {
+		$categoria_slug_2 = substr($categoria_slug_2, 0, -1);
 	} else {
-		$current_categoria = '';
+		$categoria_slug_2 = 'deixou vazio';
 	}
 
-return $current_categoria;
+return $categoria_slug_2;
 
 }
 

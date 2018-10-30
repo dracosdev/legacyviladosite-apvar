@@ -28,6 +28,8 @@ $sidebar_name = 'lat_right_categories_widgets'; ?>
 						echo "</div>";
 
 					echo "</div>";
+
+					echo checa_categ();
 					
 					?>
 

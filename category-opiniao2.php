@@ -13,6 +13,7 @@ $sidebar_name = 'lat_right_categories_widgets'; ?>
 
 					get_template_part('layout/loop-geral-lastpost');
 
+					/* ver todas	
 					// Pega o slug da categoria atual
 					if(is_category()) {
 					$categoria = get_query_var('cat');
@@ -21,7 +22,7 @@ $sidebar_name = 'lat_right_categories_widgets'; ?>
 					// Remove o caractere 2 do slug para ser usado no link
 					$categoria_slug = substr($current_categoria->slug, 0, -1);
 
-					echo '<a href="'.$categoria_slug.'" title="nome da categoria">Ver todas as postagens.</a>';
+					echo '<div class="col-md-12 text-center"><h3><a href="'.$categoria_slug.'" title="nome da categoria">Ver todas as publicações desta categoria.</a></h3></div>'; */
 
 				echo "</div>";
 				
