@@ -725,6 +725,24 @@ function my_show_extra_profile_fields( $user ) { ?>
             </td>
         </tr>
 
+        <tr>
+            <th><label for="numero">Numero</label></th>
+ 
+            <td>
+                <input type="text" name="numero" id="numero" value="<?php echo esc_attr( get_the_author_meta( 'numero', $user->ID ) ); ?>" class="regular-text" /><br />
+                <span class="description">Numero do usuário</span>
+            </td>
+        </tr>
+
+        <tr>
+            <th><label for="cpf">CPF</label></th>
+ 
+            <td>
+                <input type="text" name="cpf" id="cpf" pattern="[0-9]+$" value="<?php echo esc_attr( get_the_author_meta( 'cpf', $user->ID ) ); ?>" class="regular-text" /><br />
+                <span class="description">CPF do usuário (apenas numeros)</span>
+            </td>
+        </tr>
+
     </table>  
 <?php } ?>
 
@@ -740,6 +758,8 @@ function my_save_extra_profile_fields( $user_id ) {
     if ( !current_user_can( 'edit_user', $user_id ) )
         return false;
     update_usermeta( $user_id, 'matricula', $_POST['matricula'] );
+    update_usermeta( $user_id, 'numero', $_POST['numero'] );
+    update_usermeta( $user_id, 'cpf', $_POST['cpf'] );
 }
 
 
