@@ -738,7 +738,7 @@ function my_show_extra_profile_fields( $user ) { ?>
             <th><label for="cpf">CPF</label></th>
  
             <td>
-                <input type="text" name="cpf" id="cpf" pattern="[0-9]+$" value="<?php echo esc_attr( get_the_author_meta( 'cpf', $user->ID ) ); ?>" class="regular-text" /><br />
+                <input type="text" name="cpf" id="cpf" pattern="[0-9]{11}" value="<?php echo esc_attr( get_the_author_meta( 'cpf', $user->ID ) ); ?>" class="regular-text" /><br />
                 <span class="description">CPF do usuário (apenas numeros)</span>
             </td>
         </tr>
