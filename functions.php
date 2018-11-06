@@ -366,6 +366,16 @@ function sidebars_init() {
 		'after_title' => '</h4>',
 	) );
 
+	register_sidebar( array(
+		'name' => 'Lounge Sidebar',
+		'id' => 'lat_right_lounge',
+		'description' => esc_html('Sidebar da direita da página Lounge'),
+		'before_widget' => '<div id="%1$s" class="widget-space row %2$s">',
+		'after_widget' => '</div> <div class="separator col-md-12"></div> <div class="clearfix"></div>',
+		'before_title' => '<h4 class="main-title col-md-12">',
+		'after_title' => '</h4>',
+	) );
+
 }
 
 // Registra a inicialização das sidebars
