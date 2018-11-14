@@ -6,7 +6,7 @@ $sidebar_name = 'lat_right_categories_widgets'; ?>
 
 		<div class="row content center-block">
 			<div class="main col-md-12">
-				<?php get_template_part('layout/titulo-geral');
+				<?php get_template_part('layout/titulo-single');
 
 				// Função que abre a div de coluna variando de acordo com apresença da sidebar
 				if (is_active_sidebar($sidebar_name)) {echo '<div class="col-md-9">';}
