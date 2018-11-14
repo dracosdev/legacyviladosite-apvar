@@ -17,7 +17,9 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 			</div>
 
 			<div class="chamada col-md-8">
-				<h5>Confira a atuação da Apvar conforme registros em diversos meios de comunicação</h5>
+				<a href="http://www.apvar.org.br/v1/category/apvaracao2/">
+					<h5>Confira a atuação da Apvar conforme registros em diversos meios de comunicação</h5>
+				</a>
 			</div>
 		</div>	
 			
@@ -53,7 +55,9 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 			</div>
 
 			<div class="chamada col-md-8">
-				<h5>Informe-se sobre eventos e fatos relevantes para os pilotos e outros aeronautas da ativa ou aposentados</h5>
+				<a href="http://www.apvar.org.br/v1/category/quadroavisos2/">
+					<h5>Informe-se sobre eventos e fatos relevantes para os pilotos e outros aeronautas da ativa ou aposentados</h5>
+				</a>
 			</div>
 		</div>
 
@@ -93,7 +97,9 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 			</div>
 			
 			<div class="chamada chamada-dni">
+				<a href="http://www.apvar.org.br/v1/category/deunaimprensa2/">
 				<h5>Notícias sobre a indústria e temas de interesse específico.</h5>
+				</a>
 			</div>
 			<div class="clearfix"></div>
 		</div>	

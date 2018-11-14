@@ -301,7 +301,7 @@ function sidebars_init() {
 		'id' => 'lat_right_widgets',
 		'description' => esc_html('Widget da direita da home'),
 		'before_widget' => '<div id="%1$s" class="widget-space row %2$s">',
-		'after_widget' => '</div> <div class="separator col-md-12"></div> <div class="clearfix"></div>',
+		'after_widget' => '</div><div class="separator col-md-12"></div> <div class="clearfix"></div>',
 		'before_title' => '<h4 class="main-title col-md-12">',
 		'after_title' => '</h4>',
 	) );
@@ -496,11 +496,14 @@ class categ_last_widget extends WP_Widget {
 	    if ( $lastposts ) {
 	        foreach ( $lastposts as $post ) {
 	            setup_postdata( $post ); ?>
-	            <p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+	            <p><a href="<?php the_permalink(); ?>"><?php the_title(); ?><br><i><?php the_time('d/M/Y'); ?></i></a></p>
 	        <?php
 	        }
 	    }
 	    wp_reset_postdata();
+
+	    $category_link = get_category_link( $categ_id );
+	    echo "<a href='$category_link' title='Posts Recentes'><p style='text-align:center;'>Ver todas</p></a>";
 
 		// After Widget
 		echo $args['after_widget'];
@@ -550,7 +553,7 @@ class falsa_recup_widget extends WP_Widget {
 
 		// If title is present
 		if ( ! empty( $title ) )
-		echo $args['before_title'] . $title . $args['after_title'];
+		echo $args['before_title'] . "<a href='$cat' title='Falsa recuperação'>" . $title . "</a>" .$args['after_title'];
 
 		// WIDGET
 		// Variáveis para obetr a categoria a partir do slug
@@ -572,7 +575,7 @@ class falsa_recup_widget extends WP_Widget {
 	    if ( $lastposts ) {
 	        foreach ( $lastposts as $post ) {
 	            setup_postdata( $post ); ?>
-	            <a href="<?php the_permalink(); ?>"><p><?php the_title(); ?></p></a>
+	            <a href="<?php the_permalink(); ?>"><p><?php the_title(); ?><br><i><?php the_time('d/M/Y'); ?></i></p></a>
 	        <?php
 	        }
 	    }
@@ -664,7 +667,6 @@ class userdata_widget extends WP_Widget {
 
 		<p><strong>Exclusivo para associados:</strong></p>
 		<p>
-			<a href='http://www.apvar.org.br/v1/prestacao-de-contas/' title=''>Prestação de Contas</a>
 			<br>
 			<a href='http://www.apvar.org.br/v1/fale-com-a-diretoria/' title=''>Fale com a diretoria</a>
 		</p>
