@@ -231,37 +231,36 @@ function auto_redirect_after_logout(){
 
 
 // Função para checar se a categoria é "category2" ou não.
-function checa_categ() {
+function categ_checa() {
 	global $categoria_slug;
 	// Pega o slug da categoria atual
 	if(is_category()) {
-	$categoria = $wp_query->get_queried_object_id();
+	$categoria = get_queried_object_id();
 	$categoria_atual = get_category($categoria); }
 	$categoria_slug = $categoria_atual->slug;
 	// Verifica se a categoria é "category2" e define a variável caso seja.
 	if (substr($categoria_slug, -1) == '2') {
 		$categoria_resultado = true;
+		echo 'Tem 2';
 	} else {
 		$categoria_resultado = false;
+		echo 'Não tem 2';
 	}
 
 	return $categoria_resultado;
-
 }
 
 //Função para ajustar a categoria, caso ela seja category 2.
-function ajusta_categ() {
+function categ_ajusta() {
 	global $categoria_slug;
 	// Pega o slug da categoria atual
 	if(is_category()) {
-	$categoria = get_query_var('cat');
+	$categoria = get_queried_object_id();
 	$categoria_atual = get_category($categoria); }
 	$categoria_slug = $categoria_atual->slug;
 	// Verifica se a categoria é "category2" e define a variável caso seja.
 	if (substr($categoria_slug, -1) == '2') {
 		$categoria_slug = substr($categoria_slug, 0, -1);
-	} else {
-		$categoria_resultado = 'nao2';
 	}
 
 	return $categoria_slug;
