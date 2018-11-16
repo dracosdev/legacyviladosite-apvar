@@ -240,6 +240,25 @@ function checa_categ() {
 	$categoria_slug = $categoria_atual->slug;
 	// Verifica se a categoria é "category2" e define a variável caso seja.
 	if (substr($categoria_slug, -1) == '2') {
+		$categoria_resultado = true;
+	} else {
+		$categoria_resultado = false;
+	}
+
+	return $categoria_resultado;
+
+}
+
+//Função para ajustar a categoria, caso ela seja category 2.
+function ajusta_categ() {
+	global $categoria_slug;
+	// Pega o slug da categoria atual
+	if(is_category()) {
+	$categoria = get_query_var('cat');
+	$categoria_atual = get_category($categoria); }
+	$categoria_slug = $categoria_atual->slug;
+	// Verifica se a categoria é "category2" e define a variável caso seja.
+	if (substr($categoria_slug, -1) == '2') {
 		$categoria_slug = substr($categoria_slug, 0, -1);
 	} else {
 		$categoria_resultado = 'nao2';
@@ -248,9 +267,6 @@ function checa_categ() {
 	return $categoria_slug;
 
 }
-
-
-
 
 
 
