@@ -684,15 +684,15 @@ class userdata_widget extends WP_Widget {
 			
 			<p><strong>Categoria</strong>
 				<br>
-				<?php if (strpos($us_categ, 'administrator') !== false){
+				<?php
+				if (strpos($us_categ, 'administrator') !== false) {
 					echo "Administrador";
-					
-				} else if (strpos($us_categ, 'associado3') !== false){
-					echo "Associado Efetivo";
-					
-				} else{
-					echo "Associado";
-				}
+				} else {
+					if (strpos($us_categ, 'associado3') !== false){
+						echo "Associado Efetivo";
+					} else {
+						echo "Associado";
+					}
 				?>
 				
 			</p>
