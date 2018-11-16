@@ -10,9 +10,11 @@ $sidebar_name = 'lat_right_categories_widgets'; ?>
 				// Função que verifica se a categoria tem uma versão "2" e carrega o código apropriado.
 
 				// Roda a função de checagem de categoria
-				checa_categ();
+				categ_checa();
+
 
 				if ($categoria_resultado = true) {
+					// Carrega o título
 					get_template_part('layout/titulo-categ');
 
 					// Função que abre a div de coluna variando de acordo com apresença da sidebar
@@ -20,12 +22,11 @@ $sidebar_name = 'lat_right_categories_widgets'; ?>
 					else {echo '<div id="conteudo" class="col-md-12">';};
 
 						get_template_part('layout/loop-geral-lastpost');
-						echo '<div class="col-md-12 text-center"><h3><a href="'.get_site_url().'/category/'.$categoria_slug.'" title="nome da categoria">Ver todas as publicações desta categoria.</a></h3></div>';
+						echo '<div class="col-md-12 text-center"><h3><a href="'.get_site_url().'/category/'.categ_ajusta().'" title="nome da categoria">Ver todas as publicações desta categoria.</a></h3></div>';
 
 					echo "</div>";
-				
-				} else {
 
+				} else {
 					// Carrega o título
 					get_template_part('layout/titulo-categ');
 

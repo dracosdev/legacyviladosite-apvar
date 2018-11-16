@@ -238,13 +238,12 @@ function categ_checa() {
 	$categoria = get_queried_object_id();
 	$categoria_atual = get_category($categoria); }
 	$categoria_slug = $categoria_atual->slug;
+
 	// Verifica se a categoria é "category2" e define a variável caso seja.
 	if (substr($categoria_slug, -1) == '2') {
 		$categoria_resultado = true;
-		echo 'Tem 2';
 	} else {
 		$categoria_resultado = false;
-		echo 'Não tem 2';
 	}
 
 	return $categoria_resultado;
@@ -258,6 +257,7 @@ function categ_ajusta() {
 	$categoria = get_queried_object_id();
 	$categoria_atual = get_category($categoria); }
 	$categoria_slug = $categoria_atual->slug;
+
 	// Verifica se a categoria é "category2" e define a variável caso seja.
 	if (substr($categoria_slug, -1) == '2') {
 		$categoria_slug = substr($categoria_slug, 0, -1);
