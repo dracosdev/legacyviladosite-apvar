@@ -693,6 +693,7 @@ class userdata_widget extends WP_Widget {
 					} else {
 						echo "Associado";
 					}
+				}
 				?>
 				
 			</p>
