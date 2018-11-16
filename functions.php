@@ -524,7 +524,7 @@ class categ_last_widget extends WP_Widget {
 	    wp_reset_postdata();
 
 	    $category_link = get_category_link( $categ_id );
-	    echo "<a href='$category_link' title='Posts Recentes'><p style='text-align:center;'>Ver todas</p></a>";
+	    echo "<a href='".get_site_url()."/category/".categ_ajusta()."' title='Posts Recentes'><p style='text-align:center;'>Ver todas</p></a>";
 
 		// After Widget
 		echo $args['after_widget'];
