@@ -683,15 +683,25 @@ class userdata_widget extends WP_Widget {
 			</p>
 			
 			<p><strong>Categoria</strong>
-				<br><?php echo $us_categ; ?>
+				<br>
+				<?php if (strpos($us_categ, 'administrator') !== false){
+					echo "Administrador";
+					
+				} else if (strpos($us_categ, 'associado3') !== false){
+					echo "Associado Efetivo";
+					
+				} else{
+					echo "Associado";
+				}
+				?>
+				
 			</p>
-		</p>
 
-		<p><strong>Exclusivo para associados:</strong></p>
-		<p>
-			<br>
-			<a href='http://www.apvar.org.br/v1/fale-com-a-diretoria/' title=''>Fale com a diretoria</a>
+			<p><strong>Exclusivo para associados:</strong> <br>
+				<a href='http://www.apvar.org.br/v1/fale-com-a-diretoria/' title=''>Fale com a diretoria</a>
 		</p>
+		</p>
+		
 
 		<?php
 		// After Widget
