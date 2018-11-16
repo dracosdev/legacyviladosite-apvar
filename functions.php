@@ -575,7 +575,7 @@ class falsa_recup_widget extends WP_Widget {
 	    if ( $lastposts ) {
 	        foreach ( $lastposts as $post ) {
 	            setup_postdata( $post ); ?>
-	            <a href="<?php the_permalink(); ?>"><p><?php the_title(); ?><br><i><?php the_time('d/M/Y'); ?></i></p></a>
+	            <a href="<?php the_permalink(); ?>"><p><?php the_title(); ?><br><i><?php the_time('d/m/Y'); ?></i></p></a>
 	        <?php
 	        }
 	    }
