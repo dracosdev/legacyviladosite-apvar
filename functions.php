@@ -551,15 +551,17 @@ class falsa_recup_widget extends WP_Widget {
 		// Before Widget
 		echo $args['before_widget'];
 
-		// If title is present
-		if ( ! empty( $title ) )
-		echo $args['before_title'] . "<a href='$cat' title='Falsa recuperação'>" . $title . "</a>" .$args['after_title'];
-
 		// WIDGET
 		// Variáveis para obetr a categoria a partir do slug
 		$slug = "falsarecuperacao";
 		$categ = get_category_by_slug( $slug );
 		$categ_id = $categ->cat_ID;
+
+		$category_link = get_category_link( $categ_id );
+
+		// If title is present
+		if ( ! empty( $title ) )
+		echo $args['before_title'] . "<a href='$category_link' title='Falsa recuperação'>" . $title . "</a>" .$args['after_title'];
 
 		//Argumentos da query
 	    $lastposts = get_posts( array(
@@ -581,7 +583,7 @@ class falsa_recup_widget extends WP_Widget {
 	    }
 	    wp_reset_postdata();
 
-	    $category_link = get_category_link( $categ_id );
+	    
 	    echo "<a href='$category_link' title='Falsa recuperação'><p style='text-align:center;'>Ver todas</p></a>";
 
 		// After Widget
