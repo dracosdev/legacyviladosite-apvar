@@ -242,7 +242,6 @@ function checa_categ() {
 	if (substr($categoria_slug, -1) == '2') {
 		$categoria_slug = substr($categoria_slug, 0, -1);
 	} else {
-		$categoria_slug = 'vazio';
 		$categoria_resultado = 'nao2';
 	}
 
