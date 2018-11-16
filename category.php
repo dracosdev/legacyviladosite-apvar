@@ -13,7 +13,7 @@ $sidebar_name = 'lat_right_categories_widgets'; ?>
 				categ_checa();
 
 
-				if ($categoria_resultado === "tem2") {
+				if ($categoria_resultado == true) {
 					// Carrega o título
 					get_template_part('layout/titulo-categ');
 
