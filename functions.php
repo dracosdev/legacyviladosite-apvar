@@ -243,6 +243,7 @@ function checa_categ() {
 		$categoria_slug = substr($categoria_slug, 0, -1);
 	} else {
 		$categoria_slug = 'vazio';
+		$categoria_resultado = 'nao2';
 	}
 
 	return $categoria_slug;
