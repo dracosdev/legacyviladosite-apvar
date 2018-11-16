@@ -552,11 +552,10 @@ class falsa_recup_widget extends WP_Widget {
 		echo $args['before_widget'];
 
 		// WIDGET
-		// Variáveis para obetr a categoria a partir do slug
-		$slug = "falsarecuperacao";
+		// Variáveis para obter a categoria a partir do slug
+		$slug = "falsarecuperacao2";
 		$categ = get_category_by_slug( $slug );
 		$categ_id = $categ->cat_ID;
-
 		$category_link = get_category_link( $categ_id );
 
 		// If title is present
