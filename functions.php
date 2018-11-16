@@ -230,9 +230,12 @@ function auto_redirect_after_logout(){
 }
 
 
+
 // Função para checar se a categoria é "category2" ou não.
 function categ_checa() {
 	global $categoria_slug;
+	global $categoria_resultado;
+
 	// Pega o slug da categoria atual
 	if(is_category()) {
 	$categoria = get_queried_object_id();
@@ -242,18 +245,19 @@ function categ_checa() {
 	// Verifica se a categoria é "category2" e define a variável caso seja.
 	if (substr($categoria_slug, -1) == '2') {
 		$categoria_resultado = "tem2";
-		echo $categoria_resultado;
 	} else {
 		$categoria_resultado = "naotem2";
-		echo $categoria_resultado;
 	}
 
 	return $categoria_resultado;
 }
 
+
+
 //Função para ajustar a categoria, caso ela seja category 2.
 function categ_ajusta() {
 	global $categoria_slug;
+
 	// Pega o slug da categoria atual
 	if(is_category()) {
 	$categoria = get_queried_object_id();
