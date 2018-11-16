@@ -241,9 +241,9 @@ function categ_checa() {
 
 	// Verifica se a categoria é "category2" e define a variável caso seja.
 	if (substr($categoria_slug, -1) == '2') {
-		$categoria_resultado = true;
+		$categoria_resultado = "tem2";
 	} else {
-		$categoria_resultado = false;
+		$categoria_resultado = "naotem2";
 	}
 
 	return $categoria_resultado;
