@@ -231,7 +231,7 @@ function auto_redirect_after_logout(){
 
 
 
-// Função para checar se a categoria é "category2" ou não.
+// Função para checar se a categoria é "category2" ou não retornando true para categorias com 2 no final e false para categorias sem o 2.
 function categ_checa() {
 	global $categoria_slug;
 	global $categoria_resultado;
@@ -254,7 +254,7 @@ function categ_checa() {
 
 
 
-//Função para ajustar a categoria, caso ela seja category 2.
+//Função para ajustar a categoria, caso ela seja category 2, arrancando o 2 do final.
 function categ_ajusta() {
 	global $categoria_slug;
 
