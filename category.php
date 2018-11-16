@@ -12,7 +12,7 @@ $sidebar_name = 'lat_right_categories_widgets'; ?>
 				// Roda a função de checagem de categoria
 				checa_categ();
 
-				if ($categoria_resultado != false) {
+				if ($categoria_resultado = true) {
 					get_template_part('layout/titulo-categ');
 
 					// Função que abre a div de coluna variando de acordo com apresença da sidebar
