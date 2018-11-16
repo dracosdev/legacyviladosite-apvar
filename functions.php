@@ -496,7 +496,7 @@ class categ_last_widget extends WP_Widget {
 	    if ( $lastposts ) {
 	        foreach ( $lastposts as $post ) {
 	            setup_postdata( $post ); ?>
-	            <p><a href="<?php the_permalink(); ?>"><?php the_title(); ?><br><i><?php the_time('d/M/Y'); ?></i></a></p>
+	            <p><a href="<?php the_permalink(); ?>"><?php the_title_max(120); ?><br><b class="data-posts-recente"><?php the_time('d/m/Y'); ?></b></a></p>
 	        <?php
 	        }
 	    }
@@ -575,7 +575,7 @@ class falsa_recup_widget extends WP_Widget {
 	    if ( $lastposts ) {
 	        foreach ( $lastposts as $post ) {
 	            setup_postdata( $post ); ?>
-	            <a href="<?php the_permalink(); ?>"><p><?php the_title(); ?><br><b class="data-posts-recente"><?php the_time('d/m/Y'); ?></b></p></a>
+	            <a href="<?php the_permalink(); ?>"><p><?php the_title_max(50); ?><br><b class="data-posts-recente"><?php the_time('d/m/Y'); ?></b></p></a>
 	        <?php
 	        }
 	    }
