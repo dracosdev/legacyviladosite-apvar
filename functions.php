@@ -235,7 +235,7 @@ function checa_categ() {
 	global $categoria_slug;
 	// Pega o slug da categoria atual
 	if(is_category()) {
-	$categoria = get_query_var('cat');
+	$categoria = $wp_query->get_queried_object_id();
 	$categoria_atual = get_category($categoria); }
 	$categoria_slug = $categoria_atual->slug;
 	// Verifica se a categoria é "category2" e define a variável caso seja.
