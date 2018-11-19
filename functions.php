@@ -278,7 +278,7 @@ function categ_ajusta() {
 // Logo personalizada da página de login
 function custom_login_logo() {
           echo '<style type="text/css">
-            h1 a { background-image: url(' .get_bloginfo('template_directory').'/img/apvar-logo.png) !important;}
+            h1 a { background-image: url(' .get_bloginfo('template_directory').'/img/apvar-logo-login.png) !important;}
           </style>';
 }
 add_action('login_head', 'custom_login_logo');
