@@ -273,16 +273,20 @@ function categ_ajusta() {
 
 }
 
-
-
-// Logo personalizada da página de login
-function custom_login_logo() {
-          echo '<style type="text/css">
-            h1 a { background-image: url(' .get_bloginfo('template_directory').'/img/apvar-logo-login.png) !important;}
-          </style>';
-}
-add_action('login_head', 'custom_login_logo');
-
+// Troca a logo da página de login e a formata para as medidas específicas
+function my_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/apvar-logo-login.png);
+		height:300px;
+		width:300px;
+		background-size: 300px 300px;
+		background-repeat: no-repeat;
+        	padding-bottom: 10px;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
 
 
