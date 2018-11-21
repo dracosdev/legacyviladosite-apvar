@@ -236,10 +236,12 @@ function categ_checa() {
 	global $categoria_slug;
 	global $categoria_resultado;
 
-	// Pega o slug da categoria atual
+	// Se for uma categoria, pega o slug da categoria atual
 	if(is_category()) {
-	$categoria = get_queried_object_id();
-	$categoria_atual = get_category($categoria); }
+		$categoria = get_queried_object_id();
+		$categoria_atual = get_category($categoria);
+	}
+
 	$categoria_slug = $categoria_atual->slug;
 
 	// Verifica se a categoria é "category2" e define a variável caso seja.
@@ -258,10 +260,19 @@ function categ_checa() {
 function categ_ajusta() {
 	global $categoria_slug;
 
-	// Pega o slug da categoria atual
+	// Pega o slug da categoria atual em categorias
 	if(is_category()) {
-	$categoria = get_queried_object_id();
-	$categoria_atual = get_category($categoria); }
+		$categoria = get_queried_object_id();
+		$categoria_atual = get_category($categoria);
+	}
+
+	// Pega o slug da categoria atual em single posts
+	if(is_single()) {
+		$categoria = get_the_category($post->ID);
+		$categoria_atual = $categoria[0];
+	}
+
+	// Define a variável de slug
 	$categoria_slug = $categoria_atual->slug;
 
 	// Verifica se a categoria é "category2" e define a variável caso seja.
@@ -272,6 +283,18 @@ function categ_ajusta() {
 	return $categoria_slug;
 
 }
+
+
+// Obtem o slug da categoria a partir do id dela
+function get_cat_slug($cat_id) {
+	$cat_id = (int)$cat_id;
+	$category = &get_category($cat_id);
+	return $category->slug;
+}
+
+
+
+
 
 // Troca a logo da página de login e a formata para as medidas específicas
 

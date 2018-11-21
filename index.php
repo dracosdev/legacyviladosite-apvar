@@ -49,7 +49,7 @@ $nenhumpost = '<p> Não foi encontrada nenhuma publicação nesta categoria. </p
 			<div class="main-title-home col-md-4">
 				<img id='circle-titulo' class="circle-titulo" src='<?php echo get_bloginfo('template_directory') . '/img/logo-circulo-titulo.png'; ?>' alt='circulo do titulo'>
 
-				<a href="http://www.apvar.org.br/v1/category/quadroavisos2/">
+				<a href="http://www.apvar.org.br/v1/category/quadroavisos/">
 					<h4>Quadro de Avisos</h4>
 				</a>
 			</div>
