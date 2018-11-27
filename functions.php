@@ -552,6 +552,14 @@ class categ_last_widget extends WP_Widget {
 			$categ_id = $categ[0]->cat_ID;
 		};
 
+		// Carrega as variáveis caso a página carregada seja a página "Lounge"
+		if (is_page()) {
+			// Cria as variáveis da página e checa se o slug dela contem "lounge" setando a categoria como a de fotos caso seja o lounge.
+			$p_id = get_queried_object_id();
+			$p_slug=$post->post_name;
+			if (strpos($p_slug, 'lounge') != false) {$categ_id = 27;}
+		};
+
 		//Argumentos da query
 	    $lastposts = get_posts( array(
    			'posts_per_page' => 10,
