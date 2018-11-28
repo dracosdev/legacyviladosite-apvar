@@ -4,7 +4,7 @@
 // Funções e recursos básicos do template
 // ----------------------------------------------------------
 
-//adiciona a paginação
+// Adiciona a paginação
 function wordpress_pagination() {
             global $wp_query;
  
@@ -31,6 +31,14 @@ function wpdocs_excerpt_more( $more ) {
     return '';
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+
+// Obtem o slug da categoria a partir do id dela
+function get_cat_slug($cat_id) {
+	$cat_id = (int)$cat_id;
+	$category = &get_category($cat_id);
+	return $category->slug;
+}
 
 
 // Função para delimitar o excerpt
@@ -259,21 +267,41 @@ function categ_checa() {
 //Função para ajustar a categoria, caso ela seja category 2, arrancando o 2 do final.
 function categ_ajusta() {
 	global $categoria_slug;
+	global $post;
 
 	// Pega o slug da categoria atual em categorias
-	if(is_category()) {
+	if (is_category()) {
 		$categoria = get_queried_object_id();
 		$categoria_atual = get_category($categoria);
+		
+		// Define a variável de slug
+		$categoria_slug = $categoria_atual->slug;
 	}
 
 	// Pega o slug da categoria atual em single posts
-	if(is_single()) {
+	if (is_single()) {
 		$categoria = get_the_category($post->ID);
 		$categoria_atual = $categoria[0];
+		
+		// Define a variável de slug
+		$categoria_slug = $categoria_atual->slug;
 	}
 
-	// Define a variável de slug
-	$categoria_slug = $categoria_atual->slug;
+
+	// Carrega as variáveis caso a página carregada seja a página "Lounge"
+	if (is_page()) {
+
+		// Obtem o slug da página
+		$page_slug = $post->post_name;
+
+		// Verifica se o slug da página contem "lounge"
+		if (strpos($page_slug, 'lounge') === false) {} else {
+			// Define a categoria para uso como sendo a de galeria de fotos
+			$categoria_id = 27;
+			// Define a variável para uso no link "ver todas"
+			$categoria_slug = get_cat_slug($categoria_id);
+		}
+	};
 
 	// Verifica se a categoria é "category2" e define a variável caso seja.
 	if (substr($categoria_slug, -1) == '2') {
@@ -283,15 +311,6 @@ function categ_ajusta() {
 	return $categoria_slug;
 
 }
-
-
-// Obtem o slug da categoria a partir do id dela
-function get_cat_slug($cat_id) {
-	$cat_id = (int)$cat_id;
-	$category = &get_category($cat_id);
-	return $category->slug;
-}
-
 
 
 
@@ -555,14 +574,14 @@ class categ_last_widget extends WP_Widget {
 		// Carrega as variáveis caso a página carregada seja a página "Lounge"
 		if (is_page()) {
 
-			// Obtem o id da página (não está em uso no momento)
-			$p_id = get_queried_object_id();
-
 			// Obtem o slug da página
 			$p_slug=$post->post_name;
 
-			// Verifica se o slug contem "lounge". Se contiver, define a categoria como sendo a de fotos.
-			if (strpos($p_slug, 'lounge') === false) {} else {$categ_id = 27;}
+			// Verifica se o slug da página contem "lounge"
+			if (strpos($p_slug, 'lounge') === false) {} else {
+				// Define a categoria para uso como sendo a de galeria de fotos
+				$categ_id = 27;
+			}
 		};
 
 		//Argumentos da query
@@ -582,10 +601,13 @@ class categ_last_widget extends WP_Widget {
 	        <?php
 	        }
 	    }
+
 	    wp_reset_postdata();
 
 	    $category_link = get_category_link( $categ_id );
 	    echo "<a href='".get_site_url()."/category/".categ_ajusta()."' title='Posts Recentes'><p style='text-align:center;'>Ver todas</p></a>";
+
+
 
 		// After Widget
 		echo $args['after_widget'];
