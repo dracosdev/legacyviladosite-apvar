@@ -485,7 +485,7 @@ class ouvidoria_widget extends WP_Widget {
 	// widget ID
 	'ouvidoria_widget',
 	// widget name
-	__('Ouvidoria Widget', ' ouvidoria_widget_domain'),
+	__('(APVAR) Ouvidoria Widget', ' ouvidoria_widget_domain'),
 	// widget description
 	array( 'description' => __( 'Widget used to show Ouvidoria', 'ouvidoria_widget_domain' ), )
 	);
@@ -538,7 +538,7 @@ class categ_last_widget extends WP_Widget {
 	// widget ID
 	'categ_last_widget',
 	// widget name
-	__('Últimos Posts da Categoria', 'categ_last_widget_domain'),
+	__('(APVAR) Últimos Posts da Categoria', 'categ_last_widget_domain'),
 	// widget description
 	array( 'description' => __( 'Um widget que mostra os 10 posts mais recentes da categoria em exibição.', 'categ_lastpost_widget_domain' ), )
 	);
@@ -643,7 +643,7 @@ class falsa_recup_widget extends WP_Widget {
 	// widget ID
 	'falsa_recup_widget',
 	// widget name
-	__('Falsa Recuperação', 'falsa_recup_widget_domain'),
+	__('(APVAR) Falsa Recuperação', 'falsa_recup_widget_domain'),
 	// widget description
 	array( 'description' => __( 'Este widget mostra os últimos posts da categoria Falsa recuperação da Varig e um link para ver esta categoria completa.', 'falsa_recup_widget_domain' ), )
 	);
@@ -697,7 +697,7 @@ class falsa_recup_widget extends WP_Widget {
 		if ( isset( $instance[ 'title' ] ) )
 		$title = $instance[ 'title' ];
 		else
-		$title = __( 'Últimos posts da Categoria', 'categ_last_widget_domain' );
+		$title = __( 'Falsa Recuperação', 'falsa_recup_widget_domain' );
 		?>
 		<p>
 		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
@@ -717,6 +717,7 @@ class falsa_recup_widget extends WP_Widget {
 
 
 
+
 // Cria o User data widget
 class userdata_widget extends WP_Widget {
 	
@@ -725,7 +726,7 @@ class userdata_widget extends WP_Widget {
 	// widget ID
 	'userdata_widget',
 	// widget name
-	__('Dados de Usuário', 'userdata_widget_domain'),
+	__('(APVAR) Dados de Usuário', 'userdata_widget_domain'),
 	// widget description
 	array( 'description' => __( 'Um widget que mostra os dados de usuário quando logado.', 'userdata_widget_domain' ), )
 	);
@@ -817,6 +818,172 @@ class userdata_widget extends WP_Widget {
 
 
 
+
+// Cria o widget de Galerias de Fotos
+class galerias_widget extends WP_Widget {
+	
+	function __construct() {
+	parent::__construct(
+	// widget ID
+	'galerias_widget',
+	// widget name
+	__('(APVAR) Galerias de Fotos', 'galerias_widget_domain'),
+	// widget description
+	array( 'description' => __( 'Este widget mostra os últimos posts da categoria de Galeria de Fotos e um link para ver esta categoria completa.', 'galerias_domain' ), )
+	);
+	}
+
+	public function widget( $args, $instance ) {
+		$title = apply_filters( 'widget_title', $instance['title'] );
+
+		// Before Widget
+		echo $args['before_widget'];
+
+		// WIDGET
+		// Variáveis para obter a categoria a partir do slug
+		$slug = "galeriasfotos";
+		$categ = get_category_by_slug( $slug );
+		$categ_id = $categ->cat_ID;
+		$category_link = get_category_link( $categ_id );
+
+		// If title is present
+		if ( ! empty( $title ) )
+		echo $args['before_title'] . "<a href='$category_link' title='Falsa recuperação'>" . $title . "</a>" .$args['after_title'];
+
+		// Argumentos da query
+	    $lastposts = get_posts( array(
+   			'posts_per_page' => 4,
+	        'cat' => $categ_id,
+	        'orderby' => 'date',
+	        'order' => 'DESC',
+	        'suppress_filters' => true
+	    ) );
+
+		// Loop de posts
+		global $post;
+	    if ( $lastposts ) {
+	        foreach ( $lastposts as $post ) {
+	            setup_postdata( $post ); ?>
+	            <a href="<?php the_permalink(); ?>"><p><?php the_title_max(50); ?><br><b class="data-posts-recente"><?php the_time('d/m/Y'); ?></b></p></a>
+	        <?php
+	        }
+	    }
+	    wp_reset_postdata();
+
+	    
+	    echo "<a href='$category_link' title='Galerias de Fotos'><p style='text-align:center;'>Ver todas</p></a>";
+
+		// After Widget
+		echo $args['after_widget'];
+	}
+
+	public function form( $instance ) {
+		if ( isset( $instance[ 'title' ] ) )
+		$title = $instance[ 'title' ];
+		else
+		$title = __( 'Galerias de Fotos', 'galerias_widget_domain' );
+		?>
+		<p>
+		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+		</p>
+		<?php
+	}
+
+	public function update( $new_instance, $old_instance ) {
+		$instance = array();
+		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+		return $instance;
+	}
+ 
+}
+
+
+
+
+
+// Cria o widget de PDFs
+class pdfs_widget extends WP_Widget {
+	
+	function __construct() {
+	parent::__construct(
+	// widget ID
+	'pdfs_widget',
+	// widget name
+	__('(APVAR) PDFs', 'pdfs_widget_domain'),
+	// widget description
+	array( 'description' => __( 'Este widget mostra os últimos posts da categoria de PDFs e um link para ver esta categoria completa.', 'pdfs_widget__domain' ), )
+	);
+	}
+
+	public function widget( $args, $instance ) {
+		$title = apply_filters( 'widget_title', $instance['title'] );
+
+		// Before Widget
+		echo $args['before_widget'];
+
+		// WIDGET
+		// Variáveis para obter a categoria a partir do slug
+		$slug = "pdfs";
+		$categ = get_category_by_slug( $slug );
+		$categ_id = $categ->cat_ID;
+		$category_link = get_category_link( $categ_id );
+
+		// If title is present
+		if ( ! empty( $title ) )
+		echo $args['before_title'] . "<a href='$category_link' title='PDFs'>" . $title . "</a>" .$args['after_title'];
+
+		//Argumentos da query
+	    $lastposts = get_posts( array(
+   			'posts_per_page' => 4,
+	        'cat' => $categ_id,
+	        'orderby' => 'date',
+	        'order' => 'DESC',
+	        'suppress_filters' => true
+	    ) );
+
+		// Loop de posts
+		global $post;
+	    if ( $lastposts ) {
+	        foreach ( $lastposts as $post ) {
+	            setup_postdata( $post ); ?>
+	            <a href="<?php the_permalink(); ?>"><p><?php the_title_max(50); ?><br><b class="data-posts-recente"><?php the_time('d/m/Y'); ?></b></p></a>
+	        <?php
+	        }
+	    }
+	    wp_reset_postdata();
+
+	    
+	    echo "<a href='$category_link' title='PDFs'><p style='text-align:center;'>Ver todas</p></a>";
+
+		// After Widget
+		echo $args['after_widget'];
+	}
+
+	public function form( $instance ) {
+		if ( isset( $instance[ 'title' ] ) )
+		$title = $instance[ 'title' ];
+		else
+		$title = __( 'PDFs', 'pdfs_widget_domain' );
+		?>
+		<p>
+		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+		</p>
+		<?php
+	}
+
+	public function update( $new_instance, $old_instance ) {
+		$instance = array();
+		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+		return $instance;
+	}
+ 
+}
+
+
+
+
 // Registra e inicializa os widgets
 function register_widgets() {
 	
@@ -824,6 +991,8 @@ function register_widgets() {
 	register_widget('ouvidoria_widget');
 	register_widget('categ_last_widget');
 	register_widget('userdata_widget');
+	register_widget('galerias_widget');
+	register_widget('pdfs_widget');
 
 }
 
