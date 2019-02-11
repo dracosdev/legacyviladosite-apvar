@@ -205,8 +205,6 @@ function pega_filhos() {
 	    	    <?php echo apply_filters( 'the_content', $child->post_content); ?>
 			</div>
 		</div>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
 		<br>
 		<br>
 	<?php }
