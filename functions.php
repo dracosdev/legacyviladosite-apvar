@@ -351,6 +351,8 @@ add_filter( 'cuar/core/address/user-addresses', 'cuar_disable_addresses' );
 // Carrega os scripts de javascript, bootstrap e etc
 function carrega_scripts(){
 
+	wp_enqueue_script('js_placeholder', get_template_directory_uri().'/js/placeholder.js', array(), null, true);
+
 	wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), null, 'all');
 
 	wp_enqueue_style('style', get_template_directory_uri().'/style.css', array(), null, 'all');
