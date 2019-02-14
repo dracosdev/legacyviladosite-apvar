@@ -1,5 +1,5 @@
 var nome = document.querySelector('.user_nome');
-nome.placeholder = 'Utilize o seu nome de guerra sem acentos, espaços, maiúsculas ou caracteres especiais.';
+nome.placeholder = 'Nome de guerra sem acentos, espaços, maiúsculas ou caracteres especiais.';
 
 var email = document.querySelector('.user_email');
 email.placeholder = 'Informe seu Email.';
