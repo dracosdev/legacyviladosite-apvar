@@ -4,6 +4,9 @@
 // Funções e recursos básicos do template
 // ----------------------------------------------------------
 
+//adiciona suporte para excerpt nas paginas
+add_post_type_support( 'page', 'excerpt' );
+
 // Adiciona a paginação
 function wordpress_pagination() {
             global $wp_query;
