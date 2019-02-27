@@ -93,7 +93,11 @@ function post_comimagem() {
     <div class="main col-md-8">
     	<a href=' <?php echo the_permalink(); ?> '>
 	    	<h4 class="m-title"> <?php echo the_title(); ?> </h4>
-    		<p> <?php the_excerpt_max(200); ?> </p>
+    		<p> <?php if (has_excerpt()){
+    				the_excerpt();
+    			} else{
+    				the_excerpt_max(200);
+    				} ?> </p>
 		</a>
 	</div>
 	<?php
@@ -105,7 +109,11 @@ function post_semimagem() {
     <div class="main col-md-12">
     	<a href=' <?php echo the_permalink(); ?> '>
 	    	<h4 class="m-title"> <?php echo the_title(); ?> </h4>
-    		<p> <?php the_excerpt_max(320); ?> </p>
+    		<p> <?php if (has_excerpt()){
+    				the_excerpt();
+    			} else{
+    				the_excerpt_max(320);
+    				} ?> </p>
 		</a>
 	</div>
 	<?php
@@ -133,7 +141,11 @@ function post_comimagem_topo() { ?>
     <div class="main col-md-12">
     	<a href=' <?php echo the_permalink(); ?> '>
 	    	<h4 class="m-title"> <?php echo the_title(); ?> </h4>
-    		<p> <?php the_excerpt_max(120); ?> </p>
+    		<p> <?php if (has_excerpt()){
+    				the_excerpt();
+    			} else{
+    				the_excerpt_max(120);
+    				} ?> </p>
 		</a>
 	</div>
 	<?php
@@ -146,7 +158,11 @@ function post_semimagem_topo() {
     <div class="main col-md-12">
     	<a href=' <?php echo the_permalink(); ?> '>
 	    	<h4 class="m-title"> <?php echo the_title(); ?> </h4>
-    		<p> <?php the_excerpt_max(180); ?> </p>
+    		<p> <?php if (has_excerpt()){
+    				the_excerpt();
+    			} else{
+    				the_excerpt_max(180);
+    				} ?> </p>
 		</a>
 	</div>
 	<?php
@@ -159,7 +175,11 @@ function post_semimagem_topofirst() {
     <div class="main col-md-12">
     	<a href=' <?php echo the_permalink(); ?> '>
 	    	<h4 class="m-title"> <?php echo the_title(); ?> </h4>
-    		<p> <?php the_big_excerpt(100); ?> </p>
+    		<p> <?php if (has_excerpt()){
+    				the_excerpt();
+    			} else {
+    				the_big_excerpt(100);
+    				} ?> </p>
 		</a>
 	</div>
 	<?php
